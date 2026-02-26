@@ -12,6 +12,11 @@ private:
     HWND comboTurboConfig;      // Single/Twin/Sequential/Compound/TwinScroll
     HWND comboSCType;           // Roots/Twin-Screw/Centrifugal
 
+    // Labels that need show/hide
+    HWND lblTurboConfig;
+    HWND lblSCType;
+    HWND lblDriveRatio;
+
     // Inputs - Main parameters
     NumericEdit editTargetHP;
     NumericEdit editTargetBoost;
@@ -33,7 +38,9 @@ private:
 
     void CreateControls();
     void CreateLabel(const wchar_t* text, int x, int y, int width = 250);
+    HWND CreateLabelEx(const wchar_t* text, int x, int y, int width = 250);
     void UpdateGraph(double correctedFlow, double pressureRatio);
+    void UpdateVisibility();
 
     static LRESULT CALLBACK GraphWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -44,5 +51,6 @@ public:
     void Create() override;
     void OnCalculate() override;
     void OnClear() override;
+    void OnCommand(WPARAM wParam, LPARAM lParam) override;
     void RecalculateLayout() override;
 };

@@ -173,6 +173,7 @@ public:
     virtual void Show(bool show);
     virtual void OnCalculate() = 0;
     virtual void OnClear() = 0;
+    virtual void OnCommand(WPARAM wParam, LPARAM lParam) {}  // Override for combo/button events
     
     HWND GetHandle() const { return hwndPage; }
     bool IsVisible() const { return visible; }

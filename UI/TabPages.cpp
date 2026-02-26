@@ -89,6 +89,12 @@ static LRESULT CALLBACK TabPageProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM l
             }
             break;
 
+        case WM_COMMAND:
+            if (page) {
+                page->OnCommand(wParam, lParam);
+            }
+            return 0;
+
         case WM_PAINT:
             {
                 PAINTSTRUCT ps;

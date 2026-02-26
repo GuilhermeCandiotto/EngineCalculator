@@ -227,7 +227,6 @@
     <None Include="docs\FEATURES.md" />
     <None Include="docs\FUEL_REFERENCES.md" />
     <None Include="docs\MEP_REFERENCES.md" />
-    <None Include="EngineCalculator\README.md" />
     <None Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="README.md" />

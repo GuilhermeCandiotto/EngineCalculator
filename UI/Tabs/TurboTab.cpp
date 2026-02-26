@@ -27,7 +27,8 @@ extern bool RegisterTabPageClass(HINSTANCE hInstance);
 
 TurboTab::TurboTab(HWND parent, HINSTANCE instance)
     : TabPage(parent, instance), comboFIType(nullptr), comboTurboConfig(nullptr),
-      comboSCType(nullptr), textResults(nullptr), hwndGraph(nullptr) {
+      comboSCType(nullptr), lblTurboConfig(nullptr), lblSCType(nullptr),
+      lblDriveRatio(nullptr), textResults(nullptr), hwndGraph(nullptr) {
 }
 
 TurboTab::~TurboTab() {
@@ -38,6 +39,41 @@ void TurboTab::CreateLabel(const wchar_t* text, int x, int y, int width) {
         WS_CHILD | WS_VISIBLE | SS_LEFT,
         x, y, width, 20, hwndPage, nullptr, hInst, nullptr);
     SendMessage(label, WM_SETFONT, (WPARAM)GetStockObject(DEFAULT_GUI_FONT), TRUE);
+}
+
+HWND TurboTab::CreateLabelEx(const wchar_t* text, int x, int y, int width) {
+    HWND label = CreateWindowW(L"STATIC", text,
+        WS_CHILD | WS_VISIBLE | SS_LEFT,
+        x, y, width, 20, hwndPage, nullptr, hInst, nullptr);
+    SendMessage(label, WM_SETFONT, (WPARAM)GetStockObject(DEFAULT_GUI_FONT), TRUE);
+    return label;
+}
+
+void TurboTab::UpdateVisibility() {
+    int fiType = (int)SendMessage(comboFIType, CB_GETCURSEL, 0, 0);
+    bool isTurbo = (fiType == 0);
+    bool isSC = (fiType == 1);
+
+    int showTurbo = isTurbo ? SW_SHOW : SW_HIDE;
+    int showSC = isSC ? SW_SHOW : SW_HIDE;
+
+    ShowWindow(lblTurboConfig, showTurbo);
+    ShowWindow(comboTurboConfig, showTurbo);
+
+    ShowWindow(lblSCType, showSC);
+    ShowWindow(comboSCType, showSC);
+    ShowWindow(lblDriveRatio, showSC);
+    if (editDriveRatio.GetHandle())
+        ShowWindow(editDriveRatio.GetHandle(), showSC);
+}
+
+void TurboTab::OnCommand(WPARAM wParam, LPARAM lParam) {
+    if (HIWORD(wParam) == CBN_SELCHANGE) {
+        int id = LOWORD(wParam);
+        if (id == IDC_COMBO_FI_TYPE) {
+            UpdateVisibility();
+        }
+    }
 }
 
 void TurboTab::CreateControls() {
@@ -62,7 +98,7 @@ void TurboTab::CreateControls() {
     SendMessage(comboFIType, CB_SETCURSEL, 0, 0);
     currentY += 30;
 
-    CreateLabel(L"Configuracao Turbo:", leftMargin, currentY + 3, labelWidth);
+    lblTurboConfig = CreateLabelEx(L"Configuracao Turbo:", leftMargin, currentY + 3, labelWidth);
     comboTurboConfig = CreateWindowW(L"COMBOBOX", L"",
         WS_CHILD | WS_VISIBLE | CBS_DROPDOWNLIST | WS_VSCROLL,
         leftMargin + labelWidth, currentY, editWidth + 40, 150,
@@ -76,7 +112,7 @@ void TurboTab::CreateControls() {
     SendMessage(comboTurboConfig, CB_SETCURSEL, 0, 0);
     currentY += 30;
 
-    CreateLabel(L"Tipo Supercharger:", leftMargin, currentY + 3, labelWidth);
+    lblSCType = CreateLabelEx(L"Tipo Supercharger:", leftMargin, currentY + 3, labelWidth);
     comboSCType = CreateWindowW(L"COMBOBOX", L"",
         WS_CHILD | WS_VISIBLE | CBS_DROPDOWNLIST | WS_VSCROLL,
         leftMargin + labelWidth, currentY, editWidth + 40, 120,
@@ -154,7 +190,7 @@ void TurboTab::CreateControls() {
         L"Ref: SAE 2003-01-0732");
     currentY += 28;
 
-    CreateLabel(L"Drive Ratio (SC):", leftMargin, currentY, labelWidth);
+    lblDriveRatio = CreateLabelEx(L"Drive Ratio (SC):", leftMargin, currentY, labelWidth);
     editDriveRatio.Create(hwndPage, IDC_EDIT_DRIVE_RATIO,
         leftMargin + labelWidth, currentY - 3, editWidth, 24, 0.5, 5.0, 2);
     editDriveRatio.SetValue(1.0);
@@ -188,6 +224,9 @@ void TurboTab::CreateControls() {
         leftMargin, currentY, GetResultsWidth(), 220,
         hwndPage, nullptr, hInst, nullptr);
     SetWindowLongPtr(hwndGraph, GWLP_USERDATA, (LONG_PTR)this);
+
+    // Initial visibility: Turbo selected by default, hide SC fields
+    UpdateVisibility();
 }
 
 void TurboTab::Create() {
