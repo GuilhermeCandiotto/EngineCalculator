@@ -7,7 +7,7 @@ Professional internal combustion engine design calculator. C++17 / Win32 API.
   <img src="https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows" alt="Windows"/>
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen" alt="Build"/>
   <img src="https://img.shields.io/badge/Presets-81_Engines-orange" alt="81 Engines"/>
-  <img src="https://img.shields.io/badge/License-Proprietary-red" alt="License"/>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
 </p>
 
 Scientific-grade calculations for internal combustion engine design, based on 18 SAE Papers and 6 reference textbooks (Heywood, Blair, Pulkrabek, Bell, Baechtel, Vizard).
@@ -185,7 +185,8 @@ This is a personal project. Bug reports and feature suggestions are welcome via 
 
 ## License
 
-© 2026 Guilherme Candiotto — All rights reserved.
+MIT License © 2026 [Guilherme Candiotto](https://github.com/GuilhermeCandiotto)
 
-**Allowed:** personal, professional, and educational use.  
-**Not allowed:** source code redistribution, resale, or credit removal.
+Free to use, modify, and distribute — just keep the copyright notice.
+
+See [LICENSE](LICENSE) for details.
