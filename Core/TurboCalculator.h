@@ -190,7 +190,18 @@ struct SuperchargerResult {
     double outletTempC;            // Charge temperature out
     double netHPGain;              // HP gained minus parasitic loss
     double boostAtRPM;             // Boost at given RPM
+
+    // Pulley sizing
+    double driveRatio;             // Required crank:SC pulley ratio
+    double crankPulleyDiaMM;       // Crank pulley diameter (mm)
+    double scPulleyDiaMM;          // SC pulley diameter (mm)
+    double scSpeedAtMaxRPM;        // SC rotor speed at engine max RPM
+    double beltSpeedMS;            // Belt linear speed (m/s)
+    double beltLoadN;              // Belt tension (N)
+    double minBeltWidth_mm;        // Minimum belt width recommendation
+
     std::wstring typeRecommendation;
+    std::wstring pulleyRecommendation;
     std::wstring warnings;
 };
 
@@ -331,7 +342,46 @@ public:
                                               double targetBoostPSI,
                                               double maxRPM,
                                               double driveRatio,
+                                              double crankPulleyDiaMM,
                                               SuperchargerType type) const;
+
+    // ========== PULLEY SIZING ==========
+
+    // Calculate SC pulley diameter for target boost
+    // Ref: Eaton/Whipple application manuals
+    //   boost ∝ (SC_speed × SC_displacement) / engine_displacement
+    //   SC_speed = engine_RPM × (crank_pulley_dia / sc_pulley_dia)
+    //   Smaller SC pulley = more boost (higher overdrive ratio)
+    //
+    // Typical crank pulley sizes:
+    //   GM LS: 190-200mm, Ford Mod/Coyote: 170-180mm
+    //   Mopar Hemi: 195-205mm, Honda K-series: 130-140mm
+    //
+    // SC max rotor speed limits:
+    //   Eaton M90/M112: 14,000-16,000 RPM
+    //   Eaton TVS1900/2300: 14,000-18,000 RPM
+    //   Whipple 2.3L/2.9L: 14,000-16,000 RPM
+    //   Kenne Bell 2.8L/3.6L: 14,000-17,000 RPM
+    //   Procharger P-1SC: 40,000-65,000 RPM (centrifugal)
+    //   Vortech V-3 Si: 45,000-65,000 RPM (centrifugal)
+    double CalculateSCPulleyDiameter(double crankPulleyDiaMM,
+                                      double targetDriveRatio) const;
+
+    // Calculate drive ratio for target boost
+    // Ref: Eaton TVS application guide, Whipple tech notes
+    //   For PD blowers: ratio = (target_airflow) / (engine_airflow × VE_sc)
+    //   Typical overdrive: 1.8:1 to 3.2:1
+    double CalculateRequiredDriveRatio(double displacementCC,
+                                        double scDisplacementCID,
+                                        double targetBoostPSI,
+                                        SuperchargerType type) const;
+
+    // Belt speed and load
+    // Ref: Gates belt engineering manual
+    //   Max belt speed: 40 m/s (standard V-belt), 60 m/s (multi-rib)
+    //   Belt tension depends on transmitted power
+    double CalculateBeltSpeed(double pulleyDiaMM, double pulleyRPM) const;
+    double CalculateBeltLoad(double powerKW, double beltSpeedMS) const;
 
     // ========== TURBO MATCHING ==========
 

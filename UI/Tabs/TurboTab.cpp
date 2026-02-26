@@ -28,7 +28,8 @@ extern bool RegisterTabPageClass(HINSTANCE hInstance);
 TurboTab::TurboTab(HWND parent, HINSTANCE instance)
     : TabPage(parent, instance), comboFIType(nullptr), comboTurboConfig(nullptr),
       comboSCType(nullptr), lblTurboConfig(nullptr), lblSCType(nullptr),
-      lblDriveRatio(nullptr), textResults(nullptr), hwndGraph(nullptr) {
+      lblDriveRatio(nullptr), lblCrankPulley(nullptr),
+      textResults(nullptr), hwndGraph(nullptr) {
 }
 
 TurboTab::~TurboTab() {
@@ -65,6 +66,9 @@ void TurboTab::UpdateVisibility() {
     ShowWindow(lblDriveRatio, showSC);
     if (editDriveRatio.GetHandle())
         ShowWindow(editDriveRatio.GetHandle(), showSC);
+    ShowWindow(lblCrankPulley, showSC);
+    if (editCrankPulley.GetHandle())
+        ShowWindow(editCrankPulley.GetHandle(), showSC);
 }
 
 void TurboTab::OnCommand(WPARAM wParam, LPARAM lParam) {
@@ -193,11 +197,23 @@ void TurboTab::CreateControls() {
     lblDriveRatio = CreateLabelEx(L"Drive Ratio (SC):", leftMargin, currentY, labelWidth);
     editDriveRatio.Create(hwndPage, IDC_EDIT_DRIVE_RATIO,
         leftMargin + labelWidth, currentY - 3, editWidth, 24, 0.5, 5.0, 2);
-    editDriveRatio.SetValue(1.0);
+    editDriveRatio.SetValue(2.0);
     CreateTooltip(editDriveRatio.GetHandle(),
         L"Relacao de transmissao do supercharger.\n"
-        L"Polia do SC / Polia do crank.\n"
-        L"Tipico: 2.0-3.0 para Roots, 1.0-2.5 para centrifugo.");
+        L"Drive Ratio = Polia Crank / Polia SC.\n"
+        L"Tipico: 1.8-2.8 para Roots/Twin-Screw.\n"
+        L"Maior ratio = mais boost = mais calor/desgaste.");
+    currentY += 28;
+
+    lblCrankPulley = CreateLabelEx(L"Polia Crank (mm):", leftMargin, currentY, labelWidth);
+    editCrankPulley.Create(hwndPage, IDC_EDIT_DRIVE_RATIO + 1,
+        leftMargin + labelWidth, currentY - 3, editWidth, 24, 80.0, 300.0, 0);
+    editCrankPulley.SetValue(180.0);
+    CreateTooltip(editCrankPulley.GetHandle(),
+        L"Diametro da polia do virabrequim (mm).\n"
+        L"GM LS: 190-200mm | Ford Coyote: 170-180mm\n"
+        L"Mopar Hemi: 195-205mm | Honda K: 130-140mm\n"
+        L"Ref: Eaton/Whipple pulley sizing guides");
     currentY += 35;
 
     // ========== RESULTS ==========
@@ -246,21 +262,23 @@ void TurboTab::OnCalculate() {
     EngineDataManager* dm = EngineDataManager::GetInstance();
     EngineCore engine;
 
-    if (dm && dm->GetProject().basicData.bore > 0) {
-        const auto& bd = dm->GetProject().basicData;
-        engine.SetBore(bd.bore);
-        engine.SetStroke(bd.stroke);
-        engine.SetCylinders(bd.cylinders);
-
-        if (editMaxRPM.GetValue() == 7000.0 && bd.maxRPM > 0) {
-            editMaxRPM.SetValue(bd.maxRPM);
-        }
-    } else {
-        engine.SetBore(86.0);
-        engine.SetStroke(86.0);
-        engine.SetCylinders(4);
+    if (!dm || dm->GetProject().basicData.bore <= 0 || dm->GetProject().basicData.stroke <= 0) {
+        SetWindowTextW(textResults,
+            L"ERRO: Dados basicos do motor nao preenchidos!\r\n\r\n"
+            L"Va na aba Basico e preencha bore, stroke e cilindros\r\n"
+            L"antes de calcular o turbo/supercharger.");
+        return;
     }
-    engine.SetEngineType(EngineType::FOUR_STROKE);
+
+    const auto& bd = dm->GetProject().basicData;
+    engine.SetBore(bd.bore);
+    engine.SetStroke(bd.stroke);
+    engine.SetCylinders(bd.cylinders);
+    engine.SetEngineType(bd.engineType);
+
+    if (editMaxRPM.GetValue() <= 0 && bd.maxRPM > 0) {
+        editMaxRPM.SetValue(bd.maxRPM);
+    }
 
     TurboCalculator calc(&engine);
 
@@ -409,9 +427,10 @@ void TurboTab::OnCalculate() {
         // ========== SUPERCHARGER ==========
         SuperchargerType sType = static_cast<SuperchargerType>(scType);
         double driveRatio = editDriveRatio.GetValue();
+        double crankPulley = editCrankPulley.GetValue();
 
         SuperchargerResult sr = calc.CalculateSupercharger(
-            displacement, targetBoost, maxRPM, driveRatio, sType);
+            displacement, targetBoost, maxRPM, driveRatio, crankPulley, sType);
 
         results << L"===============================================================\r\n";
         results << L"  ANALISE DE SUPERCHARGER\r\n";
@@ -419,10 +438,13 @@ void TurboTab::OnCalculate() {
 
         results << L"DADOS DO MOTOR:\r\n";
         results << std::setprecision(0);
-        results << L"  Cilindrada: " << displacement << L" cc\r\n";
+        results << L"  Cilindrada: " << displacement << L" cc ("
+                << std::setprecision(2) << displacement / 1000.0 << L" L)\r\n";
+        results << std::setprecision(0);
         results << L"  Potencia Alvo: " << targetHP << L" HP\r\n";
         results << std::setprecision(1);
-        results << L"  Boost Alvo: " << targetBoost << L" PSI\r\n\r\n";
+        results << L"  Boost Alvo: " << targetBoost << L" PSI ("
+                << targetBoost / 14.5 << L" bar)\r\n\r\n";
 
         results << L"DIMENSIONAMENTO:\r\n";
         results << L"  Tipo: " << sr.typeRecommendation << L"\r\n";
@@ -436,6 +458,23 @@ void TurboTab::OnCalculate() {
         results << std::setprecision(1);
         results << L"  Perda parasitica: " << sr.parasticLossHP << L" HP\r\n";
         results << L"  Ganho liquido: " << sr.netHPGain << L" HP\r\n\r\n";
+
+        results << L"SISTEMA DE POLIAS:\r\n";
+        results << std::setprecision(1);
+        results << L"  Polia Crank: " << sr.crankPulleyDiaMM << L" mm\r\n";
+        results << L"  Polia SC: " << sr.scPulleyDiaMM << L" mm\r\n";
+        results << std::setprecision(2);
+        results << L"  Drive Ratio: " << sr.driveRatio << L":1\r\n";
+        results << std::setprecision(0);
+        results << L"  SC RPM @ " << (int)maxRPM << L" RPM: "
+                << (int)sr.scSpeedAtMaxRPM << L" RPM\r\n\r\n";
+
+        results << L"CORREIA:\r\n";
+        results << std::setprecision(1);
+        results << L"  Velocidade: " << sr.beltSpeedMS << L" m/s\r\n";
+        results << std::setprecision(0);
+        results << L"  Carga: " << sr.beltLoadN << L" N\r\n";
+        results << L"  Largura minima: " << sr.minBeltWidth_mm << L" mm\r\n\r\n";
 
         if (!sr.warnings.empty()) {
             results << L"ALERTAS:\r\n" << sr.warnings << L"\r\n";
@@ -473,7 +512,8 @@ void TurboTab::OnClear() {
     editPipingDrop.SetValue(1.0);
     editFilterDrop.SetValue(0.3);
     editICEfficiency.SetValue(70.0);
-    editDriveRatio.SetValue(1.0);
+    editDriveRatio.SetValue(2.0);
+    editCrankPulley.SetValue(180.0);
     SendMessage(comboFIType, CB_SETCURSEL, 0, 0);
     SendMessage(comboTurboConfig, CB_SETCURSEL, 0, 0);
     SendMessage(comboSCType, CB_SETCURSEL, 0, 0);
@@ -548,20 +588,18 @@ void TurboTab::UpdateGraph(double correctedFlow, double pressureRatio) {
         return;
     }
 
-    // Get project data for inducer estimation
+    // Use project data for inducer estimation
     EngineDataManager* dm = EngineDataManager::GetInstance();
-    EngineCore engine;
-    if (dm && dm->GetProject().basicData.bore > 0) {
-        const auto& bd = dm->GetProject().basicData;
-        engine.SetBore(bd.bore);
-        engine.SetStroke(bd.stroke);
-        engine.SetCylinders(bd.cylinders);
-    } else {
-        engine.SetBore(86.0);
-        engine.SetStroke(86.0);
-        engine.SetCylinders(4);
+    if (!dm || dm->GetProject().basicData.bore <= 0) {
+        if (hwndGraph) InvalidateRect(hwndGraph, NULL, TRUE);
+        return;
     }
-    engine.SetEngineType(EngineType::FOUR_STROKE);
+    EngineCore engine;
+    const auto& bd = dm->GetProject().basicData;
+    engine.SetBore(bd.bore);
+    engine.SetStroke(bd.stroke);
+    engine.SetCylinders(bd.cylinders);
+    engine.SetEngineType(bd.engineType);
     TurboCalculator calc(&engine);
 
     double inducerDia = calc.EstimateInducerDiameter(correctedFlow);

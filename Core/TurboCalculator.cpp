@@ -355,6 +355,7 @@ SuperchargerResult TurboCalculator::CalculateSupercharger(double displacementCC,
                                                            double targetBoostPSI,
                                                            double maxRPM,
                                                            double driveRatio,
+                                                           double crankPulleyDiaMM,
                                                            SuperchargerType type) const {
     SuperchargerResult result;
 
@@ -362,39 +363,99 @@ SuperchargerResult TurboCalculator::CalculateSupercharger(double displacementCC,
     double dispCID = displacementCC / 16.387;  // cc to cubic inches
 
     double scEfficiency, parasiticFraction;
+    double maxRotorRPM;  // Max safe rotor speed
 
     switch (type) {
     case SuperchargerType::ROOTS:
         scEfficiency = 0.50;
         parasiticFraction = 0.18;
+        maxRotorRPM = 16000.0;  // Eaton TVS limit
         result.typeRecommendation = L"Eaton TVS ou Magnuson (Roots positivo)";
         break;
     case SuperchargerType::TWIN_SCREW:
         scEfficiency = 0.70;
         parasiticFraction = 0.12;
+        maxRotorRPM = 16000.0;  // Whipple/Kenne Bell limit
         result.typeRecommendation = L"Whipple ou Kenne Bell (Twin-Screw)";
         break;
     case SuperchargerType::CENTRIFUGAL:
         scEfficiency = 0.75;
         parasiticFraction = 0.06;
+        maxRotorRPM = 65000.0;  // Procharger/Vortech with internal step-up
         result.typeRecommendation = L"Procharger, Vortech ou Paxton (Centrifugo)";
         break;
     }
 
     // Required SC displacement per revolution
-    result.requiredDisplacementCID = dispCID * PR / (driveRatio * 0.90);
+    double scVE = 0.90;  // SC volumetric efficiency (~90% for PD blowers)
+    result.requiredDisplacementCID = dispCID * PR / (driveRatio * scVE);
 
-    // Outlet temperature
+    // Outlet temperature (Heywood eq. 6.7, adapted for SC)
     double T1 = CelsiusToKelvin(T_AMB_C);
     double gamma_ratio = (GAMMA_AIR - 1.0) / GAMMA_AIR;
     result.outletTempC = KelvinToCelsius(T1 * (1.0 + (std::pow(PR, gamma_ratio) - 1.0) / scEfficiency));
 
     // Boost power and parasitic loss
-    double boostPowerHP = (targetBoostPSI / P_ATM_PSI) * displacementCC * maxRPM / (2.0 * 60.0 * 745.7);
+    // Ref: Eaton application manual
+    //   Power = (massflow × cp × deltaT) for actual compression work
+    //   Simplified: HP ≈ (PR - 1) × displacement × RPM / (nR × 60 × 745.7)
+    double boostPowerHP = (PR - 1.0) * displacementCC * maxRPM / (2.0 * 60.0 * 745.7);
     result.parasticLossHP = boostPowerHP * parasiticFraction;
     result.netHPGain = boostPowerHP - result.parasticLossHP;
     result.thermalEfficiency = scEfficiency;
-    result.boostAtRPM = targetBoostPSI;  // PD: boost ≈ constant across RPM range
+    result.boostAtRPM = targetBoostPSI;
+
+    // ========== PULLEY CALCULATIONS ==========
+    // Ref: Eaton TVS Application Guide, Whipple Technical Bulletin
+    //   Drive Ratio = Crank Pulley Dia / SC Pulley Dia
+    //   SC RPM = Engine RPM × Drive Ratio
+    //   Boost ∝ (SC RPM × SC Displacement) / Engine Displacement
+
+    result.driveRatio = driveRatio;
+
+    // Crank pulley: use provided value, default 180mm if not set
+    result.crankPulleyDiaMM = (crankPulleyDiaMM > 0) ? crankPulleyDiaMM : 180.0;
+
+    // SC pulley diameter
+    result.scPulleyDiaMM = CalculateSCPulleyDiameter(result.crankPulleyDiaMM, driveRatio);
+
+    // SC speed at max engine RPM
+    result.scSpeedAtMaxRPM = maxRPM * driveRatio;
+
+    // Belt speed (at SC pulley)
+    // Ref: Gates belt manual - use smaller pulley for worst case
+    double smallerPulleyDia = std::min(result.crankPulleyDiaMM, result.scPulleyDiaMM);
+    double smallerPulleyRPM = (smallerPulleyDia == result.scPulleyDiaMM)
+                              ? result.scSpeedAtMaxRPM : maxRPM;
+    result.beltSpeedMS = CalculateBeltSpeed(smallerPulleyDia, smallerPulleyRPM);
+
+    // Belt load
+    double parasiticKW = result.parasticLossHP * 0.7457;
+    result.beltLoadN = CalculateBeltLoad(parasiticKW, result.beltSpeedMS);
+
+    // Minimum belt width recommendation
+    // Ref: Gates Poly Chain / multi-rib guidelines
+    //   8-rib: up to ~300 HP parasitic, 10-rib: up to ~500 HP, 12-rib: up to ~700 HP
+    if (result.parasticLossHP < 30) result.minBeltWidth_mm = 21.0;       // 6-rib
+    else if (result.parasticLossHP < 60) result.minBeltWidth_mm = 28.0;  // 8-rib
+    else if (result.parasticLossHP < 100) result.minBeltWidth_mm = 35.0; // 10-rib
+    else result.minBeltWidth_mm = 42.0;                                  // 12-rib
+
+    // Pulley recommendations
+    std::wostringstream pulley;
+    pulley << std::fixed << std::setprecision(1);
+    pulley << L"Polia Crank: " << result.crankPulleyDiaMM << L" mm\n";
+    pulley << L"Polia SC: " << result.scPulleyDiaMM << L" mm\n";
+    pulley << L"Drive Ratio: " << std::setprecision(2) << driveRatio << L":1\n";
+    pulley << std::setprecision(0);
+    pulley << L"SC RPM @ " << (int)maxRPM << L" RPM motor: " << (int)result.scSpeedAtMaxRPM << L" RPM\n";
+    pulley << std::setprecision(1);
+    pulley << L"Vel. correia: " << result.beltSpeedMS << L" m/s\n";
+
+    // Belt width as rib count
+    int ribs = (int)(result.minBeltWidth_mm / 3.56 + 0.5);  // ~3.56mm per rib (PK profile)
+    pulley << L"Correia minima: " << ribs << L"-rib (" << result.minBeltWidth_mm << L" mm)\n";
+    result.pulleyRecommendation = pulley.str();
 
     // Warnings
     std::wostringstream warn;
@@ -404,6 +465,19 @@ SuperchargerResult TurboCalculator::CalculateSupercharger(double displacementCC,
     }
     if (result.outletTempC > 120) {
         warn << L"[!] Temp de carga " << (int)result.outletTempC << L"C - Intercooler OBRIGATORIO\n";
+    }
+    if (result.scSpeedAtMaxRPM > maxRotorRPM) {
+        warn << L"[!!] SC rotor speed " << (int)result.scSpeedAtMaxRPM
+             << L" RPM excede limite de " << (int)maxRotorRPM << L" RPM!\n";
+        warn << L"     Reduza o drive ratio ou limite o RPM do motor.\n";
+    }
+    if (result.beltSpeedMS > 50.0) {
+        warn << L"[!] Vel. correia " << std::setprecision(1) << result.beltSpeedMS
+             << L" m/s - use correia multi-rib reforçada (Gates Micro-V ou similar)\n";
+    }
+    if (result.scPulleyDiaMM < 60) {
+        warn << L"[!] Polia SC muito pequena (" << (int)result.scPulleyDiaMM
+             << L" mm) - risco de belt slip e desgaste prematuro\n";
     }
     result.warnings = warn.str();
 
@@ -580,6 +654,87 @@ double TurboCalculator::EstimateBoostThresholdRPM(double turbineAR,
     double threshold = base * arFactor * std::sqrt(dispFactor) * std::pow(cylFactor, 0.3);
 
     return std::clamp(threshold, 1500.0, 6000.0);
+}
+
+// ============================================================================
+// PULLEY SIZING
+// ============================================================================
+
+// ============================================================================
+// SC PULLEY DIAMETER
+// Ref: Eaton TVS, Whipple, Kenne Bell application manuals
+//   SC_pulley_dia = crank_pulley_dia / drive_ratio
+//   Higher drive ratio = smaller SC pulley = more boost
+// ============================================================================
+double TurboCalculator::CalculateSCPulleyDiameter(double crankPulleyDiaMM,
+                                                    double targetDriveRatio) const {
+    if (targetDriveRatio <= 0) targetDriveRatio = 1.0;
+    return crankPulleyDiaMM / targetDriveRatio;
+}
+
+// ============================================================================
+// REQUIRED DRIVE RATIO FOR TARGET BOOST
+// Ref: Eaton TVS application guide
+//   For positive displacement (Roots/Twin-Screw):
+//     boost ≈ (SC_flow - engine_flow) / engine_flow × P_atm
+//     SC_flow = SC_displacement × SC_RPM × VE_sc
+//     SC_RPM = engine_RPM × drive_ratio
+//   Therefore:
+//     drive_ratio = (PR × engine_disp) / (SC_disp × VE_sc)
+//
+//   For centrifugal:
+//     boost ∝ speed² (centrifugal compressor characteristic)
+//     drive_ratio is the crank-to-compressor ratio
+//     Internal step-up gear adds another 4-6× multiplier
+// ============================================================================
+double TurboCalculator::CalculateRequiredDriveRatio(double displacementCC,
+                                                      double scDisplacementCID,
+                                                      double targetBoostPSI,
+                                                      SuperchargerType type) const {
+    double PR = 1.0 + (targetBoostPSI / P_ATM_PSI);
+    double engineCID = displacementCC / 16.387;
+    double scVE = 0.90;  // SC volumetric efficiency
+
+    if (scDisplacementCID <= 0) scDisplacementCID = 100.0;  // Safety
+
+    // For PD blowers: ratio = (PR × engine_CID) / (SC_CID × VE)
+    double ratio = (PR * engineCID) / (scDisplacementCID * scVE);
+
+    if (type == SuperchargerType::CENTRIFUGAL) {
+        // Centrifugal has internal step-up, external ratio is lower
+        ratio *= 0.25;  // Internal gear typically 4:1
+    }
+
+    return std::clamp(ratio, 0.8, 5.0);
+}
+
+// ============================================================================
+// BELT SPEED
+// Ref: Gates belt engineering manual
+//   V_belt = π × D × N / (60 × 1000)
+//   where D in mm, N in RPM, result in m/s
+//
+// Max recommended belt speeds:
+//   Standard V-belt: 30-35 m/s
+//   Multi-rib (PK/Micro-V): 40-50 m/s
+//   Cogged/geared: 50-60 m/s
+//   Gilmer/HTD toothed: 40-55 m/s
+// ============================================================================
+double TurboCalculator::CalculateBeltSpeed(double pulleyDiaMM, double pulleyRPM) const {
+    return 3.14159 * pulleyDiaMM * pulleyRPM / (60.0 * 1000.0);
+}
+
+// ============================================================================
+// BELT LOAD (TENSION)
+// Ref: Gates power transmission handbook
+//   P = F × v → F = P / v
+//   where P = power (W), v = belt speed (m/s), F = effective pull (N)
+//   Total tension ≈ 1.5-2× effective pull (accounting for slack side)
+// ============================================================================
+double TurboCalculator::CalculateBeltLoad(double powerKW, double beltSpeedMS) const {
+    if (beltSpeedMS <= 0) return 0;
+    double effectivePull = (powerKW * 1000.0) / beltSpeedMS;
+    return effectivePull * 1.8;  // Total tension with slack side factor
 }
 
 // ============================================================================

@@ -16,6 +16,7 @@ private:
     HWND lblTurboConfig;
     HWND lblSCType;
     HWND lblDriveRatio;
+    HWND lblCrankPulley;
 
     // Inputs - Main parameters
     NumericEdit editTargetHP;
@@ -30,6 +31,7 @@ private:
 
     // Inputs - Supercharger
     NumericEdit editDriveRatio;
+    NumericEdit editCrankPulley;
 
     HWND textResults;
     HWND hwndGraph;
