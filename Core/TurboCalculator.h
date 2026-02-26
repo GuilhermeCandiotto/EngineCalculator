@@ -165,6 +165,19 @@ struct TurboSizingResult {
     // Warnings
     std::wstring warnings;
     std::wstring recommendations;
+
+    // Hot side (turbine) results
+    double exhaustMassFlowKGS;      // Exhaust mass flow (air + fuel)
+    double turbineInletTempC;       // T3 - Turbine inlet temperature (C)
+    double turbineOutletTempC;      // T4 - Turbine outlet temperature (C)
+    double turbinePressureRatio;    // Turbine expansion ratio
+    double turbinePowerKW;          // Power extracted by turbine
+    double exhaustBackpressureKPA;  // Backpressure at exhaust ports
+    double estimatedTurboSpeedRPM;  // Estimated turbo shaft speed
+    double suggestedTurbineAR;      // Recommended A/R
+    double boostThresholdRPM;       // RPM where boost begins
+    std::wstring egtWarning;        // EGT material limit warnings
+    std::wstring turbineHousingRec; // Housing material recommendation
 };
 
 // ============================================================================
@@ -347,6 +360,86 @@ public:
     double EstimateBoostThresholdRPM(double turbineAR,
                                       double displacementLiters,
                                       double numCylinders) const;
+
+    // ========== HOT SIDE (TURBINE) ANALYSIS ==========
+
+    // Exhaust Gas Temperature estimation
+    // Ref: Heywood Ch.4 Table 4.9, Garrett "Turbine Inlet Temperature Guidelines"
+    //   Gasoline N/A: 750-900°C, Turbo: 850-1050°C
+    //   Diesel: 500-700°C, Race gas: 900-1100°C
+    //   T3 = f(AFR, ignition timing, boost, RPM)
+    double EstimateEGT(double targetHP, double displacementCC,
+                        double boostPSI, bool isRace) const;
+
+    // Turbine outlet temperature
+    // Ref: Heywood eq. 6.10 (isentropic expansion)
+    //   T4 = T3 × [1 - ηt × (1 - 1/PR_t^((γ-1)/γ))]
+    //   γ_exhaust ≈ 1.35 (combustion products, Heywood Table 4.7)
+    double CalculateTurbineOutletTemp(double turbineInletTempK,
+                                       double turbinePR,
+                                       double turbineEfficiency) const;
+
+    // Turbine power (must balance compressor power + bearing friction)
+    // Ref: Heywood eq. 6.9
+    //   Wt = m_exhaust × cp_exhaust × T3 × ηt × [1 - 1/PR_t^((γe-1)/γe)]
+    double CalculateTurbinePower(double exhaustFlowKGS,
+                                  double turbineInletTempK,
+                                  double turbinePR,
+                                  double turbineEfficiency) const;
+
+    // Exhaust backpressure estimation
+    // Ref: SAE 920044 Watson & Janota, Garrett turbine A/R flow data
+    //   Backpressure depends on turbine A/R, flow rate, and exhaust temp
+    //   Excessive backpressure reduces VE (pumping losses)
+    double EstimateBackpressure(double exhaustFlowKGS,
+                                 double turbineAR,
+                                 double exhaustTempK) const;
+
+    // Turbo shaft speed estimation
+    // Ref: BorgWarner EFR specs, Garrett GT/GTX max speed data
+    //   Speed ∝ tip_speed / (π × inducer_dia)
+    //   Tip speed limit: ~500-520 m/s (aluminum), ~550 m/s (titanium)
+    double EstimateTurboSpeed(double correctedFlowLBM,
+                               double pressureRatio,
+                               double inducerDiaMM) const;
+
+    // Housing material recommendation based on EGT
+    // Ref: Industry data - Garrett, BorgWarner material specs
+    //   Cast iron (SiMo): up to 760°C continuous
+    //   Stainless 304: up to 870°C continuous
+    //   Inconel 713C: up to 950°C continuous
+    //   Mar-M: up to 1050°C continuous
+    std::wstring RecommendHousingMaterial(double egtC) const;
+
+    // ========== COMPRESSOR MAP MODEL ==========
+
+    // Generate compressor map data points for rendering
+    // Models surge line, speed lines, efficiency islands based on turbo size
+    // Ref: Garrett published compressor maps (GT/GTX series)
+    struct CompressorMapData {
+        // Surge line: vector of (flow, PR) points
+        std::vector<std::pair<float, float>> surgeLine;
+        // Choke line
+        std::vector<std::pair<float, float>> chokeLine;
+        // Speed lines: each is a vector of (flow, PR) at constant corrected RPM
+        struct SpeedLine {
+            double correctedRPM;
+            std::vector<std::pair<float, float>> points;
+        };
+        std::vector<SpeedLine> speedLines;
+        // Efficiency islands: each contour at a given efficiency level
+        struct EfficiencyIsland {
+            double efficiency;  // e.g. 0.60, 0.65, 0.70, 0.75, 0.78
+            std::vector<std::pair<float, float>> contour;
+        };
+        std::vector<EfficiencyIsland> efficiencyIslands;
+        // Map extents
+        float maxFlow;
+        float maxPR;
+    };
+
+    CompressorMapData GenerateCompressorMap(double inducerDiaMM,
+                                             double maxCorrectedFlow) const;
 
     // ========== UTILITY ==========
 

@@ -370,6 +370,28 @@ void TurboTab::OnCalculate() {
         results << L"  Diametro recomendado: " << wg.recommendedDiameter_mm << L" mm\r\n";
         results << L"  " << wg.recommendation << L"\r\n\r\n";
 
+        // ========== HOT SIDE ==========
+        results << L"PARTE QUENTE (TURBINA):\r\n";
+        results << std::setprecision(0);
+        results << L"  EGT (T3 - entrada turbina): " << r.turbineInletTempC << L" C\r\n";
+        results << L"  Temp saida turbina (T4): " << r.turbineOutletTempC << L" C\r\n";
+        results << std::setprecision(2);
+        results << L"  Pressure Ratio turbina: " << r.turbinePressureRatio << L":1\r\n";
+        results << std::setprecision(1);
+        results << L"  Potencia turbina: " << r.turbinePowerKW << L" kW ("
+                << calc.KWtoHP(r.turbinePowerKW) << L" HP)\r\n";
+        results << std::setprecision(0);
+        results << L"  Backpressure est.: " << r.exhaustBackpressureKPA << L" kPa ("
+                << std::setprecision(1) << r.exhaustBackpressureKPA / 6.895 << L" PSI)\r\n";
+        results << L"  Velocidade turbo est.: " << (int)r.estimatedTurboSpeedRPM << L" RPM\r\n";
+        results << std::setprecision(2);
+        results << L"  A/R turbina sugerido: " << r.suggestedTurbineAR << L"\r\n";
+        results << L"  Material housing: " << r.turbineHousingRec << L"\r\n\r\n";
+
+        if (!r.egtWarning.empty()) {
+            results << r.egtWarning << L"\r\n";
+        }
+
         if (!r.warnings.empty()) {
             results << L"ALERTAS:\r\n" << r.warnings << L"\r\n";
         }
@@ -526,58 +548,119 @@ void TurboTab::UpdateGraph(double correctedFlow, double pressureRatio) {
         return;
     }
 
+    // Get project data for inducer estimation
+    EngineDataManager* dm = EngineDataManager::GetInstance();
+    EngineCore engine;
+    if (dm && dm->GetProject().basicData.bore > 0) {
+        const auto& bd = dm->GetProject().basicData;
+        engine.SetBore(bd.bore);
+        engine.SetStroke(bd.stroke);
+        engine.SetCylinders(bd.cylinders);
+    } else {
+        engine.SetBore(86.0);
+        engine.SetStroke(86.0);
+        engine.SetCylinders(4);
+    }
+    engine.SetEngineType(EngineType::FOUR_STROKE);
+    TurboCalculator calc(&engine);
+
+    double inducerDia = calc.EstimateInducerDiameter(correctedFlow);
+
+    // Generate realistic compressor map
+    auto mapData = calc.GenerateCompressorMap(inducerDia, correctedFlow);
+
     GraphConfig& cfg = graphRenderer.GetConfig();
-    cfg.title = L"Ponto de Operacao no Mapa do Compressor";
+    cfg.title = L"Mapa do Compressor - Ponto de Operacao";
     cfg.xAxisLabel = L"Airflow Corrigido (lb/min)";
     cfg.yAxisLabel = L"Pressure Ratio";
-    float maxFlow = (float)(correctedFlow * 2.0);
-    cfg.xMin = 0; cfg.xMax = maxFlow;
-    cfg.yMin = 1.0f; cfg.yMax = 4.0f;
-    cfg.xGridStep = maxFlow > 80 ? 20.0f : 10.0f;
+    cfg.xMin = 0; cfg.xMax = mapData.maxFlow;
+    cfg.yMin = 1.0f; cfg.yMax = mapData.maxPR;
+    cfg.xGridStep = mapData.maxFlow > 80 ? 20.0f : 10.0f;
     cfg.yGridStep = 0.5f;
 
-    // Surge line approximation (typical centrifugal compressor)
-    std::vector<float> xSurge, ySurge;
-    for (float pr = 1.0f; pr <= 4.0f; pr += 0.1f) {
-        float surgePt = (pr - 1.0f) * maxFlow * 0.12f;
-        xSurge.push_back(surgePt);
-        ySurge.push_back(pr);
+    // --- Efficiency islands (outer to inner, lighter to darker green) ---
+    Gdiplus::Color effColors[] = {
+        Gdiplus::Color(60, 0, 160, 0),    // 60% - very faint
+        Gdiplus::Color(80, 0, 180, 0),    // 65%
+        Gdiplus::Color(100, 0, 200, 0),   // 70%
+        Gdiplus::Color(130, 0, 210, 0),   // 75%
+        Gdiplus::Color(160, 0, 220, 50),  // 78% peak - most visible
+    };
+    for (size_t i = 0; i < mapData.efficiencyIslands.size(); i++) {
+        const auto& island = mapData.efficiencyIslands[i];
+        std::vector<float> xPts, yPts;
+        for (const auto& pt : island.contour) {
+            xPts.push_back(pt.first);
+            yPts.push_back(pt.second);
+        }
+        wchar_t label[32];
+        swprintf_s(label, L"%.0f%% eff", island.efficiency * 100);
+        float lineW = (i == mapData.efficiencyIslands.size() - 1) ? 2.0f : 1.5f;
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xPts, yPts,
+            effColors[i], label, lineW));
     }
-    graphRenderer.AddSeries(GraphRenderer::CreateSeries(xSurge, ySurge,
-        Gdiplus::Color(180, 200, 0, 0), L"Surge Line", 2.0f));
 
-    // Choke line approximation
-    std::vector<float> xChoke, yChoke;
-    for (float pr = 1.0f; pr <= 4.0f; pr += 0.1f) {
-        float chokePt = maxFlow * (1.0f - (pr - 1.0f) * 0.08f);
-        xChoke.push_back(chokePt);
-        yChoke.push_back(pr);
+    // --- Speed lines (blue, thin) ---
+    for (size_t i = 0; i < mapData.speedLines.size(); i++) {
+        const auto& sl = mapData.speedLines[i];
+        std::vector<float> xPts, yPts;
+        for (const auto& pt : sl.points) {
+            xPts.push_back(pt.first);
+            yPts.push_back(pt.second);
+        }
+        int alpha = 80 + (int)(i * 25);
+        wchar_t label[48];
+        swprintf_s(label, L"%.0f kRPM", sl.correctedRPM / 1000.0);
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xPts, yPts,
+            Gdiplus::Color(alpha, 80, 80, 220), label, 1.0f));
     }
-    graphRenderer.AddSeries(GraphRenderer::CreateSeries(xChoke, yChoke,
-        Gdiplus::Color(180, 0, 0, 200), L"Choke Line", 2.0f));
 
-    // Peak efficiency island (approximate)
-    std::vector<float> xEff, yEff;
-    float centerFlow = maxFlow * 0.5f;
-    for (float t = 0; t <= 6.30f; t += 0.15f) {
-        float ex = centerFlow + cosf(t) * maxFlow * 0.18f;
-        float ey = 2.2f + sinf(t) * 0.6f;
-        xEff.push_back(ex);
-        yEff.push_back(ey);
+    // --- Surge line (red, dashed-thick) ---
+    {
+        std::vector<float> xPts, yPts;
+        for (const auto& pt : mapData.surgeLine) {
+            xPts.push_back(pt.first);
+            yPts.push_back(pt.second);
+        }
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xPts, yPts,
+            Gdiplus::Color(220, 200, 30, 30), L"Surge Line", 2.5f));
     }
-    graphRenderer.AddSeries(GraphRenderer::CreateSeries(xEff, yEff,
-        Gdiplus::Color(100, 0, 180, 0), L"Peak Eff Zone", 1.5f));
 
-    // Operating point
-    std::vector<float> xOp, yOp;
-    xOp.push_back((float)correctedFlow);
-    yOp.push_back(1.0f);
-    xOp.push_back((float)correctedFlow);
-    yOp.push_back((float)pressureRatio);
-    xOp.push_back(0);
-    yOp.push_back((float)pressureRatio);
-    graphRenderer.AddSeries(GraphRenderer::CreateSeries(xOp, yOp,
-        Gdiplus::Color(255, 255, 80, 80), L"Ponto Operacao", 2.5f));
+    // --- Choke line (dark blue, thick) ---
+    {
+        std::vector<float> xPts, yPts;
+        for (const auto& pt : mapData.chokeLine) {
+            xPts.push_back(pt.first);
+            yPts.push_back(pt.second);
+        }
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xPts, yPts,
+            Gdiplus::Color(200, 30, 30, 180), L"Choke Line", 2.5f));
+    }
+
+    // --- Operating point (crosshair) ---
+    {
+        std::vector<float> xV = {(float)correctedFlow, (float)correctedFlow};
+        std::vector<float> yV = {1.0f, (float)pressureRatio};
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xV, yV,
+            Gdiplus::Color(255, 255, 60, 60), L"", 1.5f));
+
+        std::vector<float> xH = {0, (float)correctedFlow};
+        std::vector<float> yH = {(float)pressureRatio, (float)pressureRatio};
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xH, yH,
+            Gdiplus::Color(255, 255, 60, 60), L"", 1.5f));
+
+        // Point marker (small diamond around operating point)
+        float s = mapData.maxFlow * 0.015f;
+        float sp = (mapData.maxPR - 1.0f) * 0.03f;
+        std::vector<float> xM = {(float)correctedFlow, (float)correctedFlow + s,
+                                  (float)correctedFlow, (float)correctedFlow - s,
+                                  (float)correctedFlow};
+        std::vector<float> yM = {(float)pressureRatio + sp, (float)pressureRatio,
+                                  (float)pressureRatio - sp, (float)pressureRatio,
+                                  (float)pressureRatio + sp};
+        graphRenderer.AddSeries(GraphRenderer::CreateSeries(xM, yM,
+            Gdiplus::Color(255, 255, 0, 0), L"Ponto Operacao", 3.0f));
+    }
 
     if (hwndGraph) InvalidateRect(hwndGraph, NULL, TRUE);
 }

@@ -680,5 +680,328 @@ TurboSizingResult TurboCalculator::CalculateTurboSizing(const TurboSizingInput& 
     r.warnings = warn.str();
     r.recommendations = rec.str();
 
+    // ========== HOT SIDE ANALYSIS ==========
+    r.exhaustMassFlowKGS = r.requiredAirflowKGS * 1.067;  // Air + fuel (AFR ~15:1)
+    r.turbineInletTempC = EstimateEGT(input.targetHP, input.displacementCC,
+                                       input.targetBoostPSI, input.targetBoostPSI > 18);
+    double T3_K = CelsiusToKelvin(r.turbineInletTempC);
+
+    // Turbine PR ≈ Compressor PR × 0.85-0.95 (accounting for manifold losses)
+    r.turbinePressureRatio = r.pressureRatioTotal * 0.90;
+    r.estimatedTurbineEff = 0.75;
+
+    r.turbineOutletTempC = KelvinToCelsius(
+        CalculateTurbineOutletTemp(T3_K, r.turbinePressureRatio, r.estimatedTurbineEff));
+
+    r.turbinePowerKW = CalculateTurbinePower(
+        r.exhaustMassFlowKGS / input.numberOfTurbos,
+        T3_K, r.turbinePressureRatio, r.estimatedTurbineEff);
+
+    r.exhaustBackpressureKPA = EstimateBackpressure(
+        r.exhaustMassFlowKGS / input.numberOfTurbos, suggestedAR, T3_K);
+
+    r.estimatedTurboSpeedRPM = EstimateTurboSpeed(
+        r.correctedAirflow, r.pressureRatioTotal, r.inducer_mm);
+
+    r.suggestedTurbineAR = suggestedAR;
+    r.boostThresholdRPM = threshold;
+    r.turbineHousingRec = RecommendHousingMaterial(r.turbineInletTempC);
+
+    // EGT warnings
+    std::wostringstream egtWarn;
+    if (r.turbineInletTempC > 1000) {
+        egtWarn << L"[!!] EGT > 1000C - risco de dano a turbina e coletores\n";
+        egtWarn << L"     Material minimo: Inconel 713C ou equivalente\n";
+    } else if (r.turbineInletTempC > 900) {
+        egtWarn << L"[!] EGT > 900C - monitoramento de EGT recomendado\n";
+    }
+    r.egtWarning = egtWarn.str();
+
     return r;
+}
+
+// ============================================================================
+// HOT SIDE CALCULATIONS
+// ============================================================================
+
+// ============================================================================
+// EGT ESTIMATION
+// Ref: Heywood Ch.4 Table 4.9, Garrett turbine inlet temp guidelines
+//
+// Typical EGT ranges (at turbine inlet, T3):
+//   Gasoline N/A:       750-900°C
+//   Gasoline Turbo:     850-1000°C (street tune)
+//   Gasoline Turbo:     950-1050°C (aggressive tune)
+//   Race gasoline:      1000-1100°C
+//   Diesel turbo:       500-700°C
+//
+// EGT increases with:
+//   - Richer AFR (more fuel energy)
+//   - More boost (higher cylinder pressures & temps)
+//   - Higher RPM (less time for heat transfer)
+//   - Retarded ignition timing
+//
+// Empirical model: EGT ≈ base + boost_correction + load_correction
+// ============================================================================
+double TurboCalculator::EstimateEGT(double targetHP, double displacementCC,
+                                     double boostPSI, bool isRace) const {
+    // Base EGT for turbo gasoline at moderate tune
+    double baseEGT = 870.0;  // °C
+
+    // Boost correction: ~5°C per PSI above 10
+    double boostCorrection = 0;
+    if (boostPSI > 10) boostCorrection = (boostPSI - 10.0) * 5.0;
+
+    // Load correction: higher specific output = higher EGT
+    double specificHP = targetHP / (displacementCC / 1000.0);  // HP/liter
+    double loadCorrection = 0;
+    if (specificHP > 150) loadCorrection = (specificHP - 150) * 0.3;
+
+    // Race correction
+    if (isRace) baseEGT += 50.0;
+
+    double egt = baseEGT + boostCorrection + loadCorrection;
+
+    return std::clamp(egt, 700.0, 1150.0);
+}
+
+// ============================================================================
+// TURBINE OUTLET TEMPERATURE
+// Ref: Heywood eq. 6.10
+//   T4 = T3 × [1 - ηt × (1 - PR_t^(-(γe-1)/γe))]
+//   γ_exhaust ≈ 1.35 (combustion products at ~900°C, Heywood Table 4.7)
+// ============================================================================
+double TurboCalculator::CalculateTurbineOutletTemp(double turbineInletTempK,
+                                                    double turbinePR,
+                                                    double turbineEfficiency) const {
+    if (turbinePR <= 1.0) return turbineInletTempK;
+    const double GAMMA_EXHAUST = 1.35;
+    double gamma_ratio = (GAMMA_EXHAUST - 1.0) / GAMMA_EXHAUST;
+
+    double expansionTerm = 1.0 - std::pow(turbinePR, -gamma_ratio);
+    return turbineInletTempK * (1.0 - turbineEfficiency * expansionTerm);
+}
+
+// ============================================================================
+// TURBINE POWER
+// Ref: Heywood eq. 6.9
+//   Wt = m_exhaust × cp_exhaust × T3 × ηt × [1 - PR_t^(-(γe-1)/γe)]
+//   cp_exhaust ≈ 1150 J/(kg·K) for combustion products (Heywood Ch.4)
+// ============================================================================
+double TurboCalculator::CalculateTurbinePower(double exhaustFlowKGS,
+                                               double turbineInletTempK,
+                                               double turbinePR,
+                                               double turbineEfficiency) const {
+    if (turbinePR <= 1.0) return 0;
+    const double GAMMA_EXHAUST = 1.35;
+    const double CP_EXHAUST = 1150.0;  // J/(kg·K) - combustion products
+    double gamma_ratio = (GAMMA_EXHAUST - 1.0) / GAMMA_EXHAUST;
+
+    double expansionTerm = 1.0 - std::pow(turbinePR, -gamma_ratio);
+    double Wt = exhaustFlowKGS * CP_EXHAUST * turbineInletTempK
+              * turbineEfficiency * expansionTerm;
+    return Wt / 1000.0;  // kW
+}
+
+// ============================================================================
+// EXHAUST BACKPRESSURE
+// Ref: SAE 920044, Watson & Janota
+//   Backpressure = f(exhaust flow, turbine A/R, exhaust temp)
+//   Simplified orifice model:
+//     ΔP = (m_dot² × T) / (2 × ρ_ref × Cd² × A²)
+//   Higher A/R = lower backpressure (for same flow)
+//   Rule of thumb: 1.5-2.5:1 exhaust manifold to atmospheric ratio (street)
+//                  1.0-1.5:1 for race
+// ============================================================================
+double TurboCalculator::EstimateBackpressure(double exhaustFlowKGS,
+                                              double turbineAR,
+                                              double exhaustTempK) const {
+    // Empirical: backpressure in kPa ≈ flow² × temp_factor / AR_factor
+    double flowFactor = exhaustFlowKGS * exhaustFlowKGS * 500.0;
+    double tempFactor = exhaustTempK / 1100.0;  // Normalized to ~827°C
+    double arFactor = turbineAR * 1.5;
+
+    if (arFactor <= 0) arFactor = 0.5;
+    double backpressure = flowFactor * tempFactor / arFactor;
+
+    return std::clamp(backpressure, 5.0, 200.0);
+}
+
+// ============================================================================
+// TURBO SHAFT SPEED
+// Ref: Garrett GT/GTX max speed specs, BorgWarner EFR specs
+//
+// Turbo speed is related to compressor tip speed:
+//   U_tip = π × D_inducer × N / 60
+//   U_tip limit: ~500 m/s (aluminum), ~550 m/s (titanium/MAR-M)
+//
+// Actual speed depends on operating point on the map.
+// Empirical correlation from published spec sheets:
+//   Speed ≈ tip_speed_factor / inducer_dia × PR_factor
+//
+// Reference max speeds:
+//   GT2554R (41mm): 230,000 RPM
+//   GT2860RS (46mm): 190,000 RPM
+//   GTX3071R (54mm): 150,000 RPM
+//   GTX3576R (60mm): 130,000 RPM
+//   GTX4088R (68mm): 110,000 RPM
+//   GTX5008R (80mm): 95,000 RPM
+// ============================================================================
+double TurboCalculator::EstimateTurboSpeed(double correctedFlowLBM,
+                                            double pressureRatio,
+                                            double inducerDiaMM) const {
+    if (inducerDiaMM <= 0) return 0;
+
+    // Tip speed ~ 480 m/s at operating point (below max)
+    double tipSpeed = 480.0 * std::sqrt(pressureRatio / 2.5);
+    tipSpeed = std::clamp(tipSpeed, 300.0, 530.0);
+
+    // N = (U_tip × 60) / (π × D)
+    double diaM = inducerDiaMM / 1000.0;
+    double speed = (tipSpeed * 60.0) / (3.14159 * diaM);
+
+    return speed;
+}
+
+// ============================================================================
+// HOUSING MATERIAL RECOMMENDATION
+// Ref: Garrett, BorgWarner, Precision Turbo material specifications
+//
+// Material limits (continuous service temperature):
+//   Ductile iron (GGG-40):  up to 650°C
+//   SiMo ductile iron:      up to 760°C (most common OEM)
+//   Austenitic SS (304/321): up to 870°C
+//   Ni-Resist (D5S):        up to 900°C
+//   Inconel 713C:           up to 950°C
+//   Mar-M (MAR-M247):       up to 1050°C
+//   Stainless 347:          up to 900°C (Garrett V-band housings)
+// ============================================================================
+std::wstring TurboCalculator::RecommendHousingMaterial(double egtC) const {
+    if (egtC <= 650) return L"Ferro fundido (GGG-40) - adequado";
+    if (egtC <= 760) return L"SiMo ductile iron (OEM padrao)";
+    if (egtC <= 870) return L"Aco inox 304/321 ou Ni-Resist D5S";
+    if (egtC <= 950) return L"Inconel 713C (race/high performance)";
+    return L"Mar-M 247 ou similar (Top Fuel/Pro class)";
+}
+
+// ============================================================================
+// COMPRESSOR MAP GENERATION
+// Creates a realistic compressor map model based on inducer size
+// Ref: Garrett published GT/GTX compressor maps analysis
+//
+// A compressor map is characterized by:
+// 1. SURGE LINE - left boundary (stall, flow reversal)
+//    Shape: roughly parabolic, concave right
+//    Surge flow increases with PR
+//
+// 2. CHOKE LINE - right boundary (sonic velocity at inducer throat)
+//    Shape: nearly vertical, slight lean left at high PR
+//    Max flow ≈ f(inducer area, tip speed)
+//
+// 3. SPEED LINES - constant corrected RPM
+//    Shape: roughly horizontal at low flow, rising steeply near surge
+//    Higher speed = higher PR capability
+//
+// 4. EFFICIENCY ISLANDS - concentric contours
+//    Peak typically at 60-70% of flow range, PR 2.0-2.8
+//    Outer islands: 60%, 65%, inner: 70%, 75%, peak 76-80%
+//
+// All scaled by inducer diameter / max flow
+// ============================================================================
+TurboCalculator::CompressorMapData TurboCalculator::GenerateCompressorMap(
+    double inducerDiaMM, double maxCorrectedFlow) const {
+
+    CompressorMapData map;
+
+    // Scale map to turbo size
+    float maxFlow = (float)(maxCorrectedFlow * 1.4);  // 40% beyond operating point
+    float maxPR = 4.5f;
+    if (maxFlow < 40) maxPR = 3.5f;
+    if (maxFlow > 100) maxPR = 5.0f;
+
+    map.maxFlow = maxFlow;
+    map.maxPR = maxPR;
+
+    // Surge flow as fraction of max flow at each PR
+    // Based on analysis of Garrett GT/GTX maps
+    float surgeFraction = 0.15f;  // At PR=1, surge at ~15% of max flow
+
+    // --- SURGE LINE ---
+    for (float pr = 1.0f; pr <= maxPR; pr += 0.05f) {
+        // Surge flow increases with PR (parabolic shape)
+        float surgeFlow = maxFlow * (surgeFraction + 0.06f * (pr - 1.0f) * (pr - 1.0f));
+        surgeFlow = std::min(surgeFlow, maxFlow * 0.55f);
+        map.surgeLine.push_back({surgeFlow, pr});
+    }
+
+    // --- CHOKE LINE ---
+    for (float pr = 1.0f; pr <= maxPR; pr += 0.05f) {
+        // Choke flow decreases slightly at high PR
+        float chokeFlow = maxFlow * (1.0f - 0.02f * (pr - 1.0f) * (pr - 1.0f));
+        chokeFlow = std::max(chokeFlow, maxFlow * 0.5f);
+        map.chokeLine.push_back({chokeFlow, pr});
+    }
+
+    // --- SPEED LINES ---
+    // Generate 6 speed lines from ~40% to ~100% of max speed
+    int numSpeedLines = 6;
+    for (int i = 0; i < numSpeedLines; i++) {
+        CompressorMapData::SpeedLine sl;
+        float speedFraction = 0.4f + 0.12f * i;  // 40%, 52%, 64%, 76%, 88%, 100%
+
+        // Max PR at this speed (increases with speed squared)
+        float maxPRatSpeed = 1.0f + (maxPR - 1.0f) * speedFraction * speedFraction;
+
+        // Flow range at this speed
+        float minFlowAtSpeed = maxFlow * surgeFraction * (1.0f + 0.3f * speedFraction);
+        float maxFlowAtSpeed = maxFlow * speedFraction * 1.1f;
+
+        // Speed line: PR drops as flow increases (typical compressor characteristic)
+        for (float flow = minFlowAtSpeed; flow <= maxFlowAtSpeed; flow += maxFlow * 0.02f) {
+            float flowFraction = (flow - minFlowAtSpeed) / (maxFlowAtSpeed - minFlowAtSpeed);
+            // PR peaks near surge, drops toward choke
+            float pr = maxPRatSpeed * (1.0f - 0.4f * flowFraction * flowFraction);
+            pr = std::max(pr, 1.0f);
+            sl.points.push_back({flow, pr});
+        }
+
+        // Corrected RPM estimate (proportional to tip speed)
+        double tipSpeed = 520.0 * speedFraction;
+        double diaM = inducerDiaMM / 1000.0;
+        sl.correctedRPM = (tipSpeed * 60.0) / (3.14159 * diaM);
+
+        map.speedLines.push_back(sl);
+    }
+
+    // --- EFFICIENCY ISLANDS ---
+    // Modeled as ellipses centered at peak efficiency point
+    // Peak at approximately 55-65% of flow range, PR 2.0-2.5
+    float peakFlow = maxFlow * 0.55f;
+    float peakPR = 2.2f;
+    if (maxFlow > 80) peakPR = 2.5f;
+
+    // Efficiency levels: 60%, 65%, 70%, 75%, 78% (peak)
+    float effLevels[] = {0.60f, 0.65f, 0.70f, 0.75f, 0.78f};
+    float scaleFactor[] = {1.0f, 0.82f, 0.62f, 0.42f, 0.22f};  // Outer to inner
+
+    for (int e = 0; e < 5; e++) {
+        CompressorMapData::EfficiencyIsland island;
+        island.efficiency = effLevels[e];
+
+        float rx = maxFlow * 0.30f * scaleFactor[e];  // X radius (flow)
+        float ry = (maxPR - 1.0f) * 0.28f * scaleFactor[e];  // Y radius (PR)
+
+        // Generate ellipse points (slightly tilted)
+        for (float t = 0; t <= 6.35f; t += 0.12f) {
+            float x = peakFlow + rx * cosf(t) * 1.0f - ry * sinf(t) * 0.15f;
+            float y = peakPR + ry * sinf(t) * 1.0f + rx * cosf(t) * 0.05f;
+            if (x > 0 && y >= 1.0f) {
+                island.contour.push_back({x, y});
+            }
+        }
+
+        map.efficiencyIslands.push_back(island);
+    }
+
+    return map;
 }
