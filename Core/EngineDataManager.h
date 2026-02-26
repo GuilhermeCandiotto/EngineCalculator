@@ -10,6 +10,7 @@
 #include "ValveTrainCalculator.h"
 #include "CamshaftCalculator.h"
 #include "IntakeExhaustCalculator.h"
+#include "TurboCalculator.h"
 #include <string>
 #include <vector>
 #include <functional>
@@ -112,6 +113,21 @@ struct EngineProject {
         double waterMethRatio;
         double waterMethStartBoost;
     } alternativeFuelsData;
+
+    // Dados de turbo/supercharger
+    struct TurboData {
+        int forcedInductionType;     // 0=None, 1=Turbo, 2=Supercharger
+        int turboType;               // TurboType enum
+        int superchargerType;        // SuperchargerType enum
+        int numberOfTurbos;
+        double targetBoostPSI;
+        double targetHP;
+        double intercoolerEfficiency;
+        double intercoolerPressDrop;
+        double pipingPressDrop;
+        double filterPressDrop;
+        double driveRatio;           // Supercharger drive ratio
+    } turboData;
     
     // Construtor
     EngineProject();
@@ -161,6 +177,7 @@ public:
     void UpdateExhaustData(const EngineProject::ExhaustData& data);
     void UpdateFuelData(const EngineProject::FuelData& data);
     void UpdateAlternativeFuelsData(const EngineProject::AlternativeFuelsData& data);
+    void UpdateTurboData(const EngineProject::TurboData& data);
     
     // Novo projeto
     void NewProject();

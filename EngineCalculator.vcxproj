@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Core\AlternativeFuelsCalculator.h" />
+    <ClInclude Include="Core\TurboCalculator.h" />
     <ClInclude Include="Core\CamshaftCalculator.h" />
     <ClInclude Include="Core\CompressionCalculator.h" />
     <ClInclude Include="Core\EngineCore.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="UI\Managers\TabManager.h" />
     <ClInclude Include="UI\TabPages.h" />
     <ClInclude Include="UI\Tabs\AlternativeFuelsTab.h" />
+    <ClInclude Include="UI\Tabs\TurboTab.h" />
     <ClInclude Include="UI\Tabs\BasicTab.h" />
     <ClInclude Include="UI\Tabs\CamshaftTab.h" />
     <ClInclude Include="UI\Tabs\CompressionTab.h" />
@@ -164,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\AlternativeFuelsCalculator.cpp" />
+    <ClCompile Include="Core\TurboCalculator.cpp" />
     <ClCompile Include="Core\CamshaftCalculator.cpp" />
     <ClCompile Include="Core\CompressionCalculator.cpp" />
     <ClCompile Include="Core\EngineCore.cpp" />
@@ -187,6 +190,7 @@
     <ClCompile Include="UI\Managers\TabManager.cpp" />
     <ClCompile Include="UI\TabPages.cpp" />
     <ClCompile Include="UI\Tabs\AlternativeFuelsTab.cpp" />
+    <ClCompile Include="UI\Tabs\TurboTab.cpp" />
     <ClCompile Include="UI\Tabs\BasicTab.cpp" />
     <ClCompile Include="UI\Tabs\CamshaftTab.cpp" />
     <ClCompile Include="UI\Tabs\CompressionTab.cpp" />
@@ -223,6 +227,7 @@
     <None Include="docs\FEATURES.md" />
     <None Include="docs\FUEL_REFERENCES.md" />
     <None Include="docs\MEP_REFERENCES.md" />
+    <None Include="EngineCalculator\README.md" />
     <None Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="README.md" />

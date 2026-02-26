@@ -75,6 +75,19 @@ void EngineProject::Reset() {
     exhaustData.targetRPM = 6000.0;
     exhaustData.exhaustDuration = 220.0;
     exhaustData.isFourIntoOne = false;
+
+    // Turbo/Supercharger
+    turboData.forcedInductionType = 0;
+    turboData.turboType = 0;
+    turboData.superchargerType = 0;
+    turboData.numberOfTurbos = 1;
+    turboData.targetBoostPSI = 0.0;
+    turboData.targetHP = 0.0;
+    turboData.intercoolerEfficiency = 0.70;
+    turboData.intercoolerPressDrop = 1.5;
+    turboData.pipingPressDrop = 1.0;
+    turboData.filterPressDrop = 0.3;
+    turboData.driveRatio = 1.0;
 }
 
 bool EngineProject::IsBasicDataComplete() const {
@@ -151,6 +164,12 @@ void EngineDataManager::UpdateFuelData(const EngineProject::FuelData& data) {
 
 void EngineDataManager::UpdateAlternativeFuelsData(const EngineProject::AlternativeFuelsData& data) {
     currentProject.alternativeFuelsData = data;
+    dataChanged = true;
+    NotifyDataChanged();
+}
+
+void EngineDataManager::UpdateTurboData(const EngineProject::TurboData& data) {
+    currentProject.turboData = data;
     dataChanged = true;
     NotifyDataChanged();
 }

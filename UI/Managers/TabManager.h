@@ -19,6 +19,7 @@ class IntakeTab;
 class ExhaustTab;
 class FuelTab;
 class AlternativeFuelsTab;
+class TurboTab;
 
 class TabManager {
 private:
@@ -36,6 +37,7 @@ private:
     ExhaustTab* tabExhaust;
     FuelTab* tabFuel;
     AlternativeFuelsTab* tabAlternativeFuels;
+    TurboTab* tabTurbo;
     
     std::vector<TabPage*> tabs;
     int currentTab;

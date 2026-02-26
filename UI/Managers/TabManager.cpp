@@ -13,6 +13,7 @@
 #include "../Tabs/ExhaustTab.h"
 #include "../Tabs/FuelTab.h"
 #include "../Tabs/AlternativeFuelsTab.h"
+#include "../Tabs/TurboTab.h"
 #include "../../Core/EngineDataManager.h"
 #include "../../Core/EngineValidator.h"
 #include "StatusBarManager.h"
@@ -45,7 +46,7 @@ TabManager::TabManager(MainWindow* window, HWND hwnd, HINSTANCE hInst)
     : mainWindow(window), hwndMain(hwnd), hwndTab(nullptr), hInstance(hInst),
       tabBasic(nullptr), tabCompression(nullptr), tabValveTrain(nullptr),
       tabCamshaft(nullptr), tabIntake(nullptr), tabExhaust(nullptr),
-      tabFuel(nullptr), tabAlternativeFuels(nullptr),
+      tabFuel(nullptr), tabAlternativeFuels(nullptr), tabTurbo(nullptr),
       currentTab(0) {
 }
 
@@ -117,7 +118,10 @@ void TabManager::CreateTabControl() {
     
     tie.pszText = (LPWSTR)L"Combust. Alternativos";
     TabCtrl_InsertItem(hwndTab, 7, &tie);
-    
+
+    tie.pszText = (LPWSTR)L"Turbo/SC";
+    TabCtrl_InsertItem(hwndTab, 8, &tie);
+
     InitializeTabs();
 }
 
@@ -154,7 +158,11 @@ void TabManager::InitializeTabs() {
     tabAlternativeFuels = new AlternativeFuelsTab(hwndTab, hInstance);
     tabAlternativeFuels->Create();
     tabs.push_back(tabAlternativeFuels);
-    
+
+    tabTurbo = new TurboTab(hwndTab, hInstance);
+    tabTurbo->Create();
+    tabs.push_back(tabTurbo);
+
     // Mostra a primeira aba
     if (!tabs.empty()) {
         tabs[0]->Show(true);

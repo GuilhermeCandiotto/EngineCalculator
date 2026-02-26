@@ -1,0 +1,359 @@
+#pragma once
+// ============================================================================
+// TurboCalculator.h - Turbocharger & Supercharger Sizing Calculator
+// Engine Calculator v1.2.0 - Fevereiro 2026
+//
+// REFERENCES:
+// - Heywood, J.B. - "ICE Fundamentals" Ch.6 (Supercharging)
+// - Garrett by Honeywell - "Turbo Tech 101-103" Application Guidelines
+// - BorgWarner Turbo Systems - "Turbocharger Matching Guide"
+// - Precision Turbo & Engine - "Compressor Map Reading Guide"
+// - SAE 2006-01-0038 - "Turbocharger Matching for SI Engines"
+// - SAE 920044 - Watson & Janota - "Turbocharging the ICE"
+// - Corky Bell - "Maximum Boost" (Robert Bentley Publishers)
+// - SAE 2003-01-0732 - "Intercooler Effectiveness"
+// - SAE J1826 - "Turbocharger Gas Stand Test Code"
+// ============================================================================
+#include "EngineCore.h"
+#include <cmath>
+#include <string>
+#include <vector>
+
+// ============================================================================
+// CONSTANTS
+// Ref: Heywood Table 6.1, standard atmosphere, ideal gas relations
+// ============================================================================
+namespace TurboConstants {
+    constexpr double P_ATM_KPA = 101.325;       // Standard atmospheric pressure (kPa)
+    constexpr double P_ATM_PSI = 14.696;        // Standard atmospheric pressure (PSI)
+    constexpr double T_AMB_K = 298.15;          // Standard ambient temp (25C = 298.15K)
+    constexpr double T_AMB_C = 25.0;
+    constexpr double GAMMA_AIR = 1.4;           // Ratio of specific heats (cp/cv) for air
+    constexpr double CP_AIR = 1005.0;           // Specific heat at constant pressure (J/kg·K)
+    constexpr double R_AIR = 287.058;           // Specific gas constant for air (J/kg·K)
+    constexpr double KPA_PER_PSI = 6.89476;
+    constexpr double LB_PER_KG = 2.20462;
+    constexpr double CFM_PER_M3S = 2118.88;
+}
+
+// ============================================================================
+// TURBO TYPE ENUMS
+// ============================================================================
+enum class TurboType {
+    SINGLE_TURBO,
+    TWIN_TURBO,           // Parallel (one per bank)
+    SEQUENTIAL_TURBO,     // Small + large, staged
+    COMPOUND_TURBO,       // Series (LP → HP)
+    TWIN_SCROLL,          // Single turbo, divided exhaust housing
+    VGT                   // Variable Geometry Turbine
+};
+
+enum class SuperchargerType {
+    ROOTS,                // Positive displacement (Eaton, Magnuson)
+    TWIN_SCREW,           // Positive displacement (Whipple, Kenne Bell)
+    CENTRIFUGAL           // Procharger, Vortech, Paxton
+};
+
+// ============================================================================
+// COMPRESSOR MAP POINT
+// Ref: Garrett Turbo Tech 101 - "Reading a Compressor Map"
+// A compressor map plots Pressure Ratio vs Corrected Airflow
+// with islands of constant efficiency and speed lines.
+// ============================================================================
+struct CompressorMapPoint {
+    double correctedFlow;       // Corrected airflow (lb/min)
+    double pressureRatio;       // Total-to-total pressure ratio (P2/P1)
+    double efficiency;          // Isentropic compressor efficiency (0-1)
+    double correctedSpeed;      // Corrected shaft speed (RPM)
+};
+
+// ============================================================================
+// TURBO SIZING INPUT
+// ============================================================================
+struct TurboSizingInput {
+    // Engine parameters
+    double displacementCC;      // Engine displacement (cc)
+    double targetHP;            // Target flywheel HP
+    double maxRPM;              // Max engine RPM
+    double numCylinders;        // Number of cylinders
+    double volumetricEfficiency; // VE at target RPM (fraction, e.g. 0.85)
+
+    // Boost parameters
+    double targetBoostPSI;      // Target boost pressure (PSI gauge)
+    double ambientTempC;        // Ambient temperature (C)
+    double ambientPressureKPA;  // Ambient pressure (kPa), default 101.325
+
+    // System losses
+    double intercoolerPressDrop; // Intercooler pressure drop (PSI), typical 1-2
+    double pipingPressDrop;      // Piping losses (PSI), typical 0.5-1.5
+    double filterPressDrop;      // Air filter pressure drop (PSI), typical 0.3-0.5
+
+    // Turbo config
+    TurboType turboType;
+    int numberOfTurbos;         // 1 or 2
+
+    TurboSizingInput()
+        : displacementCC(0), targetHP(0), maxRPM(0), numCylinders(4),
+          volumetricEfficiency(0.85), targetBoostPSI(0),
+          ambientTempC(TurboConstants::T_AMB_C),
+          ambientPressureKPA(TurboConstants::P_ATM_KPA),
+          intercoolerPressDrop(1.5), pipingPressDrop(1.0),
+          filterPressDrop(0.3), turboType(TurboType::SINGLE_TURBO),
+          numberOfTurbos(1) {}
+};
+
+// ============================================================================
+// INTERCOOLER INPUT
+// Ref: SAE 2003-01-0732, Garrett Application Guidelines
+// ============================================================================
+struct IntercoolerInput {
+    double boostPressurePSI;
+    double compressorEfficiency;   // (0-1)
+    double ambientTempC;
+    double targetIATempC;          // Target intake air temp after IC
+    double intercoolerEfficiency;  // Typical 0.60-0.85 (air-air), 0.80-0.95 (air-water)
+    bool isAirToWater;
+
+    IntercoolerInput()
+        : boostPressurePSI(0), compressorEfficiency(0.72),
+          ambientTempC(TurboConstants::T_AMB_C), targetIATempC(40.0),
+          intercoolerEfficiency(0.70), isAirToWater(false) {}
+};
+
+// ============================================================================
+// TURBO SIZING RESULTS
+// ============================================================================
+struct TurboSizingResult {
+    // Airflow requirements
+    double requiredAirflowKGS;  // Required mass airflow (kg/s)
+    double requiredAirflowLBM;  // Required mass airflow (lb/min)
+    double requiredAirflowCFM;  // Volume airflow at inlet (CFM)
+    double correctedAirflow;    // Corrected airflow for compressor map (lb/min)
+
+    // Pressure
+    double pressureRatioTotal;  // Total pressure ratio required (P2c/P1c)
+    double absoluteBoostKPA;    // Absolute boost pressure (kPa)
+    double boostPSIG;           // Gauge boost pressure (PSI)
+
+    // Temperature
+    double compressorOutletTempC;  // T2 - Temperature after compressor (C)
+    double tempRiseAcrossCompressor; // Delta-T compressor (C)
+
+    // Power
+    double compressorPowerKW;   // Power consumed by compressor (kW)
+    double compressorPowerHP;   // Power consumed by compressor (HP)
+
+    // Sizing recommendation
+    double inducer_mm;          // Recommended compressor inducer diameter (mm)
+    double exducer_mm;          // Recommended compressor exducer diameter (mm)
+    double turbineWheelDia_mm;  // Recommended turbine wheel diameter (mm)
+    std::wstring sizeClass;     // "Small", "Medium", "Large", "Very Large"
+
+    // Turbo recommendations (Garrett frame sizes)
+    std::wstring garrettFrame;      // e.g. "GT2860R", "GTX3076R"
+    std::wstring borgWarnerFrame;   // e.g. "EFR 6758", "EFR 7670"
+    std::wstring precisionFrame;    // e.g. "PT5858", "PT6266"
+
+    // Efficiency
+    double estimatedCompressorEff;  // Estimated efficiency at operating point
+    double estimatedTurbineEff;     // Estimated turbine efficiency
+
+    // Intercooler
+    double heatRejectionKW;     // Heat to be rejected by intercooler
+    double icCoreSizeEstimate;  // Estimated IC core volume (liters)
+
+    // Warnings
+    std::wstring warnings;
+    std::wstring recommendations;
+};
+
+// ============================================================================
+// SUPERCHARGER RESULTS
+// ============================================================================
+struct SuperchargerResult {
+    double requiredDisplacementCID; // Required SC displacement (CID per revolution)
+    double parasticLossHP;         // Power consumed by supercharger
+    double thermalEfficiency;      // Isentropic efficiency
+    double outletTempC;            // Charge temperature out
+    double netHPGain;              // HP gained minus parasitic loss
+    double boostAtRPM;             // Boost at given RPM
+    std::wstring typeRecommendation;
+    std::wstring warnings;
+};
+
+// ============================================================================
+// WASTEGATE SIZING
+// Ref: Garrett Tech - "Wastegate Sizing", Turbonetics Application Guide
+// ============================================================================
+struct WastegateResult {
+    double requiredFlowArea_mm2;   // Minimum flow area (mm²)
+    double recommendedDiameter_mm; // Recommended WG valve diameter (mm)
+    double springPressurePSI;      // WG spring base pressure
+    bool internalSufficient;       // Can internal wastegate handle it?
+    std::wstring recommendation;
+};
+
+// ============================================================================
+// TurboCalculator CLASS
+// ============================================================================
+class TurboCalculator {
+private:
+    const EngineCore* engine;
+
+public:
+    explicit TurboCalculator(const EngineCore* eng = nullptr);
+    ~TurboCalculator();
+
+    // ========== PRIMARY CALCULATIONS ==========
+
+    // Calculate required airflow for target power
+    // Ref: Heywood eq. 6.2 - Mass airflow for SI engine
+    //   ma = (Vd * N * ηv * ρa) / (nR)
+    //   where nR = 2 for 4-stroke
+    // Alternative (from power target):
+    //   ma = P_target / (ηf * Qfuel / AFR)
+    //   Simplified: HP = (airflow_lb/min × 10.42) for gasoline (Garrett method)
+    double CalculateRequiredAirflow(const TurboSizingInput& input) const;
+
+    // Calculate compressor pressure ratio
+    // Ref: Garrett Turbo Tech 103
+    //   PR = (P_boost + P_atm + ΔP_losses) / (P_atm - ΔP_filter)
+    //   Must account for intercooler drop, piping losses, filter restriction
+    double CalculatePressureRatio(const TurboSizingInput& input) const;
+
+    // Calculate corrected airflow for compressor map lookup
+    // Ref: SAE J1826, Garrett - Corrected to standard conditions
+    //   W_corrected = W_actual × √(T_inlet/T_ref) / (P_inlet/P_ref)
+    //   T_ref = 545°R (85°F = 302.6K), P_ref = 14.696 PSI (Garrett standard)
+    double CalculateCorrectedAirflow(double massFlowLBM,
+                                      double inletTempK,
+                                      double inletPressureKPA) const;
+
+    // Complete turbo sizing analysis
+    TurboSizingResult CalculateTurboSizing(const TurboSizingInput& input) const;
+
+    // ========== COMPRESSOR CALCULATIONS ==========
+
+    // Compressor outlet temperature (isentropic + efficiency)
+    // Ref: Heywood eq. 6.7
+    //   T2 = T1 × [1 + (PR^((γ-1)/γ) - 1) / ηc]
+    //   where ηc = isentropic compressor efficiency (typically 0.65-0.78)
+    double CalculateCompressorOutletTemp(double inletTempK,
+                                          double pressureRatio,
+                                          double compressorEfficiency) const;
+
+    // Compressor power consumption
+    // Ref: Heywood eq. 6.8
+    //   Wc = ma × cp × T1 × (PR^((γ-1)/γ) - 1) / ηc
+    double CalculateCompressorPower(double massFlowKGS,
+                                     double inletTempK,
+                                     double pressureRatio,
+                                     double compressorEfficiency) const;
+
+    // Estimate compressor efficiency at operating point
+    // Ref: Garrett compressor maps empirical data
+    //   Peak efficiency typically at 65-75% of surge-to-choke range
+    //   Efficiency islands roughly follow: η = η_peak × f(distance_from_peak)
+    double EstimateCompressorEfficiency(double correctedFlow,
+                                         double pressureRatio) const;
+
+    // Compressor inducer diameter estimation
+    // Ref: BorgWarner matching guide, empirical correlation
+    //   D_inducer ∝ (airflow)^0.5 with corrections for PR and speed
+    double EstimateInducerDiameter(double correctedFlowLBM) const;
+
+    // ========== TURBINE CALCULATIONS ==========
+
+    // Turbine A/R selection guide
+    // Ref: Garrett Turbo Tech 102 - "A/R and its effects"
+    //   Smaller A/R = faster spool, higher backpressure, lower peak power
+    //   Larger A/R = slower spool, lower backpressure, higher peak power
+    //   Rule of thumb: A/R ≈ displacement_liters × 0.04-0.06 (street)
+    //                  A/R ≈ displacement_liters × 0.06-0.10 (race)
+    double SuggestTurbineAR(double displacementLiters,
+                             double targetBoostPSI,
+                             bool isRaceApplication) const;
+
+    // Turbine wheel diameter estimation
+    // Ref: BorgWarner empirical data
+    //   Turbine wheel ≈ 80-90% of compressor exducer for matched turbo
+    double EstimateTurbineWheelDiameter(double compressorExducerMM) const;
+
+    // ========== INTERCOOLER ==========
+
+    // Intercooler outlet temperature
+    // Ref: SAE 2003-01-0732
+    //   T_out = T_hot - ε × (T_hot - T_cold)
+    //   ε = intercooler effectiveness (0.60-0.85 air/air, 0.80-0.95 air/water)
+    double CalculateIntercoolerOutletTemp(double compressorOutTempC,
+                                           double ambientTempC,
+                                           double effectiveness) const;
+
+    // Heat rejection required
+    // Ref: Thermodynamics - Q = ma × cp × ΔT
+    double CalculateHeatRejection(double massFlowKGS,
+                                   double tempDropC) const;
+
+    // Intercooler core volume estimate
+    // Ref: Garrett application data, Bell "Maximum Boost"
+    //   Rule of thumb: ~1L core per 100hp of heat rejection
+    double EstimateICCoreVolume(double heatRejectionKW) const;
+
+    // ========== WASTEGATE ==========
+
+    // Wastegate flow area required
+    // Ref: Garrett wastegate sizing, Turbonetics tech bulletin
+    //   Flow area must bypass enough exhaust to prevent overboosting
+    WastegateResult CalculateWastegate(double targetBoostPSI,
+                                        double maxExhaustFlowKGS,
+                                        double turbineEfficiency) const;
+
+    // ========== SUPERCHARGER ==========
+
+    // Roots/Twin-Screw displacement sizing
+    // Ref: Eaton supercharger application guide
+    //   SC_displacement = engine_displacement × PR × (1/ηv_sc)
+    //   Parasitic loss ≈ 15-20% of boost power (Roots), 10-15% (Twin-Screw)
+    SuperchargerResult CalculateSupercharger(double displacementCC,
+                                              double targetBoostPSI,
+                                              double maxRPM,
+                                              double driveRatio,
+                                              SuperchargerType type) const;
+
+    // ========== TURBO MATCHING ==========
+
+    // Recommend Garrett frame size based on airflow
+    // Ref: Garrett product catalog 2024
+    //   GT/GTX series sizing by corrected airflow range
+    std::wstring RecommendGarrettFrame(double correctedFlowLBM,
+                                        double pressureRatio) const;
+
+    // Recommend BorgWarner EFR frame
+    // Ref: BorgWarner EFR product line specifications
+    std::wstring RecommendBorgWarnerFrame(double correctedFlowLBM,
+                                           double pressureRatio) const;
+
+    // Recommend Precision Turbo frame
+    // Ref: Precision Turbo & Engine product catalog
+    std::wstring RecommendPrecisionFrame(double correctedFlowLBM,
+                                          double pressureRatio) const;
+
+    // ========== BOOST THRESHOLD ==========
+
+    // Estimate boost threshold RPM (RPM where turbo starts making boost)
+    // Ref: Garrett application data
+    //   Depends on: turbine A/R, turbo inertia, exhaust energy
+    //   Empirical: threshold ≈ 2000-3500 RPM (street), 4000-5000 (race)
+    double EstimateBoostThresholdRPM(double turbineAR,
+                                      double displacementLiters,
+                                      double numCylinders) const;
+
+    // ========== UTILITY ==========
+
+    double PSItoKPA(double psi) const { return psi * TurboConstants::KPA_PER_PSI; }
+    double KPAtoPSI(double kpa) const { return kpa / TurboConstants::KPA_PER_PSI; }
+    double CelsiusToKelvin(double c) const { return c + 273.15; }
+    double KelvinToCelsius(double k) const { return k - 273.15; }
+    double HPtoKW(double hp) const { return hp * 0.7457; }
+    double KWtoHP(double kw) const { return kw / 0.7457; }
+};
