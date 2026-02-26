@@ -1,0 +1,809 @@
+{
+  "version": "1.0.0",
+  "category": "Valves",
+  "description": "Válvulas de alta performance - 40+ fabricantes premium",
+  "lastUpdated": "2026-02-15",
+  "totalComponents": 40,
+  "components": [
+    {
+      "name": "Ferrea 5000 Series Intake Valve LS",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5304-8",
+      "category": "Valve",
+      "application": "Chevrolet LS1/LS2/LS3 (Intake)",
+      "price": 24.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 55.88,
+        "stemDiameter": 8.00,
+        "overallLength": 118.11,
+        "material": "Stainless Steel 21-4N",
+        "weight": 95.0,
+        "maxRPM": 8500,
+        "maxLift": 16.0
+      },
+      "description": "Ferrea 5000 series, durabilidade comprovada",
+      "tags": ["Ferrea", "LS", "Intake", "Stainless"]
+    },
+    {
+      "name": "Ferrea 6000 Series Exhaust Valve LS",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F6304-8",
+      "category": "Valve",
+      "application": "Chevrolet LS1/LS2/LS3 (Exhaust)",
+      "price": 27.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 50.80,
+        "stemDiameter": 8.00,
+        "overallLength": 114.30,
+        "material": "Inconel 751",
+        "weight": 92.0,
+        "maxRPM": 8500,
+        "maxLift": 15.0
+      },
+      "description": "Inconel para escape, suporta altíssimas temperaturas",
+      "tags": ["Ferrea", "LS", "Exhaust", "Inconel"]
+    },
+    {
+      "name": "Ferrea Honda B-Series Intake 34mm",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F1105-8",
+      "category": "Valve",
+      "application": "Honda B16A/B18C (Intake)",
+      "price": 22.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 5.50,
+        "overallLength": 108.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 65.0,
+        "maxRPM": 9500,
+        "maxLift": 13.0
+      },
+      "description": "Oversized +1mm para B-series, ganho de fluxo",
+      "tags": ["Ferrea", "Honda", "B-Series", "Oversized"]
+    },
+    {
+      "name": "Ferrea Competition Plus Ford Coyote Intake",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5145-1",
+      "category": "Valve",
+      "application": "Ford Modular 4.6L/5.0L (Intake)",
+      "price": 29.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 38.00,
+        "stemDiameter": 6.00,
+        "overallLength": 112.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 80.0,
+        "maxRPM": 8500,
+        "maxLift": 14.5
+      },
+      "description": "Competition Plus para Ford Modular/Coyote",
+      "tags": ["Ferrea", "Ford", "Coyote", "Race"]
+    },
+    {
+      "name": "Ferrea SBC Intake 2.02",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5100-8",
+      "category": "Valve",
+      "application": "Chevrolet Small Block 350 (Intake)",
+      "price": 19.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 51.31,
+        "stemDiameter": 8.00,
+        "overallLength": 127.00,
+        "material": "Stainless Steel 8740",
+        "weight": 105.0,
+        "maxRPM": 7500,
+        "maxLift": 14.0
+      },
+      "description": "Ferrea 2.02\" intake para SBC",
+      "tags": ["Ferrea", "SBC", "350", "Intake"]
+    },
+    {
+      "name": "Manley Severe Duty Intake SBC",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11611-8",
+      "category": "Valve",
+      "application": "Chevrolet Small Block 350 (Intake)",
+      "price": 19.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 50.80,
+        "stemDiameter": 8.00,
+        "overallLength": 127.00,
+        "material": "Stainless Steel 8740",
+        "weight": 110.0,
+        "maxRPM": 7500,
+        "maxLift": 14.5
+      },
+      "description": "Severe Duty para SBC, durabilidade extrema",
+      "tags": ["Manley", "SBC", "Severe Duty"]
+    },
+    {
+      "name": "Manley Race Master Exhaust SBC",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11614-8",
+      "category": "Valve",
+      "application": "Chevrolet Small Block 350 (Exhaust)",
+      "price": 24.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 44.45,
+        "stemDiameter": 8.00,
+        "overallLength": 121.92,
+        "material": "Inconel 718",
+        "weight": 105.0,
+        "maxRPM": 8000,
+        "maxLift": 14.0
+      },
+      "description": "Race Master Inconel, para competição",
+      "tags": ["Manley", "SBC", "Race", "Inconel"]
+    },
+    {
+      "name": "Manley Nissan RB26 Intake 33mm",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11820-24",
+      "category": "Valve",
+      "application": "Nissan RB26DETT GT-R (Intake)",
+      "price": 29.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 33.00,
+        "stemDiameter": 6.00,
+        "overallLength": 106.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 70.0,
+        "maxRPM": 9000,
+        "maxLift": 13.0
+      },
+      "description": "Oversized para RB26, +1mm de diâmetro",
+      "tags": ["Manley", "RB26", "GT-R", "Oversized"]
+    },
+    {
+      "name": "Manley Pro Series 4G63 Intake",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11925-8",
+      "category": "Valve",
+      "application": "Mitsubishi 4G63 EVO (Intake)",
+      "price": 27.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 5.50,
+        "overallLength": 105.50,
+        "material": "Stainless Steel 21-4N",
+        "weight": 69.0,
+        "maxRPM": 8500,
+        "maxLift": 12.5
+      },
+      "description": "Pro Series para EVO turbo",
+      "tags": ["Manley", "4G63", "EVO", "Turbo"]
+    },
+    {
+      "name": "Manley Extreme Duty BBC Exhaust",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11618-8",
+      "category": "Valve",
+      "application": "Big Block Chevy 454/502 (Exhaust)",
+      "price": 34.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 50.80,
+        "stemDiameter": 8.75,
+        "overallLength": 125.00,
+        "material": "Inconel 718",
+        "weight": 125.0,
+        "maxRPM": 7500,
+        "maxLift": 15.0
+      },
+      "description": "Extreme Duty para BBC, stem reforçado",
+      "tags": ["Manley", "BBC", "Extreme Duty"]
+    },
+    {
+      "name": "Del West Titanium Intake F1",
+      "manufacturer": "Del West Engineering",
+      "partNumber": "DW-TI-2000",
+      "category": "Valve",
+      "application": "F1/IndyCar/NASCAR (Custom)",
+      "price": 199.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 45.00,
+        "stemDiameter": 7.00,
+        "overallLength": 110.00,
+        "material": "Titanium Ti-6Al-4V",
+        "weight": 45.0,
+        "maxRPM": 15000,
+        "maxLift": 15.0
+      },
+      "description": "Titanium de competição, ultra leve",
+      "tags": ["Del West", "Titanium", "F1", "Racing"]
+    },
+    {
+      "name": "Supertech Intake Valve K20 35mm",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "INV7035-1",
+      "category": "Valve",
+      "application": "Honda K20A/K24 (Intake)",
+      "price": 18.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 35.00,
+        "stemDiameter": 5.50,
+        "overallLength": 107.50,
+        "material": "Stainless Steel 8740",
+        "weight": 68.0,
+        "maxRPM": 9000,
+        "maxLift": 13.5
+      },
+      "description": "Ótimo custo-benefício para K-series",
+      "tags": ["Supertech", "K20", "Budget"]
+    },
+    {
+      "name": "Supertech Exhaust Valve K20 30mm",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "EXV7030-1",
+      "category": "Valve",
+      "application": "Honda K20A/K24 (Exhaust)",
+      "price": 21.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 30.00,
+        "stemDiameter": 5.50,
+        "overallLength": 104.50,
+        "material": "Inconel 751",
+        "weight": 65.0,
+        "maxRPM": 9000,
+        "maxLift": 12.5
+      },
+      "description": "Inconel para escape K-series",
+      "tags": ["Supertech", "K20", "Exhaust"]
+    },
+    {
+      "name": "Supertech Subaru EJ25 Exhaust 29mm",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "EXV9029-1",
+      "category": "Valve",
+      "application": "Subaru EJ25 WRX/STI (Exhaust)",
+      "price": 23.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 29.00,
+        "stemDiameter": 6.00,
+        "overallLength": 102.00,
+        "material": "Stainless Steel 8740",
+        "weight": 71.0,
+        "maxRPM": 8000,
+        "maxLift": 12.0
+      },
+      "description": "Opção econômica para Subaru",
+      "tags": ["Supertech", "Subaru", "WRX", "Budget"]
+    },
+    {
+      "name": "GSC Power-Division Subaru Intake 34.5mm",
+      "manufacturer": "GSC Power-Division",
+      "partNumber": "3020-8",
+      "category": "Valve",
+      "application": "Subaru EJ25 WRX/STI (Intake)",
+      "price": 26.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.50,
+        "stemDiameter": 6.00,
+        "overallLength": 105.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 72.0,
+        "maxRPM": 8500,
+        "maxLift": 12.5
+      },
+      "description": "GSC é referência em Subaru, +0.5mm oversized",
+      "tags": ["GSC", "Subaru", "STI", "Oversized"]
+    },
+    {
+      "name": "GSC Power-Division Subaru Exhaust 29mm",
+      "manufacturer": "GSC Power-Division",
+      "partNumber": "3021-8",
+      "category": "Valve",
+      "application": "Subaru EJ25 WRX/STI (Exhaust)",
+      "price": 28.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 29.00,
+        "stemDiameter": 6.00,
+        "overallLength": 102.00,
+        "material": "Inconel 718",
+        "weight": 70.0,
+        "maxRPM": 8500,
+        "maxLift": 12.0
+      },
+      "description": "Inconel 718 para turbo, suporta EGT alto",
+      "tags": ["GSC", "Subaru", "Turbo", "Inconel"]
+    },
+    {
+      "name": "Kibblewhite Black Diamond Harley Intake",
+      "manufacturer": "Kibblewhite Precision Machining",
+      "partNumber": "20-4925BD",
+      "category": "Valve",
+      "application": "Harley-Davidson Twin Cam (Intake)",
+      "price": 32.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 44.45,
+        "stemDiameter": 8.00,
+        "overallLength": 120.00,
+        "material": "Stainless Steel + DLC Coating",
+        "weight": 95.0,
+        "maxRPM": 7000,
+        "maxLift": 14.0
+      },
+      "description": "Black Diamond coating, reduz fricção",
+      "tags": ["Kibblewhite", "Harley", "DLC"]
+    },
+    {
+      "name": "Tomei Genesis SR20DET Intake 34mm",
+      "manufacturer": "Tomei Powered",
+      "partNumber": "1532A034",
+      "category": "Valve",
+      "application": "Nissan SR20DET (Intake)",
+      "price": 34.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 5.50,
+        "overallLength": 106.50,
+        "material": "Stainless Steel 21-4N",
+        "weight": 67.0,
+        "maxRPM": 9000,
+        "maxLift": 13.0
+      },
+      "description": "Tomei Genesis, qualidade JDM premium",
+      "tags": ["Tomei", "SR20DET", "JDM"]
+    },
+    {
+      "name": "HKS Turbo Spec RB26 Exhaust",
+      "manufacturer": "HKS Japan",
+      "partNumber": "1401-RN001",
+      "category": "Valve",
+      "application": "Nissan RB26DETT (Exhaust)",
+      "price": 39.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 29.00,
+        "stemDiameter": 6.00,
+        "overallLength": 103.00,
+        "material": "Inconel 751",
+        "weight": 68.0,
+        "maxRPM": 9000,
+        "maxLift": 12.5
+      },
+      "description": "HKS Turbo Spec, otimizado para boost",
+      "tags": ["HKS", "RB26", "GT-R", "Turbo"]
+    },
+    {
+      "name": "Skunk2 Pro Series B-Series Intake 34mm",
+      "manufacturer": "Skunk2 Racing",
+      "partNumber": "311-05-1535",
+      "category": "Valve",
+      "application": "Honda B16A/B18C (Intake)",
+      "price": 25.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 5.50,
+        "overallLength": 108.00,
+        "material": "Stainless Steel 8740",
+        "weight": 66.0,
+        "maxRPM": 9500,
+        "maxLift": 13.0
+      },
+      "description": "Skunk2 oversized para B-series",
+      "tags": ["Skunk2", "B-Series", "Oversized"]
+    },
+    {
+      "name": "PAC Racing Titanium Intake Universal",
+      "manufacturer": "PAC Racing Springs",
+      "partNumber": "1247-TI",
+      "category": "Valve",
+      "application": "Universal (Custom Race)",
+      "price": 179.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 40.00,
+        "stemDiameter": 7.00,
+        "overallLength": 115.00,
+        "material": "Titanium Ti-6Al-4V",
+        "weight": 52.0,
+        "maxRPM": 12000,
+        "maxLift": 16.0
+      },
+      "description": "PAC Titanium, ultra leve, race engines",
+      "tags": ["PAC", "Titanium", "Race", "Ultra-Light"]
+    },
+    {
+      "name": "Ferrea Competition Plus 2JZ Intake",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5200-6",
+      "category": "Valve",
+      "application": "Toyota 2JZ-GTE/GE (Intake)",
+      "price": 31.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 33.50,
+        "stemDiameter": 6.00,
+        "overallLength": 110.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 75.0,
+        "maxRPM": 9000,
+        "maxLift": 13.5
+      },
+      "description": "Ferrea para 2JZ turbo/N/A",
+      "tags": ["Ferrea", "2JZ", "Supra"]
+    },
+    {
+      "name": "Manley Race Master 2JZ Exhaust",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11850-6",
+      "category": "Valve",
+      "application": "Toyota 2JZ-GTE (Exhaust)",
+      "price": 33.99,
+      "specs": {
+        "valveType": "Exhaust",
+        "diameter": 29.50,
+        "stemDiameter": 6.00,
+        "overallLength": 107.00,
+        "material": "Inconel 718",
+        "weight": 72.0,
+        "maxRPM": 9000,
+        "maxLift": 13.0
+      },
+      "description": "Manley Race Master para 2JZ turbo",
+      "tags": ["Manley", "2JZ-GTE", "Turbo"]
+    },
+    {
+      "name": "Brian Crower SR20DET Intake 34mm",
+      "manufacturer": "Brian Crower",
+      "partNumber": "BC1010",
+      "category": "Valve",
+      "application": "Nissan SR20DET (Intake)",
+      "price": 28.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 5.50,
+        "overallLength": 106.50,
+        "material": "Stainless Steel 21-4N",
+        "weight": 68.0,
+        "maxRPM": 9000,
+        "maxLift": 13.0
+      },
+      "description": "Brian Crower intake oversized SR20",
+      "tags": ["Brian Crower", "SR20DET", "Oversized"]
+    },
+    {
+      "name": "GSC Power-Division 4G63 Intake 34mm",
+      "manufacturer": "GSC Power-Division",
+      "partNumber": "3030-8",
+      "category": "Valve",
+      "application": "Mitsubishi 4G63 EVO (Intake)",
+      "price": 27.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 5.50,
+        "overallLength": 105.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 70.0,
+        "maxRPM": 8500,
+        "maxLift": 12.5
+      },
+      "description": "GSC intake para EVO turbo",
+      "tags": ["GSC", "4G63", "EVO"]
+    },
+    {
+      "name": "Ferrea BBC Intake 2.19",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5400-8",
+      "category": "Valve",
+      "application": "Big Block Chevy 454/502 (Intake)",
+      "price": 29.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 55.63,
+        "stemDiameter": 8.75,
+        "overallLength": 134.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 135.0,
+        "maxRPM": 7500,
+        "maxLift": 15.0
+      },
+      "description": "Ferrea 2.19\" intake para BBC",
+      "tags": ["Ferrea", "BBC", "454", "502"]
+    },
+    {
+      "name": "Manley Pro Series BMW S54 Intake",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11900-6",
+      "category": "Valve",
+      "application": "BMW S54B32 M3 E46 (Intake)",
+      "price": 32.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 6.00,
+        "overallLength": 108.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 73.0,
+        "maxRPM": 8500,
+        "maxLift": 13.0
+      },
+      "description": "Manley para S54 M3 high-rev",
+      "tags": ["Manley", "BMW", "S54", "M3"]
+    },
+    {
+      "name": "Supertech BMW N54 Intake 35mm",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "INV8035-6",
+      "category": "Valve",
+      "application": "BMW N54B30 Twin-Turbo 335i (Intake)",
+      "price": 24.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 35.00,
+        "stemDiameter": 6.00,
+        "overallLength": 107.00,
+        "material": "Stainless Steel 8740",
+        "weight": 76.0,
+        "maxRPM": 8000,
+        "maxLift": 12.5
+      },
+      "description": "Supertech para N54 turbo BMW",
+      "tags": ["Supertech", "BMW", "N54", "Turbo"]
+    },
+    {
+      "name": "Ferrea VW/Audi 1.8T Intake 34mm",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5250-4",
+      "category": "Valve",
+      "application": "VW/Audi 1.8T 20V Turbo (Intake)",
+      "price": 26.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 6.00,
+        "overallLength": 105.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 71.0,
+        "maxRPM": 8000,
+        "maxLift": 12.0
+      },
+      "description": "Ferrea para VAG 1.8T turbo",
+      "tags": ["Ferrea", "VW", "Audi", "1.8T"]
+    },
+    {
+      "name": "Manley Severe Duty Ford 302 Intake",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11700-8",
+      "category": "Valve",
+      "application": "Ford 302/351W Windsor (Intake)",
+      "price": 21.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 50.80,
+        "stemDiameter": 8.00,
+        "overallLength": 125.00,
+        "material": "Stainless Steel 8740",
+        "weight": 108.0,
+        "maxRPM": 7500,
+        "maxLift": 14.0
+      },
+      "description": "Manley Severe Duty para Ford Windsor",
+      "tags": ["Manley", "Ford", "302", "351W"]
+    },
+    {
+      "name": "Ferrea LS7 Titanium Intake 2.20",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F7500-TI-8",
+      "category": "Valve",
+      "application": "Chevrolet LS7 7.0L Z06 (Intake)",
+      "price": 149.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 55.88,
+        "stemDiameter": 8.00,
+        "overallLength": 118.11,
+        "material": "Titanium Ti-6Al-4V",
+        "weight": 62.0,
+        "maxRPM": 9000,
+        "maxLift": 16.0
+      },
+      "description": "Ferrea Titanium ultra leve para LS7",
+      "tags": ["Ferrea", "LS7", "Z06", "Titanium"]
+    },
+    {
+      "name": "Manley Pro Series Porsche 911 Intake",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11950-6",
+      "category": "Valve",
+      "application": "Porsche 911 997 Carrera S Flat-6 (Intake)",
+      "price": 39.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 39.00,
+        "stemDiameter": 7.00,
+        "overallLength": 112.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 85.0,
+        "maxRPM": 8500,
+        "maxLift": 13.5
+      },
+      "description": "Manley para Porsche 911 flat-6",
+      "tags": ["Manley", "Porsche", "911", "Flat-6"]
+    },
+    {
+      "name": "Supertech Mercedes AMG M156 Intake",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "INV9038-8",
+      "category": "Valve",
+      "application": "Mercedes-Benz M156 AMG C63 (Intake)",
+      "price": 34.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 38.00,
+        "stemDiameter": 7.00,
+        "overallLength": 110.00,
+        "material": "Stainless Steel 8740",
+        "weight": 82.0,
+        "maxRPM": 8000,
+        "maxLift": 13.0
+      },
+      "description": "Supertech para AMG M156 V8",
+      "tags": ["Supertech", "Mercedes", "AMG", "C63"]
+    },
+    {
+      "name": "Ferrea Alfa Romeo Busso Intake 36mm",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5350-6",
+      "category": "Valve",
+      "application": "Alfa Romeo Busso V6 3.2L (Intake)",
+      "price": 36.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 36.00,
+        "stemDiameter": 6.50,
+        "overallLength": 108.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 77.0,
+        "maxRPM": 8000,
+        "maxLift": 12.5
+      },
+      "description": "Ferrea para lendário Busso V6",
+      "tags": ["Ferrea", "Alfa-Romeo", "Busso", "V6"]
+    },
+    {
+      "name": "Manley Race Master Ferrari F154 Intake",
+      "manufacturer": "Manley Performance",
+      "partNumber": "12000-8",
+      "category": "Valve",
+      "application": "Ferrari F154 V8 Twin-Turbo 488 (Intake)",
+      "price": 79.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 35.00,
+        "stemDiameter": 6.00,
+        "overallLength": 106.00,
+        "material": "Stainless Steel 21-4N + Coating",
+        "weight": 70.0,
+        "maxRPM": 9000,
+        "maxLift": 13.0
+      },
+      "description": "Manley Race Master para Ferrari exotic",
+      "tags": ["Manley", "Ferrari", "F154", "Exotic"]
+    },
+    {
+      "name": "Ferrea Lamborghini V10 Intake Titanium",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F7600-TI-10",
+      "category": "Valve",
+      "application": "Lamborghini Huracán V10 5.2L (Intake)",
+      "price": 189.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 6.00,
+        "overallLength": 105.00,
+        "material": "Titanium Ti-6Al-4V",
+        "weight": 58.0,
+        "maxRPM": 10000,
+        "maxLift": 14.0
+      },
+      "description": "Ferrea Titanium para Lamborghini V10",
+      "tags": ["Ferrea", "Lamborghini", "V10", "Titanium"]
+    },
+    {
+      "name": "Supertech VW AP 1.8L Intake 36mm",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "INV7036-BR",
+      "category": "Valve",
+      "application": "VW AP 1.8L/2.0L Brasil (Intake)",
+      "price": 22.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 36.00,
+        "stemDiameter": 7.00,
+        "overallLength": 110.00,
+        "material": "Stainless Steel 8740",
+        "weight": 78.0,
+        "maxRPM": 7500,
+        "maxLift": 12.0
+      },
+      "description": "Supertech para motor AP brasileiro",
+      "tags": ["Supertech", "VW-AP", "Brasil", "Gol"]
+    },
+    {
+      "name": "Manley Opala 250-S Intake 1.94",
+      "manufacturer": "Manley Performance",
+      "partNumber": "11750-6",
+      "category": "Valve",
+      "application": "Chevrolet Opala 250-S 4.1L I6 Brasil (Intake)",
+      "price": 24.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 49.28,
+        "stemDiameter": 8.00,
+        "overallLength": 128.00,
+        "material": "Stainless Steel 8740",
+        "weight": 102.0,
+        "maxRPM": 7000,
+        "maxLift": 13.0
+      },
+      "description": "Manley para lendário Opala 250-S",
+      "tags": ["Manley", "Opala", "Brasil", "250-S"]
+    },
+    {
+      "name": "Ferrea Ford CHT 1.6L Intake 34mm",
+      "manufacturer": "Ferrea Racing Components",
+      "partNumber": "F5150-BR",
+      "category": "Valve",
+      "application": "Ford CHT 1.6L Brasil (Intake)",
+      "price": 21.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 34.00,
+        "stemDiameter": 7.00,
+        "overallLength": 107.00,
+        "material": "Stainless Steel 21-4N",
+        "weight": 74.0,
+        "maxRPM": 7500,
+        "maxLift": 11.5
+      },
+      "description": "Ferrea para CHT Escort/Del Rey Brasil",
+      "tags": ["Ferrea", "CHT", "Ford", "Brasil"]
+    },
+    {
+      "name": "Supertech Fiat Fire 1.4T Intake 30mm",
+      "manufacturer": "Supertech Performance",
+      "partNumber": "INV6030-BR",
+      "category": "Valve",
+      "application": "Fiat Fire 1.4L 16V Turbo Abarth Brasil (Intake)",
+      "price": 23.99,
+      "specs": {
+        "valveType": "Intake",
+        "diameter": 30.00,
+        "stemDiameter": 5.50,
+        "overallLength": 98.00,
+        "material": "Stainless Steel 8740",
+        "weight": 62.0,
+        "maxRPM": 8000,
+        "maxLift": 11.0
+      },
+      "description": "Supertech para Fiat Fire turbo Abarth 500",
+      "tags": ["Supertech", "Fiat", "Fire", "Brasil"]
+    }
+  ]
+}

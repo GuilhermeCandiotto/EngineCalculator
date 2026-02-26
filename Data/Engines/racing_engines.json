@@ -1,0 +1,1492 @@
+﻿{
+  "version": "1.0.0",
+  "category": "Race Engines",
+  "description": "Motores de competi��o profissional - F1, IndyCar, NASCAR, NHRA, Stock Car",
+  "engines": [
+    {
+      "name": "Mercedes-AMG F1 M13 E Performance",
+      "description": "Mercedes-AMG F1 Power Unit - 1.6L V6 Turbo Hybrid (2022)",
+      "application": "Fórmula 1 (Mercedes-AMG Petronas, McLaren, Aston Martin)",
+      "factoryHP": 1050.0,
+      "factoryTorque": 350.0,
+      "factoryRPM": 15000,
+      "fuelType": "E10 (10% etanol) - FIA specification",
+      "hasForcedInduction": true,
+      "tags": ["V6", "F1", "Hybrid", "Turbo", "1000HP+", "15000RPM"],
+      "basicData": {
+        "bore": 80.0,
+        "stroke": 53.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 90.0,
+        "maxRPM": 15000
+      },
+      "compressionData": {
+        "chamberVolume": 28.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.5,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 65.0
+      },
+      "camshaftData": {
+        "intakeDuration": 260.0,
+        "exhaustDuration": 265.0,
+        "intakeLift": 11.0,
+        "exhaustLift": 10.5,
+        "lsa": 105.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 180.0,
+        "runnerDiameter": 42.0,
+        "plenumVolume": 1.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 12000,
+        "boostPressure": 58.0
+      },
+      "exhaustData": {
+        "primaryLength": 450.0,
+        "primaryDiameter": 32.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 55.0,
+        "targetRPM": 12000,
+        "exhaustDuration": 265.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Honda HI23R (IndyCar)",
+      "description": "Honda HI23R - 2.2L V6 Twin-Turbo (IndyCar Series)",
+      "application": "IndyCar Series (2023+)",
+      "factoryHP": 720.0,
+      "factoryTorque": 450.0,
+      "factoryRPM": 12000,
+      "fuelType": "E85 (85% etanol)",
+      "hasForcedInduction": true,
+      "tags": ["V6", "IndyCar", "Twin-Turbo", "E85", "Oval", "Road Course"],
+      "basicData": {
+        "bore": 95.0,
+        "stroke": 77.6,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.0,
+        "maxRPM": 12000
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 0.8,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 55.0
+      },
+      "camshaftData": {
+        "intakeDuration": 245.0,
+        "exhaustDuration": 250.0,
+        "intakeLift": 11.5,
+        "exhaustLift": 11.0,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 10000,
+        "boostPressure": 28.0
+      },
+      "exhaustData": {
+        "primaryLength": 600.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 65.0,
+        "targetRPM": 10000,
+        "exhaustDuration": 250.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Chevrolet NASCAR Cup Series R07",
+      "description": "Chevrolet R07 - 5.86L V8 Pushrod (NASCAR Cup Series)",
+      "application": "NASCAR Cup Series (Chevrolet Camaro ZL1)",
+      "factoryHP": 750.0,
+      "factoryTorque": 520.0,
+      "factoryRPM": 9000,
+      "fuelType": "Sunoco Green E15 (15% etanol)",
+      "hasForcedInduction": false,
+      "tags": ["V8", "NASCAR", "Pushrod", "Cup Series", "Oval", "Stock Car"],
+      "basicData": {
+        "bore": 104.78,
+        "stroke": 85.09,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 9500
+      },
+      "compressionData": {
+        "chamberVolume": 68.0,
+        "pistonDomeVolume": 8.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 290.0,
+        "exhaustDuration": 295.0,
+        "intakeLift": 14.5,
+        "exhaustLift": 14.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 75.0,
+        "plenumVolume": 8.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 850.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 8500,
+        "exhaustDuration": 295.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "NHRA Top Fuel Dragster V8",
+      "description": "Top Fuel Hemi - 8.2L Supercharged V8 (11000+ HP!)",
+      "application": "NHRA Top Fuel Dragster",
+      "factoryHP": 11000.0,
+      "factoryTorque": 8000.0,
+      "factoryRPM": 8500,
+      "fuelType": "Nitrometano 90%",
+      "hasForcedInduction": true,
+      "tags": ["V8", "NHRA", "Top Fuel", "Supercharged", "11000HP", "Nitromethane"],
+      "basicData": {
+        "bore": 107.95,
+        "stroke": 111.76,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 190.5,
+        "maxRPM": 8600
+      },
+      "compressionData": {
+        "chamberVolume": 95.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.5,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 40.0
+      },
+      "camshaftData": {
+        "intakeDuration": 310.0,
+        "exhaustDuration": 320.0,
+        "intakeLift": 18.0,
+        "exhaustLift": 18.5,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.85
+      },
+      "intakeData": {
+        "runnerLength": 200.0,
+        "runnerDiameter": 95.0,
+        "plenumVolume": 12.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 60.0
+      },
+      "exhaustData": {
+        "primaryLength": 500.0,
+        "primaryDiameter": 76.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 127.0,
+        "targetRPM": 8000,
+        "exhaustDuration": 320.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "NHRA Pro Stock V8",
+      "description": "Pro Stock Hemi - 8.0L V8 Aspirado (1500 HP)",
+      "application": "NHRA Pro Stock",
+      "factoryHP": 1500.0,
+      "factoryTorque": 950.0,
+      "factoryRPM": 10500,
+      "fuelType": "VP Racing MS109 (109 octanas)",
+      "hasForcedInduction": false,
+      "tags": ["V8", "NHRA", "Pro Stock", "N/A", "1500HP", "High-Rev"],
+      "basicData": {
+        "bore": 107.95,
+        "stroke": 108.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 177.8,
+        "maxRPM": 10800
+      },
+      "compressionData": {
+        "chamberVolume": 72.0,
+        "pistonDomeVolume": 15.0,
+        "gasketThickness": 1.2,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 320.0,
+        "exhaustDuration": 325.0,
+        "intakeLift": 16.5,
+        "exhaustLift": 17.0,
+        "lsa": 106.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.8
+      },
+      "intakeData": {
+        "runnerLength": 240.0,
+        "runnerDiameter": 85.0,
+        "plenumVolume": 9.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 10000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 55.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 101.6,
+        "targetRPM": 10000,
+        "exhaustDuration": 325.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Stock Car Pro Series V8",
+      "description": "Chevrolet V8 5.0L - Stock Car Pro Series Brasil",
+      "application": "Stock Car Brasil (2023+)",
+      "factoryHP": 480.0,
+      "factoryTorque": 500.0,
+      "factoryRPM": 7500,
+      "fuelType": "Etanol E100 (Brasil)",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Stock Car", "Brasil", "E100", "Chevrolet", "Pushrod"],
+      "basicData": {
+        "bore": 101.6,
+        "stroke": 97.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 160.0,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 65.0,
+        "pistonDomeVolume": 5.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 285.0,
+        "exhaustDuration": 290.0,
+        "intakeLift": 13.5,
+        "exhaustLift": 13.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 72.0,
+        "plenumVolume": 7.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 820.0,
+        "primaryDiameter": 46.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 7000,
+        "exhaustDuration": 290.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Le Mans LMP1 Hybrid (Toyota GR010)",
+      "description": "Toyota GR010 Hybrid - 3.5L V6 Twin-Turbo Hybrid",
+      "application": "WEC Le Mans Hypercar (24h Le Mans)",
+      "factoryHP": 680.0,
+      "factoryTorque": 550.0,
+      "factoryRPM": 7000,
+      "fuelType": "E20 (20% biofuel)",
+      "hasForcedInduction": true,
+      "tags": ["V6", "Le Mans", "Hybrid", "Twin-Turbo", "Endurance", "WEC"],
+      "basicData": {
+        "bore": 95.0,
+        "stroke": 82.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 140.0,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 250.0,
+        "exhaustDuration": 255.0,
+        "intakeLift": 11.8,
+        "exhaustLift": 11.5,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 290.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 4.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 24.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 255.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Fórmula 4 (FIA F4) - 1.4L Turbo",
+      "description": "FIA Fórmula 4 - 1.4L I4 Turbo (Categoria de Acesso)",
+      "application": "FIA Fórmula 4 Championship (Entrada para monopostos)",
+      "factoryHP": 160.0,
+      "factoryTorque": 210.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 98 octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "F4", "Turbo", "Entry Level", "FIA", "Junior"],
+      "basicData": {
+        "bore": 77.0,
+        "stroke": 75.5,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -6.0,
+        "gasketThickness": 0.8,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 230.0,
+        "exhaustDuration": 235.0,
+        "intakeLift": 10.0,
+        "exhaustLift": 9.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 48.0,
+        "plenumVolume": 2.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 14.0
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 35.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 55.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 235.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Fórmula 3 (FIA F3) - 3.4L V6",
+      "description": "FIA Fórmula 3 - 3.4L V6 N/A (Mecachrome)",
+      "application": "FIA Fórmula 3 Championship",
+      "factoryHP": 380.0,
+      "factoryTorque": 290.0,
+      "factoryRPM": 8000,
+      "fuelType": "Gasolina 102 octanas",
+      "hasForcedInduction": false,
+      "tags": ["V6", "F3", "N/A", "FIA", "Junior", "Mecachrome"],
+      "basicData": {
+        "bore": 89.0,
+        "stroke": 90.3,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 142.0,
+        "maxRPM": 8500
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 56.0
+      },
+      "camshaftData": {
+        "intakeDuration": 252.0,
+        "exhaustDuration": 248.0,
+        "intakeLift": 12.0,
+        "exhaustLift": 11.8,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 270.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 4.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 650.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 65.0,
+        "targetRPM": 7500,
+        "exhaustDuration": 248.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Fórmula 2 (FIA F2) - 3.4L V6 Turbo",
+      "description": "FIA Fórmula 2 - 3.4L V6 Turbo (Mecachrome)",
+      "application": "FIA Fórmula 2 Championship (Porta de entrada para F1)",
+      "factoryHP": 620.0,
+      "factoryTorque": 450.0,
+      "factoryRPM": 8500,
+      "fuelType": "Gasolina 102 octanas",
+      "hasForcedInduction": true,
+      "tags": ["V6", "F2", "Turbo", "FIA", "F1 Feeder", "Mecachrome"],
+      "basicData": {
+        "bore": 89.0,
+        "stroke": 90.3,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 142.0,
+        "maxRPM": 9000
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 250.0,
+        "exhaustDuration": 255.0,
+        "intakeLift": 12.5,
+        "exhaustLift": 12.2,
+        "lsa": 106.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 60.0,
+        "plenumVolume": 4.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 32.0
+      },
+      "exhaustData": {
+        "primaryLength": 620.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 68.0,
+        "targetRPM": 8000,
+        "exhaustDuration": 255.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Fórmula V/Vee - 1.2L Motorcycle",
+      "description": "Fórmula Vee - 1.2L I4 Motorcycle Engine (Categoria Iniciante)",
+      "application": "Fórmula Vee/Formula First (Entrada monopostos)",
+      "factoryHP": 65.0,
+      "factoryTorque": 80.0,
+      "factoryRPM": 7000,
+      "fuelType": "Gasolina comum",
+      "hasForcedInduction": false,
+      "tags": ["I4", "Formula V", "Entry Level", "Motorcycle", "Budget Racing"],
+      "basicData": {
+        "bore": 69.0,
+        "stroke": 66.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 110.0,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 38.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.8,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 240.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 9.0,
+        "exhaustLift": 8.8,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.4
+      },
+      "intakeData": {
+        "runnerLength": 220.0,
+        "runnerDiameter": 38.0,
+        "plenumVolume": 1.5,
+        "trumpetLength": 60.0,
+        "trumpetDiameter": 42.0,
+        "targetRPM": 7000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 550.0,
+        "primaryDiameter": 28.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 45.0,
+        "targetRPM": 7000,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Super Fórmula (SF23) - 2.0L Turbo",
+      "description": "Super Fórmula - 2.0L I4 Turbo (Japão - Nível F1)",
+      "application": "Super Fórmula Championship (Japão)",
+      "factoryHP": 650.0,
+      "factoryTorque": 480.0,
+      "factoryRPM": 9000,
+      "fuelType": "Gasolina 100 octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Super Formula", "Turbo", "Japan", "High-Tech"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 152.0,
+        "maxRPM": 10000
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 56.0
+      },
+      "camshaftData": {
+        "intakeDuration": 248.0,
+        "exhaustDuration": 252.0,
+        "intakeLift": 12.0,
+        "exhaustLift": 11.8,
+        "lsa": 106.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 250.0,
+        "runnerDiameter": 56.0,
+        "plenumVolume": 3.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8500,
+        "boostPressure": 36.0
+      },
+      "exhaustData": {
+        "primaryLength": 600.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 60.0,
+        "targetRPM": 8500,
+        "exhaustDuration": 252.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "F1 V10 Era (Ferrari 056)",
+      "description": "Ferrari 056 - 3.0L V10 N/A (F1 2005 - Era V10)",
+      "application": "Ferrari F2005 (Michael Schumacher era)",
+      "factoryHP": 930.0,
+      "factoryTorque": 320.0,
+      "factoryRPM": 19000,
+      "fuelType": "Gasolina racing (Shell V-Power)",
+      "hasForcedInduction": false,
+      "tags": ["V10", "F1", "19000RPM", "Ferrari", "Schumacher", "Classic"],
+      "basicData": {
+        "bore": 98.0,
+        "stroke": 39.7,
+        "cylinders": 10,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 102.0,
+        "maxRPM": 19200
+      },
+      "compressionData": {
+        "chamberVolume": 32.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.5,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 68.0
+      },
+      "camshaftData": {
+        "intakeDuration": 272.0,
+        "exhaustDuration": 276.0,
+        "intakeLift": 13.0,
+        "exhaustLift": 12.8,
+        "lsa": 102.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 160.0,
+        "runnerDiameter": 48.0,
+        "plenumVolume": 2.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 17000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 380.0,
+        "primaryDiameter": 30.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 55.0,
+        "targetRPM": 17000,
+        "exhaustDuration": 276.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "F1 V8 Era (Cosworth CA2010)",
+      "description": "Cosworth CA2010 - 2.4L V8 N/A (F1 2006-2013)",
+      "application": "Williams, Lotus, Marussia (F1 V8 era)",
+      "factoryHP": 750.0,
+      "factoryTorque": 270.0,
+      "factoryRPM": 18000,
+      "fuelType": "Gasolina racing",
+      "hasForcedInduction": false,
+      "tags": ["V8", "F1", "18000RPM", "Cosworth", "V8 Era", "Classic"],
+      "basicData": {
+        "bore": 98.0,
+        "stroke": 39.7,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 102.0,
+        "maxRPM": 18000
+      },
+      "compressionData": {
+        "chamberVolume": 30.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.5,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 66.0
+      },
+      "camshaftData": {
+        "intakeDuration": 268.0,
+        "exhaustDuration": 272.0,
+        "intakeLift": 12.5,
+        "exhaustLift": 12.3,
+        "lsa": 104.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 170.0,
+        "runnerDiameter": 44.0,
+        "plenumVolume": 1.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 16000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 400.0,
+        "primaryDiameter": 32.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 58.0,
+        "targetRPM": 16000,
+        "exhaustDuration": 272.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "DTM Class 1 (Audi RS5) - 2.0L Turbo",
+      "description": "DTM Class 1 - 2.0L I4 Turbo (Deutsche Tourenwagen Masters)",
+      "application": "DTM 2019-2020 (Audi RS5, BMW M4)",
+      "factoryHP": 620.0,
+      "factoryTorque": 500.0,
+      "factoryRPM": 8500,
+      "fuelType": "Gasolina 102 octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "DTM", "Turbo", "Touring Car", "Germany", "Audi"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 152.0,
+        "maxRPM": 9000
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -9.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 55.0
+      },
+      "camshaftData": {
+        "intakeDuration": 246.0,
+        "exhaustDuration": 250.0,
+        "intakeLift": 11.8,
+        "exhaustLift": 11.5,
+        "lsa": 107.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 270.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 34.0
+      },
+      "exhaustData": {
+        "primaryLength": 630.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 8000,
+        "exhaustDuration": 250.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "WRC Rally (Yaris GR - M15A-FTS)",
+      "description": "Toyota GR Yaris Rally1 - 1.6L I3 Turbo Hybrid",
+      "application": "WRC Rally1 Hybrid (2022+)",
+      "factoryHP": 500.0,
+      "factoryTorque": 420.0,
+      "factoryRPM": 6500,
+      "fuelType": "E10 sustainable fuel",
+      "hasForcedInduction": true,
+      "tags": ["I3", "WRC", "Rally", "Hybrid", "Turbo", "Toyota"],
+      "basicData": {
+        "bore": 87.5,
+        "stroke": 89.7,
+        "cylinders": 3,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 143.0,
+        "maxRPM": 7200
+      },
+      "compressionData": {
+        "chamberVolume": 40.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 232.0,
+        "exhaustDuration": 238.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 10.5,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 54.0,
+        "plenumVolume": 2.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 30.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 57.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 238.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "IMSA DPi (Cadillac LMDh V8)",
+      "description": "Cadillac LMDh - 5.5L V8 N/A (IMSA Prototype)",
+      "application": "IMSA WeatherTech SportsCar Championship",
+      "factoryHP": 600.0,
+      "factoryTorque": 520.0,
+      "factoryRPM": 7500,
+      "fuelType": "E10 sustainable fuel",
+      "hasForcedInduction": false,
+      "tags": ["V8", "IMSA", "DPi", "Prototype", "Endurance", "Cadillac"],
+      "basicData": {
+        "bore": 99.0,
+        "stroke": 90.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 155.0,
+        "maxRPM": 7800
+      },
+      "compressionData": {
+        "chamberVolume": 58.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 254.0,
+        "exhaustDuration": 258.0,
+        "intakeLift": 12.5,
+        "exhaustLift": 12.3,
+        "lsa": 107.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 290.0,
+        "runnerDiameter": 72.0,
+        "plenumVolume": 7.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 7000,
+        "exhaustDuration": 258.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "V8 Supercars (Chevrolet LS3)",
+      "description": "V8 Supercars - 5.0L V8 Pushrod (Austr�lia)",
+      "application": "Supercars Championship (Austr�lia/NZ)",
+      "factoryHP": 650.0,
+      "factoryTorque": 550.0,
+      "factoryRPM": 7500,
+      "fuelType": "E85 (85% etanol)",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Supercars", "Australia", "Pushrod", "Touring Car"],
+      "basicData": {
+        "bore": 99.0,
+        "stroke": 81.3,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 158.8,
+        "maxRPM": 7800
+      },
+      "compressionData": {
+        "chamberVolume": 64.0,
+        "pistonDomeVolume": 5.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 280.0,
+        "exhaustDuration": 285.0,
+        "intakeLift": 14.0,
+        "exhaustLift": 14.3,
+        "lsa": 109.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 74.0,
+        "plenumVolume": 7.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 800.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 7000,
+        "exhaustDuration": 285.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Pikes Peak Hillclimb (Monster Tajima)",
+      "description": "Monster Sport Suzuki - 3.1L V6 Twin-Turbo (Hillclimb Extremo)",
+      "application": "Pikes Peak International Hill Climb",
+      "factoryHP": 1400.0,
+      "factoryTorque": 900.0,
+      "factoryRPM": 8500,
+      "fuelType": "VP Racing C16 (117 octanas)",
+      "hasForcedInduction": true,
+      "tags": ["V6", "Hillclimb", "Twin-Turbo", "Pikes Peak", "Extreme", "Monster"],
+      "basicData": {
+        "bore": 90.0,
+        "stroke": 81.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 135.0,
+        "maxRPM": 9000
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -15.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 58.0
+      },
+      "camshaftData": {
+        "intakeDuration": 270.0,
+        "exhaustDuration": 275.0,
+        "intakeLift": 13.5,
+        "exhaustLift": 13.2,
+        "lsa": 104.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 220.0,
+        "runnerDiameter": 68.0,
+        "plenumVolume": 5.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 55.0
+      },
+      "exhaustData": {
+        "primaryLength": 550.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 320.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 8000,
+        "exhaustDuration": 275.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "GT3 Racing (Porsche 911 GT3 R)",
+      "description": "Porsche 911 GT3 R - 4.0L Flat-6 N/A",
+      "application": "FIA GT3 International, IMSA GTD",
+      "factoryHP": 550.0,
+      "factoryTorque": 460.0,
+      "factoryRPM": 9000,
+      "fuelType": "Gasolina 102 octanas",
+      "hasForcedInduction": false,
+      "tags": ["Flat-6", "GT3", "Porsche", "911", "N/A", "Endurance"],
+      "basicData": {
+        "bore": 102.0,
+        "stroke": 81.5,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 137.0,
+        "maxRPM": 9400
+      },
+      "compressionData": {
+        "chamberVolume": 60.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 60.0
+      },
+      "camshaftData": {
+        "intakeDuration": 260.0,
+        "exhaustDuration": 256.0,
+        "intakeLift": 13.2,
+        "exhaustLift": 13.0,
+        "lsa": 106.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 68.0,
+        "plenumVolume": 5.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 8500,
+        "exhaustDuration": 256.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Fórmula E Gen3 (Electric)",
+      "description": "Fórmula E Gen3 - Motor Elétrico 350kW (Referência comparativa)",
+      "application": "ABB FIA Fórmula E World Championship",
+      "factoryHP": 470.0,
+      "factoryTorque": 335.0,
+      "factoryRPM": 20000,
+      "fuelType": "Elétrico (bateria)",
+      "hasForcedInduction": false,
+      "tags": ["Electric", "Formula E", "Gen3", "Zero Emissions", "Future"],
+      "basicData": {
+        "bore": 0.0,
+        "stroke": 0.0,
+        "cylinders": 0,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 0.0,
+        "maxRPM": 20000
+      },
+      "compressionData": {
+        "chamberVolume": 0.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 0.0
+      },
+      "camshaftData": {
+        "intakeDuration": 0.0,
+        "exhaustDuration": 0.0,
+        "intakeLift": 0.0,
+        "exhaustLift": 0.0,
+        "lsa": 0.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 0.0
+      },
+      "intakeData": {
+        "runnerLength": 0.0,
+        "runnerDiameter": 0.0,
+        "plenumVolume": 0.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 0,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 0.0,
+        "primaryDiameter": 0.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 0.0,
+        "targetRPM": 0,
+        "exhaustDuration": 0.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Kart Shifter (125cc KZ)",
+      "description": "Kart KZ Shifter - 125cc Single Cylinder (6-marchas)",
+      "application": "CIK-FIA Karting KZ/KZ2 (Categoria Elite)",
+      "factoryHP": 54.0,
+      "factoryTorque": 35.0,
+      "factoryRPM": 16000,
+      "fuelType": "Gasolina racing + �leo 2T",
+      "hasForcedInduction": false,
+      "tags": ["Single", "Kart", "2-Stroke", "Shifter", "16000RPM"],
+      "basicData": {
+        "bore": 54.0,
+        "stroke": 54.5,
+        "cylinders": 1,
+        "engineType": "TWO_STROKE",
+        "rodLength": 85.0,
+        "maxRPM": 16500
+      },
+      "compressionData": {
+        "chamberVolume": 12.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.5,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 0.0
+      },
+      "camshaftData": {
+        "intakeDuration": 0.0,
+        "exhaustDuration": 0.0,
+        "intakeLift": 0.0,
+        "exhaustLift": 0.0,
+        "lsa": 0.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 0.0
+      },
+      "intakeData": {
+        "runnerLength": 180.0,
+        "runnerDiameter": 32.0,
+        "plenumVolume": 0.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 14000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 420.0,
+        "primaryDiameter": 26.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 28.0,
+        "targetRPM": 14000,
+        "exhaustDuration": 0.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Can-Am (McLaren M8F) - 8.1L V8",
+      "description": "Chevrolet Big Block - 8.1L V8 N/A (Can-Am Historic)",
+      "application": "McLaren Can-Am M8F (1971 - Bruce McLaren era)",
+      "factoryHP": 750.0,
+      "factoryTorque": 680.0,
+      "factoryRPM": 7800,
+      "fuelType": "Gasolina racing 110+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Can-Am", "Historic", "McLaren", "Big Block", "Classic"],
+      "basicData": {
+        "bore": 108.0,
+        "stroke": 111.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 177.8,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 85.0,
+        "pistonDomeVolume": 12.0,
+        "gasketThickness": 1.2,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 300.0,
+        "exhaustDuration": 308.0,
+        "intakeLift": 15.5,
+        "exhaustLift": 16.0,
+        "lsa": 106.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.75
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 88.0,
+        "plenumVolume": 10.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 750.0,
+        "primaryDiameter": 52.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 101.6,
+        "targetRPM": 7500,
+        "exhaustDuration": 308.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Group B Rally (Audi Quattro S1)",
+      "description": "Audi Quattro S1 - 2.1L I5 Turbo (Group B Lend�rio)",
+      "application": "WRC Group B (1984-1986 - Era mais insana do rally)",
+      "factoryHP": 600.0,
+      "factoryTorque": 520.0,
+      "factoryRPM": 8000,
+      "fuelType": "Gasolina racing 110+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I5", "Group B", "Turbo", "Audi", "Rally", "Legendary"],
+      "basicData": {
+        "bore": 82.5,
+        "stroke": 92.8,
+        "cylinders": 5,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.5,
+        "maxRPM": 8500
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 56.0
+      },
+      "camshaftData": {
+        "intakeDuration": 264.0,
+        "exhaustDuration": 270.0,
+        "intakeLift": 12.5,
+        "exhaustLift": 12.2,
+        "lsa": 105.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 3.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7500,
+        "boostPressure": 42.0
+      },
+      "exhaustData": {
+        "primaryLength": 600.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 7500,
+        "exhaustDuration": 270.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Trans-Am TA2 (Chevrolet LS3)",
+      "description": "Trans-Am TA2 - 6.2L V8 Pushrod (Muscle Car Racing)",
+      "application": "Trans-Am TA2 Series (USA)",
+      "factoryHP": 520.0,
+      "factoryTorque": 490.0,
+      "factoryRPM": 6800,
+      "fuelType": "Sunoco 260 GTX (100 octanas)",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Trans-Am", "TA2", "Pushrod", "Muscle", "USA"],
+      "basicData": {
+        "bore": 103.25,
+        "stroke": 92.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 158.8,
+        "maxRPM": 7200
+      },
+      "compressionData": {
+        "chamberVolume": 70.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 274.0,
+        "exhaustDuration": 280.0,
+        "intakeLift": 13.8,
+        "exhaustLift": 14.2,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 76.0,
+        "plenumVolume": 8.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 820.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 280.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Indy 500 (1960s Offenhauser)",
+      "description": "Offenhauser 4-cylinder - 2.6L I4 Turbo (Indy 500 Cl�ssico)",
+      "application": "Indianapolis 500 (1950s-1970s - Motor lend�rio)",
+      "factoryHP": 800.0,
+      "factoryTorque": 550.0,
+      "factoryRPM": 9500,
+      "fuelType": "Metanol/�lcool racing",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Indy 500", "Turbo", "Historic", "Offenhauser", "Classic"],
+      "basicData": {
+        "bore": 114.3,
+        "stroke": 63.5,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 152.4,
+        "maxRPM": 10000
+      },
+      "compressionData": {
+        "chamberVolume": 62.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 1.2,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 280.0,
+        "exhaustDuration": 288.0,
+        "intakeLift": 13.0,
+        "exhaustLift": 13.5,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 70.0,
+        "plenumVolume": 4.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 9000,
+        "boostPressure": 38.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 9000,
+        "exhaustDuration": 288.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Sprint Car (410 Winged)",
+      "description": "Sprint Car 410 - 6.7L V8 Methanol (Dirt Track)",
+      "application": "World of Outlaws Sprint Car Series",
+      "factoryHP": 900.0,
+      "factoryTorque": 780.0,
+      "factoryRPM": 8200,
+      "fuelType": "Metanol 100%",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Sprint Car", "Winged", "Methanol", "Dirt Track", "Outlaws"],
+      "basicData": {
+        "bore": 108.0,
+        "stroke": 92.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 177.8,
+        "maxRPM": 8500
+      },
+      "compressionData": {
+        "chamberVolume": 78.0,
+        "pistonDomeVolume": 10.0,
+        "gasketThickness": 1.2,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 295.0,
+        "exhaustDuration": 302.0,
+        "intakeLift": 15.2,
+        "exhaustLift": 15.8,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.75
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 82.0,
+        "plenumVolume": 9.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 50.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 8000,
+        "exhaustDuration": 302.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

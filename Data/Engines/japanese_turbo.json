@@ -1,0 +1,447 @@
+{
+  "version": "1.0.0",
+  "category": "Japanese Turbo",
+  "description": "Motores japoneses turbo lend�rios",
+  "engines": [
+    {
+      "name": "Toyota 2JZ-GTE",
+      "description": "Toyota 2JZ-GTE - 3.0L Inline-6 Twin-Turbo (Lend�rio)",
+      "application": "Toyota Supra Mk4 (1993-2002)",
+      "factoryHP": 320.0,
+      "factoryTorque": 315.0,
+      "factoryRPM": 5600,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I6", "Turbo", "Supra", "JDM", "Legend", "Twin-Turbo"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 142.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 56.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 1.2,
+        "deckHeight": 0.3,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 216.0,
+        "exhaustDuration": 228.0,
+        "intakeLift": 11.43,
+        "exhaustLift": 11.18,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 350.0,
+        "runnerDiameter": 60.0,
+        "plenumVolume": 5.3,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 10.0
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 228.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Nissan RB26DETT",
+      "description": "Nissan RB26DETT - 2.6L Inline-6 Twin-Turbo (Godzilla)",
+      "application": "Nissan Skyline GT-R R32/R33/R34 (1989-2002)",
+      "factoryHP": 280.0,
+      "factoryTorque": 289.0,
+      "factoryRPM": 6800,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I6", "Twin-Turbo", "GT-R", "Skyline", "JDM", "Godzilla"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 73.7,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 121.5,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 51.0,
+        "pistonDomeVolume": -5.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.5,
+        "valveRelief": 2.0,
+        "ivcAngle": 55.0
+      },
+      "camshaftData": {
+        "intakeDuration": 240.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 11.8,
+        "exhaustLift": 11.3,
+        "lsa": 109.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 55.0,
+        "plenumVolume": 4.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 10.0
+      },
+      "exhaustData": {
+        "primaryLength": 650.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 380.0,
+        "secondaryDiameter": 57.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Subaru EJ257",
+      "description": "Subaru EJ257 - 2.5L Flat-4 Turbo (WRX STI)",
+      "application": "Subaru WRX STI (2004-2019)",
+      "factoryHP": 305.0,
+      "factoryTorque": 290.0,
+      "factoryRPM": 6000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["Flat-4", "Turbo", "WRX", "STI", "Subaru", "Rally"],
+      "basicData": {
+        "bore": 99.5,
+        "stroke": 79.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.7,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 58.0,
+        "pistonDomeVolume": -12.0,
+        "gasketThickness": 1.1,
+        "deckHeight": 0.4,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 232.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 10.6,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 4.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 14.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 41.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Mitsubishi 4G63T",
+      "description": "Mitsubishi 4G63 - 2.0L I4 Turbo (Lancer Evolution)",
+      "application": "Mitsubishi Lancer Evolution VIII/IX (2003-2006)",
+      "factoryHP": 280.0,
+      "factoryTorque": 289.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Turbo", "EVO", "Lancer", "Rally", "JDM"],
+      "basicData": {
+        "bore": 85.0,
+        "stroke": 88.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 150.0,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": -6.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.3,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 248.0,
+        "exhaustDuration": 244.0,
+        "intakeLift": 11.3,
+        "exhaustLift": 11.0,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 4.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 17.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 244.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Nissan SR20DET",
+      "description": "Nissan SR20DET - 2.0L I4 Turbo (Silvia/180SX)",
+      "application": "Nissan Silvia S13/S14/S15 (1989-2002)",
+      "factoryHP": 250.0,
+      "factoryTorque": 203.0,
+      "factoryRPM": 6000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Turbo", "Silvia", "240SX", "Drift", "JDM"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 137.0,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 50.0,
+        "pistonDomeVolume": -5.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.2,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 232.0,
+        "exhaustDuration": 228.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 10.5,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 330.0,
+        "runnerDiameter": 60.0,
+        "plenumVolume": 3.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 10.0
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 228.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Nissan VR38DETT (GT-R R35)",
+      "description": "Nissan VR38DETT - 3.8L V6 Twin-Turbo (GT-R R35)",
+      "application": "Nissan GT-R R35 (2007+)",
+      "factoryHP": 565.0,
+      "factoryTorque": 467.0,
+      "factoryRPM": 6800,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V6", "Twin-Turbo", "GT-R", "R35", "Supercar", "JDM"],
+      "basicData": {
+        "bore": 95.5,
+        "stroke": 88.4,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 145.0,
+        "maxRPM": 7100
+      },
+      "compressionData": {
+        "chamberVolume": 54.0,
+        "pistonDomeVolume": -12.0,
+        "gasketThickness": 1.1,
+        "deckHeight": 0.3,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 236.0,
+        "exhaustDuration": 240.0,
+        "intakeLift": 11.8,
+        "exhaustLift": 11.5,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 65.0,
+        "plenumVolume": 6.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 16.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 240.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Honda L15B7 Type R (FK8)",
+      "description": "Honda L15B - 1.5L I4 VTEC Turbo (Civic Type R FK8)",
+      "application": "Honda Civic Type R FK8 (2017-2021)",
+      "factoryHP": 306.0,
+      "factoryTorque": 295.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "VTEC", "Turbo", "Type R", "FK8", "Front-wheel drive record"],
+      "basicData": {
+        "bore": 73.0,
+        "stroke": 89.4,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 38.0,
+        "pistonDomeVolume": -6.0,
+        "gasketThickness": 0.8,
+        "deckHeight": 0.2,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 232.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 10.5,
+        "exhaustLift": 10.0,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 52.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 20.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 55.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 6000,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Toyota GR Yaris G16E-GTS",
+      "description": "Toyota G16E-GTS - 1.6L I3 Turbo (GR Yaris)",
+      "application": "Toyota GR Yaris (2020+)",
+      "factoryHP": 268.0,
+      "factoryTorque": 273.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I3", "Turbo", "GR Yaris", "Rally", "AWD", "Triple-cylinder"],
+      "basicData": {
+        "bore": 87.5,
+        "stroke": 89.7,
+        "cylinders": 3,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 143.0,
+        "maxRPM": 7200
+      },
+      "compressionData": {
+        "chamberVolume": 40.0,
+        "pistonDomeVolume": -7.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.2,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 228.0,
+        "exhaustDuration": 234.0,
+        "intakeLift": 10.5,
+        "exhaustLift": 10.2,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 290.0,
+        "runnerDiameter": 54.0,
+        "plenumVolume": 3.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 25.0
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 60.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 234.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

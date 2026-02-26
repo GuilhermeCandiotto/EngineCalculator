@@ -1,0 +1,557 @@
+{
+  "version": "1.0.0",
+  "category": "European Performance",
+  "description": "Motores europeus de alta performance",
+  "engines": [
+    {
+      "name": "BMW S54B32",
+      "description": "BMW S54 - 3.2L Inline-6 de Alta Performance",
+      "application": "BMW M3 E46 (2000-2006)",
+      "factoryHP": 343.0,
+      "factoryTorque": 269.0,
+      "factoryRPM": 7900,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["I6", "BMW", "M3", "European", "ITB", "High-Tech"],
+      "basicData": {
+        "bore": 87.0,
+        "stroke": 91.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 135.0,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.0,
+        "valveRelief": 2.5,
+        "ivcAngle": 58.0
+      },
+      "camshaftData": {
+        "intakeDuration": 268.0,
+        "exhaustDuration": 252.0,
+        "intakeLift": 12.0,
+        "exhaustLift": 11.2,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 250.0,
+        "runnerDiameter": 54.0,
+        "plenumVolume": 0.5,
+        "trumpetLength": 90.0,
+        "trumpetDiameter": 58.0,
+        "targetRPM": 7500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 7500,
+        "exhaustDuration": 252.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "BMW N54B30",
+      "description": "BMW N54 - 3.0L Inline-6 Twin-Turbo",
+      "application": "BMW 335i E90/E92 (2007-2010)",
+      "factoryHP": 300.0,
+      "factoryTorque": 300.0,
+      "factoryRPM": 5800,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I6", "BMW", "335i", "Twin-Turbo", "Tunable"],
+      "basicData": {
+        "bore": 84.0,
+        "stroke": 89.6,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 55.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 220.0,
+        "exhaustDuration": 228.0,
+        "intakeLift": 10.5,
+        "exhaustLift": 10.2,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 5.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 10.5
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 380.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 228.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Volkswagen EA888 2.0T",
+      "description": "VW/Audi EA888 - 2.0L I4 Turbo (GTI/Golf R)",
+      "application": "VW Golf GTI/R, Audi S3 (2013+)",
+      "factoryHP": 220.0,
+      "factoryTorque": 258.0,
+      "factoryRPM": 5500,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Turbo", "GTI", "Golf R", "VAG", "TSI"],
+      "basicData": {
+        "bore": 82.5,
+        "stroke": 92.8,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.0,
+        "maxRPM": 6800
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 224.0,
+        "exhaustDuration": 232.0,
+        "intakeLift": 10.0,
+        "exhaustLift": 10.2,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 56.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 12.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 232.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Mercedes M156 AMG",
+      "description": "Mercedes-Benz M156 - 6.2L V8 N/A (AMG)",
+      "application": "Mercedes C63 AMG W204 (2008-2014)",
+      "factoryHP": 451.0,
+      "factoryTorque": 443.0,
+      "factoryRPM": 6800,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "AMG", "Mercedes", "C63", "N/A", "DOHC"],
+      "basicData": {
+        "bore": 102.0,
+        "stroke": 94.6,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 156.0,
+        "maxRPM": 7200
+      },
+      "compressionData": {
+        "chamberVolume": 65.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 55.0
+      },
+      "camshaftData": {
+        "intakeDuration": 244.0,
+        "exhaustDuration": 240.0,
+        "intakeLift": 11.8,
+        "exhaustLift": 11.5,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 290.0,
+        "runnerDiameter": 68.0,
+        "plenumVolume": 8.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 800.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 240.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Porsche M96/M97",
+      "description": "Porsche M97 - 3.8L Flat-6 (911 Carrera S)",
+      "application": "Porsche 911 997 Carrera S (2005-2008)",
+      "factoryHP": 355.0,
+      "factoryTorque": 295.0,
+      "factoryRPM": 6600,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["Flat-6", "Porsche", "911", "Boxer", "N/A"],
+      "basicData": {
+        "bore": 99.0,
+        "stroke": 82.8,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 127.5,
+        "maxRPM": 7300
+      },
+      "compressionData": {
+        "chamberVolume": 58.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 58.0
+      },
+      "camshaftData": {
+        "intakeDuration": 248.0,
+        "exhaustDuration": 244.0,
+        "intakeLift": 11.0,
+        "exhaustLift": 10.8,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 4.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 750.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 244.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Ferrari F154 3.9L V8 Twin-Turbo",
+      "description": "Ferrari F154 - 3.9L V8 Twin-Turbo (488 GTB/Pista)",
+      "application": "Ferrari 488 GTB, 488 Pista, F8 Tributo",
+      "factoryHP": 710.0,
+      "factoryTorque": 568.0,
+      "factoryRPM": 8000,
+      "fuelType": "Gasolina 98+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Ferrari", "Twin-Turbo", "Supercar", "Italian", "488"],
+      "basicData": {
+        "bore": 86.5,
+        "stroke": 82.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 138.0,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": -12.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 248.0,
+        "exhaustDuration": 252.0,
+        "intakeLift": 12.5,
+        "exhaustLift": 12.2,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 270.0,
+        "runnerDiameter": 65.0,
+        "plenumVolume": 5.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7000,
+        "boostPressure": 22.0
+      },
+      "exhaustData": {
+        "primaryLength": 650.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 380.0,
+        "secondaryDiameter": 58.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 7000,
+        "exhaustDuration": 252.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Lamborghini L539 5.2L V10",
+      "description": "Lamborghini V10 - 5.2L V10 N/A (Huracán Performante)",
+      "application": "Lamborghini Huracán Performante/STO",
+      "factoryHP": 640.0,
+      "factoryTorque": 442.0,
+      "factoryRPM": 8000,
+      "fuelType": "Gasolina 98+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V10", "Lamborghini", "N/A", "Supercar", "Italian", "Huracan"],
+      "basicData": {
+        "bore": 84.5,
+        "stroke": 92.8,
+        "cylinders": 10,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 155.0,
+        "maxRPM": 8500
+      },
+      "compressionData": {
+        "chamberVolume": 55.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 56.0
+      },
+      "camshaftData": {
+        "intakeDuration": 252.0,
+        "exhaustDuration": 248.0,
+        "intakeLift": 12.8,
+        "exhaustLift": 12.5,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 68.0,
+        "plenumVolume": 6.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 7500,
+        "exhaustDuration": 248.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Lamborghini L545 6.5L V12",
+      "description": "Lamborghini V12 - 6.5L V12 N/A (Aventador SVJ)",
+      "application": "Lamborghini Aventador SVJ/Ultimae",
+      "factoryHP": 770.0,
+      "factoryTorque": 531.0,
+      "factoryRPM": 8500,
+      "fuelType": "Gasolina 98+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V12", "Lamborghini", "N/A", "Supercar", "Italian", "Aventador"],
+      "basicData": {
+        "bore": 95.0,
+        "stroke": 76.4,
+        "cylinders": 12,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 133.0,
+        "maxRPM": 8700
+      },
+      "compressionData": {
+        "chamberVolume": 58.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 58.0
+      },
+      "camshaftData": {
+        "intakeDuration": 256.0,
+        "exhaustDuration": 252.0,
+        "intakeLift": 13.0,
+        "exhaustLift": 12.8,
+        "lsa": 106.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.65
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 72.0,
+        "plenumVolume": 8.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 101.6,
+        "targetRPM": 8000,
+        "exhaustDuration": 252.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Alfa Romeo Busso V6 3.2L",
+      "description": "Alfa Romeo Busso - 3.2L V6 24V (Motor Lendário)",
+      "application": "Alfa Romeo 156 GTA, 147 GTA, GT 3.2",
+      "factoryHP": 250.0,
+      "factoryTorque": 300.0,
+      "factoryRPM": 6200,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V6", "Alfa Romeo", "Busso", "Classic", "Italian", "N/A"],
+      "basicData": {
+        "bore": 93.0,
+        "stroke": 78.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 137.0,
+        "maxRPM": 6800
+      },
+      "compressionData": {
+        "chamberVolume": 58.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 240.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 11.0,
+        "exhaustLift": 10.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 64.0,
+        "plenumVolume": 5.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 750.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Audi RS6 4.0L V8 TFSI",
+      "description": "Audi RS6 - 4.0L V8 Twin-Turbo (C8 RS6 Avant)",
+      "application": "Audi RS6 C8, RS7, Lamborghini Urus",
+      "factoryHP": 600.0,
+      "factoryTorque": 590.0,
+      "factoryRPM": 6000,
+      "fuelType": "Gasolina 98+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Audi", "Twin-Turbo", "RS", "TFSI", "Performance"],
+      "basicData": {
+        "bore": 84.5,
+        "stroke": 89.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 148.5,
+        "maxRPM": 6800
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 238.0,
+        "exhaustDuration": 244.0,
+        "intakeLift": 11.5,
+        "exhaustLift": 11.2,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 6.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 21.0
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 244.0,
+        "isFourIntoOne": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "category": "High Performance Diesel",
+  "description": "Motores diesel turbo de alta performance",
+  "engines": [
+    {
+      "name": "Cummins 6.7L ISB",
+      "description": "Cummins 6.7L ISB - Inline-6 Turbo Diesel",
+      "application": "Dodge Ram 2500/3500 (2007+)",
+      "factoryHP": 370.0,
+      "factoryTorque": 850.0,
+      "factoryRPM": 2800,
+      "fuelType": "Diesel",
+      "hasForcedInduction": true,
+      "tags": ["I6", "Diesel", "Turbo", "Cummins", "Heavy Duty"],
+      "basicData": {
+        "bore": 107.0,
+        "stroke": 124.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 192.0,
+        "maxRPM": 3600
+      },
+      "compressionData": {
+        "chamberVolume": 85.0,
+        "pistonDomeVolume": -25.0,
+        "gasketThickness": 1.5,
+        "deckHeight": 0.0,
+        "valveRelief": 5.0,
+        "ivcAngle": 40.0
+      },
+      "camshaftData": {
+        "intakeDuration": 200.0,
+        "exhaustDuration": 210.0,
+        "intakeLift": 10.0,
+        "exhaustLift": 9.5,
+        "lsa": 118.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.4
+      },
+      "intakeData": {
+        "runnerLength": 400.0,
+        "runnerDiameter": 70.0,
+        "plenumVolume": 8.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 2800,
+        "boostPressure": 35.0
+      },
+      "exhaustData": {
+        "primaryLength": 800.0,
+        "primaryDiameter": 50.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 101.6,
+        "targetRPM": 2800,
+        "exhaustDuration": 210.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Duramax LML 6.6L",
+      "description": "GM Duramax LML - 6.6L V8 Turbo Diesel",
+      "application": "Chevrolet Silverado/GMC Sierra 2500HD/3500HD (2011-2016)",
+      "factoryHP": 397.0,
+      "factoryTorque": 765.0,
+      "factoryRPM": 3000,
+      "fuelType": "Diesel",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Diesel", "Turbo", "Duramax", "Heavy Duty"],
+      "basicData": {
+        "bore": 103.25,
+        "stroke": 98.6,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 3600
+      },
+      "compressionData": {
+        "chamberVolume": 78.0,
+        "pistonDomeVolume": -22.0,
+        "gasketThickness": 1.4,
+        "deckHeight": 0.0,
+        "valveRelief": 4.0,
+        "ivcAngle": 42.0
+      },
+      "camshaftData": {
+        "intakeDuration": 205.0,
+        "exhaustDuration": 212.0,
+        "intakeLift": 9.8,
+        "exhaustLift": 9.4,
+        "lsa": 116.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 380.0,
+        "runnerDiameter": 68.0,
+        "plenumVolume": 10.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 3000,
+        "boostPressure": 30.0
+      },
+      "exhaustData": {
+        "primaryLength": 850.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 101.6,
+        "targetRPM": 3000,
+        "exhaustDuration": 212.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford PowerStroke 6.7L",
+      "description": "Ford PowerStroke 6.7L V8 Turbo Diesel",
+      "application": "Ford F-250/F-350 Super Duty (2011+)",
+      "factoryHP": 475.0,
+      "factoryTorque": 1050.0,
+      "factoryRPM": 2600,
+      "fuelType": "Diesel",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Diesel", "Turbo", "PowerStroke", "Heavy Duty"],
+      "basicData": {
+        "bore": 99.0,
+        "stroke": 106.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 172.0,
+        "maxRPM": 3400
+      },
+      "compressionData": {
+        "chamberVolume": 72.0,
+        "pistonDomeVolume": -20.0,
+        "gasketThickness": 1.3,
+        "deckHeight": 0.0,
+        "valveRelief": 3.5,
+        "ivcAngle": 41.0
+      },
+      "camshaftData": {
+        "intakeDuration": 198.0,
+        "exhaustDuration": 208.0,
+        "intakeLift": 9.5,
+        "exhaustLift": 9.2,
+        "lsa": 115.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.45
+      },
+      "intakeData": {
+        "runnerLength": 390.0,
+        "runnerDiameter": 72.0,
+        "plenumVolume": 9.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 2600,
+        "boostPressure": 38.0
+      },
+      "exhaustData": {
+        "primaryLength": 820.0,
+        "primaryDiameter": 52.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 101.6,
+        "targetRPM": 2600,
+        "exhaustDuration": 208.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

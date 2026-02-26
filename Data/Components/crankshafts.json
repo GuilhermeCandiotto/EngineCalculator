@@ -1,0 +1,609 @@
+{
+  "version": "1.0.0",
+  "category": "Crankshafts",
+  "description": "Virabrequins forjados e billet - 30+ fabricantes premium",
+  "lastUpdated": "2026-02-15",
+  "totalComponents": 30,
+  "components": [
+    {
+      "name": "Callies DragonSlayer LS 4.000 Stroke",
+      "manufacturer": "Callies Performance Products",
+      "partNumber": "DS4000-LS",
+      "category": "Crankshaft",
+      "application": "Chevrolet LS1/LS2/LS3 (Stroker 408ci)",
+      "price": 1599.99,
+      "specs": {
+        "stroke": 101.6,
+        "rodJournal": 55.56,
+        "mainJournal": 61.21,
+        "weight": 23.60,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 1200.0
+      },
+      "description": "DragonSlayer 4.000\" stroke para LS stroker 408ci",
+      "tags": ["Callies", "LS", "Stroker", "408ci", "Forged"]
+    },
+    {
+      "name": "Callies CompStar LS 3.622 Stock Stroke",
+      "manufacturer": "Callies Performance Products",
+      "partNumber": "CS3622-LS",
+      "category": "Crankshaft",
+      "application": "Chevrolet LS1/LS6 5.7L (Stock Replacement)",
+      "price": 899.99,
+      "specs": {
+        "stroke": 92.0,
+        "rodJournal": 55.56,
+        "mainJournal": 61.21,
+        "weight": 22.20,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 800.0
+      },
+      "description": "CompStar stock stroke replacement para LS1",
+      "tags": ["Callies", "LS1", "Stock-Stroke", "Forged"]
+    },
+    {
+      "name": "Manley Billet LS 4.125 Extreme Stroker",
+      "manufacturer": "Manley Performance",
+      "partNumber": "190500-8",
+      "category": "Crankshaft",
+      "application": "Chevrolet LS (Stroker 427ci)",
+      "price": 2499.99,
+      "specs": {
+        "stroke": 104.78,
+        "rodJournal": 55.56,
+        "mainJournal": 61.21,
+        "weight": 24.50,
+        "material": "Billet 4340 Steel",
+        "counterweights": "Knife-Edged",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 2000.0
+      },
+      "description": "Manley Billet extremo para 427ci stroker, 2000+ HP",
+      "tags": ["Manley", "LS", "Billet", "427ci", "2000HP"]
+    },
+    {
+      "name": "Scat 9000 Series SBC 3.480 Stroke",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "9-350-3480",
+      "category": "Crankshaft",
+      "application": "Chevrolet Small Block 350 (Stock Stroke)",
+      "price": 649.99,
+      "specs": {
+        "stroke": 88.39,
+        "rodJournal": 53.98,
+        "mainJournal": 60.33,
+        "weight": 19.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 600.0
+      },
+      "description": "Scat 9000 para SBC 350, ótimo custo-benefício",
+      "tags": ["Scat", "SBC", "350", "Budget", "Forged"]
+    },
+    {
+      "name": "Scat 9000 Series SBC 3.750 Stroker",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "9-350-3750",
+      "category": "Crankshaft",
+      "application": "Chevrolet Small Block (Stroker 383ci)",
+      "price": 749.99,
+      "specs": {
+        "stroke": 95.25,
+        "rodJournal": 53.98,
+        "mainJournal": 60.33,
+        "weight": 20.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 700.0
+      },
+      "description": "Scat 3.750\" stroker para 383ci, popular build",
+      "tags": ["Scat", "SBC", "Stroker", "383ci"]
+    },
+    {
+      "name": "Eagle 4340 Forged BBC 4.250 Stroke",
+      "manufacturer": "Eagle Specialty Products",
+      "partNumber": "E4340BBC-4250",
+      "category": "Crankshaft",
+      "application": "Big Block Chevy 454 (Stroker 496ci)",
+      "price": 1199.99,
+      "specs": {
+        "stroke": 107.95,
+        "rodJournal": 60.33,
+        "mainJournal": 69.85,
+        "weight": 29.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 900.0
+      },
+      "description": "Eagle forjado para BBC stroker 496ci",
+      "tags": ["Eagle", "BBC", "454", "Stroker", "496ci"]
+    },
+    {
+      "name": "Bryant Billet SBC 4.000 Extreme Stroker",
+      "manufacturer": "Bryant Racing",
+      "partNumber": "BRY-4000-SBC",
+      "category": "Crankshaft",
+      "application": "Chevrolet Small Block (Stroker 434ci)",
+      "price": 2199.99,
+      "specs": {
+        "stroke": 101.6,
+        "rodJournal": 53.98,
+        "mainJournal": 60.33,
+        "weight": 22.00,
+        "material": "Billet 4340 Steel",
+        "counterweights": "Knife-Edged",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 1500.0
+      },
+      "description": "Bryant Billet para SBC extremo 434ci, drag racing",
+      "tags": ["Bryant", "SBC", "Billet", "434ci", "Drag"]
+    },
+    {
+      "name": "Crower Billet Honda B-Series 97mm Stroker",
+      "manufacturer": "Crower Cams & Equipment",
+      "partNumber": "CRO-97B18",
+      "category": "Crankshaft",
+      "application": "Honda B18C (Stroker 2.1L)",
+      "price": 1899.99,
+      "specs": {
+        "stroke": 97.0,
+        "rodJournal": 48.0,
+        "mainJournal": 58.0,
+        "weight": 9.50,
+        "material": "Billet 4340 Steel",
+        "counterweights": "Lightweight",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 600.0
+      },
+      "description": "Crower Billet 97mm stroke para B18C 2.1L",
+      "tags": ["Crower", "Honda", "B18C", "Stroker", "2.1L"]
+    },
+    {
+      "name": "Brian Crower SR20DET 86mm Stroker Crank",
+      "manufacturer": "Brian Crower",
+      "partNumber": "BC0500-86",
+      "category": "Crankshaft",
+      "application": "Nissan SR20DET (Stroker 2.2L)",
+      "price": 1699.99,
+      "specs": {
+        "stroke": 86.0,
+        "rodJournal": 50.0,
+        "mainJournal": 54.0,
+        "weight": 10.20,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 800.0
+      },
+      "description": "Brian Crower 86mm stroker para SR20 2.2L turbo",
+      "tags": ["Brian Crower", "SR20DET", "Stroker", "2.2L"]
+    },
+    {
+      "name": "Tomei SR20DET Forged Stroker 89mm",
+      "manufacturer": "Tomei Powered",
+      "partNumber": "TB1110-NS05A",
+      "category": "Crankshaft",
+      "application": "Nissan SR20DET (Stroker 2.3L)",
+      "price": 2199.99,
+      "specs": {
+        "stroke": 89.0,
+        "rodJournal": 50.0,
+        "mainJournal": 54.0,
+        "weight": 10.50,
+        "material": "4340 Forged Steel + Nitriding",
+        "counterweights": "Lightweight",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 900.0
+      },
+      "description": "Tomei lendário 89mm stroke para SR20 2.3L",
+      "tags": ["Tomei", "SR20DET", "Stroker", "2.3L", "JDM"]
+    },
+    {
+      "name": "Jun Auto RB26DETT Billet 77.7mm Stroker",
+      "manufacturer": "Jun Auto Mechanic",
+      "partNumber": "JUN-RB26-77.7",
+      "category": "Crankshaft",
+      "application": "Nissan RB26DETT (Stroker 2.8L)",
+      "price": 3499.99,
+      "specs": {
+        "stroke": 77.7,
+        "rodJournal": 54.0,
+        "mainJournal": 62.0,
+        "weight": 16.80,
+        "material": "Billet EN40B Steel",
+        "counterweights": "Knife-Edged",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 1500.0
+      },
+      "description": "Jun Auto Billet 77.7mm para RB26 2.8L, 1500+ HP",
+      "tags": ["Jun Auto", "RB26", "Billet", "2.8L", "1500HP"]
+    },
+    {
+      "name": "HKS RB26DETT Forged 73.7mm Stock Stroke",
+      "manufacturer": "HKS Japan",
+      "partNumber": "2301-RN001",
+      "category": "Crankshaft",
+      "application": "Nissan RB26DETT GT-R (Stock Replacement)",
+      "price": 2299.99,
+      "specs": {
+        "stroke": 73.7,
+        "rodJournal": 54.0,
+        "mainJournal": 62.0,
+        "weight": 15.50,
+        "material": "4340 Forged Steel + Nitriding",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 1000.0
+      },
+      "description": "HKS forjado stock stroke para RB26, 1000 HP safe",
+      "tags": ["HKS", "RB26", "GT-R", "Stock-Stroke"]
+    },
+    {
+      "name": "Manley Pro Series RB30 Stroker 85mm",
+      "manufacturer": "Manley Performance",
+      "partNumber": "191000-6",
+      "category": "Crankshaft",
+      "application": "Nissan RB30DET (Stroker 3.2L)",
+      "price": 1899.99,
+      "specs": {
+        "stroke": 85.0,
+        "rodJournal": 54.0,
+        "mainJournal": 62.0,
+        "weight": 17.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 1200.0
+      },
+      "description": "Manley Pro para RB30 stroker 3.2L",
+      "tags": ["Manley", "RB30", "Stroker", "3.2L"]
+    },
+    {
+      "name": "Brian Crower 2JZ-GTE 94mm Stroker",
+      "manufacturer": "Brian Crower",
+      "partNumber": "BC0600-94",
+      "category": "Crankshaft",
+      "application": "Toyota 2JZ-GTE (Stroker 3.4L)",
+      "price": 2499.99,
+      "specs": {
+        "stroke": 94.0,
+        "rodJournal": 52.0,
+        "mainJournal": 60.0,
+        "weight": 18.50,
+        "material": "Billet 4340 Steel",
+        "counterweights": "Knife-Edged",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 1500.0
+      },
+      "description": "Brian Crower 94mm billet para 2JZ 3.4L stroker",
+      "tags": ["Brian Crower", "2JZ-GTE", "Stroker", "3.4L"]
+    },
+    {
+      "name": "Scat 2JZ-GTE 86mm Stock Stroke",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-2JZ-86",
+      "category": "Crankshaft",
+      "application": "Toyota 2JZ-GTE Supra (Stock Replacement)",
+      "price": 1199.99,
+      "specs": {
+        "stroke": 86.0,
+        "rodJournal": 52.0,
+        "mainJournal": 60.0,
+        "weight": 16.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 900.0
+      },
+      "description": "Scat forjado stock stroke para 2JZ",
+      "tags": ["Scat", "2JZ-GTE", "Stock-Stroke", "Forged"]
+    },
+    {
+      "name": "GSC Power-Division EJ25 79mm Stroker",
+      "manufacturer": "GSC Power-Division",
+      "partNumber": "GSC-EJ25-79",
+      "category": "Crankshaft",
+      "application": "Subaru EJ25 (Stroker 2.6L)",
+      "price": 1799.99,
+      "specs": {
+        "stroke": 79.0,
+        "rodJournal": 50.0,
+        "mainJournal": 52.0,
+        "weight": 12.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 800.0
+      },
+      "description": "GSC 79mm stroker para EJ25 2.6L STI",
+      "tags": ["GSC", "EJ25", "STI", "Stroker", "2.6L"]
+    },
+    {
+      "name": "Manley Turbo Tuff EJ25 75mm Stock Stroke",
+      "manufacturer": "Manley Performance",
+      "partNumber": "191500-4",
+      "category": "Crankshaft",
+      "application": "Subaru EJ25 WRX/STI (Stock Replacement)",
+      "price": 1399.99,
+      "specs": {
+        "stroke": 75.0,
+        "rodJournal": 50.0,
+        "mainJournal": 52.0,
+        "weight": 11.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 700.0
+      },
+      "description": "Manley Turbo Tuff stock stroke para STI",
+      "tags": ["Manley", "EJ25", "STI", "Stock-Stroke"]
+    },
+    {
+      "name": "Crower 4G63 EVO 100mm Stroker",
+      "manufacturer": "Crower Cams & Equipment",
+      "partNumber": "CRO-4G63-100",
+      "category": "Crankshaft",
+      "application": "Mitsubishi 4G63 EVO (Stroker 2.3L)",
+      "price": 1999.99,
+      "specs": {
+        "stroke": 100.0,
+        "rodJournal": 50.0,
+        "mainJournal": 56.0,
+        "weight": 13.20,
+        "material": "4340 Forged Steel",
+        "counterweights": "Lightweight",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 1000.0
+      },
+      "description": "Crower 100mm stroker para EVO 2.3L",
+      "tags": ["Crower", "4G63", "EVO", "Stroker", "2.3L"]
+    },
+    {
+      "name": "Scat Honda K24 Stroker 99mm",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-K24-99",
+      "category": "Crankshaft",
+      "application": "Honda K24 (Stroker 2.7L)",
+      "price": 1499.99,
+      "specs": {
+        "stroke": 99.0,
+        "rodJournal": 49.0,
+        "mainJournal": 58.0,
+        "weight": 11.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 700.0
+      },
+      "description": "Scat 99mm stroker para K24 2.7L",
+      "tags": ["Scat", "K24", "Stroker", "2.7L"]
+    },
+    {
+      "name": "Manley Pro Series Ford Coyote 5.0L Stock",
+      "manufacturer": "Manley Performance",
+      "partNumber": "192000-8",
+      "category": "Crankshaft",
+      "application": "Ford 5.0L Coyote Mustang GT (Stock Replacement)",
+      "price": 1599.99,
+      "specs": {
+        "stroke": 92.7,
+        "rodJournal": 52.0,
+        "mainJournal": 60.0,
+        "weight": 21.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 900.0
+      },
+      "description": "Manley Pro stock stroke para Coyote 5.0L",
+      "tags": ["Manley", "Coyote", "5.0L", "Mustang"]
+    },
+    {
+      "name": "Scat Ford 302/351W 3.750 Stroker",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-302-3750",
+      "category": "Crankshaft",
+      "application": "Ford 302 Windsor (Stroker 347ci)",
+      "price": 899.99,
+      "specs": {
+        "stroke": 95.25,
+        "rodJournal": 53.34,
+        "mainJournal": 63.50,
+        "weight": 18.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 650.0
+      },
+      "description": "Scat 3.750\" stroker para Ford 302 347ci",
+      "tags": ["Scat", "Ford", "302", "Stroker", "347ci"]
+    },
+    {
+      "name": "Eagle Billet BMW S54 Stock Stroke",
+      "manufacturer": "Eagle Specialty Products",
+      "partNumber": "EAGLE-S54-87",
+      "category": "Crankshaft",
+      "application": "BMW S54B32 M3 E46 (Stock Replacement)",
+      "price": 1899.99,
+      "specs": {
+        "stroke": 87.0,
+        "rodJournal": 50.0,
+        "mainJournal": 60.0,
+        "weight": 14.50,
+        "material": "Billet 4340 Steel",
+        "counterweights": "Knife-Edged",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 700.0
+      },
+      "description": "Eagle Billet para S54 M3 high-rev",
+      "tags": ["Eagle", "BMW", "S54", "M3", "Billet"]
+    },
+    {
+      "name": "Manley BMW N54 Stock Stroke Forged",
+      "manufacturer": "Manley Performance",
+      "partNumber": "192500-6",
+      "category": "Crankshaft",
+      "application": "BMW N54B30 Twin-Turbo 335i (Stock Replacement)",
+      "price": 1699.99,
+      "specs": {
+        "stroke": 89.6,
+        "rodJournal": 51.0,
+        "mainJournal": 60.0,
+        "weight": 16.20,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 800.0
+      },
+      "description": "Manley forjado para N54 twin-turbo",
+      "tags": ["Manley", "BMW", "N54", "Twin-Turbo"]
+    },
+    {
+      "name": "Scat VW/Audi 1.8T 20V Forged Stock",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-1.8T-86",
+      "category": "Crankshaft",
+      "application": "VW/Audi 1.8T 20V Turbo (Stock Replacement)",
+      "price": 1199.99,
+      "specs": {
+        "stroke": 86.4,
+        "rodJournal": 47.0,
+        "mainJournal": 54.0,
+        "weight": 12.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 600.0
+      },
+      "description": "Scat forjado para VAG 1.8T turbo",
+      "tags": ["Scat", "VW", "Audi", "1.8T", "Turbo"]
+    },
+    {
+      "name": "Manley Porsche 911 Flat-6 Forged",
+      "manufacturer": "Manley Performance",
+      "partNumber": "193000-6",
+      "category": "Crankshaft",
+      "application": "Porsche 911 997 Carrera S Flat-6",
+      "price": 2999.99,
+      "specs": {
+        "stroke": 82.8,
+        "rodJournal": 53.0,
+        "mainJournal": 64.0,
+        "weight": 19.50,
+        "material": "4340 Forged Steel + Nitriding",
+        "counterweights": "Knife-Edged",
+        "oilHoles": "Gun-Drilled",
+        "maxHP": 800.0
+      },
+      "description": "Manley forjado para Porsche 911 flat-6",
+      "tags": ["Manley", "Porsche", "911", "Flat-6"]
+    },
+    {
+      "name": "Scat Mercedes AMG M156 Stock Stroke",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-M156-90",
+      "category": "Crankshaft",
+      "application": "Mercedes-Benz M156 AMG C63",
+      "price": 1899.99,
+      "specs": {
+        "stroke": 90.5,
+        "rodJournal": 52.0,
+        "mainJournal": 62.0,
+        "weight": 22.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 750.0
+      },
+      "description": "Scat forjado para AMG M156 V8",
+      "tags": ["Scat", "Mercedes", "AMG", "M156", "C63"]
+    },
+    {
+      "name": "Scat VW AP 1.8L/2.0L Brasil Stroker",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-AP-BR-84",
+      "category": "Crankshaft",
+      "application": "VW AP 1.8L/2.0L Brasil (Stroker)",
+      "price": 899.99,
+      "specs": {
+        "stroke": 84.0,
+        "rodJournal": 48.0,
+        "mainJournal": 54.0,
+        "weight": 10.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 550.0
+      },
+      "description": "Scat stroker para motor AP brasileiro",
+      "tags": ["Scat", "VW-AP", "Brasil", "Stroker", "Gol"]
+    },
+    {
+      "name": "Manley Opala 250-S 4.1L I6 Forged",
+      "manufacturer": "Manley Performance",
+      "partNumber": "193500-6",
+      "category": "Crankshaft",
+      "application": "Chevrolet Opala 250-S 4.1L I6 Brasil",
+      "price": 1299.99,
+      "specs": {
+        "stroke": 85.7,
+        "rodJournal": 54.0,
+        "mainJournal": 60.33,
+        "weight": 18.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 650.0
+      },
+      "description": "Manley forjado para lendário Opala 250-S",
+      "tags": ["Manley", "Opala", "Brasil", "250-S", "I6"]
+    },
+    {
+      "name": "Scat Ford CHT 1.6L Brasil Forged",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-CHT-BR",
+      "category": "Crankshaft",
+      "application": "Ford CHT 1.6L Brasil Escort/Del Rey",
+      "price": 799.99,
+      "specs": {
+        "stroke": 66.0,
+        "rodJournal": 47.0,
+        "mainJournal": 52.0,
+        "weight": 8.50,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 450.0
+      },
+      "description": "Scat forjado para CHT Brasil",
+      "tags": ["Scat", "CHT", "Ford", "Brasil", "Escort"]
+    },
+    {
+      "name": "Scat Fiat Fire 1.4L 16V Turbo Brasil",
+      "manufacturer": "Scat Crankshafts",
+      "partNumber": "SCAT-FIRE-BR",
+      "category": "Crankshaft",
+      "application": "Fiat Fire 1.4L 16V Turbo Abarth Brasil",
+      "price": 999.99,
+      "specs": {
+        "stroke": 78.9,
+        "rodJournal": 45.0,
+        "mainJournal": 50.0,
+        "weight": 7.80,
+        "material": "4340 Forged Steel",
+        "counterweights": "Fully Counterweighted",
+        "oilHoles": "Cross-Drilled",
+        "maxHP": 500.0
+      },
+      "description": "Scat forjado para Fiat Fire turbo Abarth 500",
+      "tags": ["Scat", "Fiat", "Fire", "Turbo", "Brasil"]
+    }
+  ]
+}

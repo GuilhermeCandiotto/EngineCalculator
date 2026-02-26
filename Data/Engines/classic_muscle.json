@@ -1,0 +1,502 @@
+{
+  "version": "1.0.0",
+  "category": "Classic Muscle Cars",
+  "description": "Motores lend�rios da era muscle car americana (1960-1975)",
+  "engines": [
+    {
+      "name": "Chrysler 426 Hemi",
+      "description": "Chrysler 426 Hemi - 7.0L V8 (Street Hemi)",
+      "application": "Dodge Charger, Plymouth Road Runner (1966-1971)",
+      "factoryHP": 425.0,
+      "factoryTorque": 490.0,
+      "factoryRPM": 5000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Hemi", "Muscle Car", "Mopar", "426", "Elephant Motor"],
+      "basicData": {
+        "bore": 108.2,
+        "stroke": 95.25,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 171.45,
+        "maxRPM": 6000
+      },
+      "compressionData": {
+        "chamberVolume": 102.0,
+        "pistonDomeVolume": 18.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 45.0
+      },
+      "camshaftData": {
+        "intakeDuration": 276.0,
+        "exhaustDuration": 284.0,
+        "intakeLift": 11.43,
+        "exhaustLift": 11.94,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 350.0,
+        "runnerDiameter": 85.0,
+        "plenumVolume": 10.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 900.0,
+        "primaryDiameter": 50.8,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5000,
+        "exhaustDuration": 284.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford Boss 429",
+      "description": "Ford Boss 429 - 7.0L V8 Hemi (NASCAR Homologation)",
+      "application": "Ford Mustang Boss 429 (1969-1970)",
+      "factoryHP": 375.0,
+      "factoryTorque": 450.0,
+      "factoryRPM": 5200,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Ford", "Boss", "Muscle Car", "NASCAR", "Hemi"],
+      "basicData": {
+        "bore": 109.22,
+        "stroke": 95.25,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 6000
+      },
+      "compressionData": {
+        "chamberVolume": 98.0,
+        "pistonDomeVolume": 12.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 270.0,
+        "exhaustDuration": 280.0,
+        "intakeLift": 11.43,
+        "exhaustLift": 11.68,
+        "lsa": 116.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.73
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 82.0,
+        "plenumVolume": 9.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5200,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 880.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5200,
+        "exhaustDuration": 280.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Chevrolet LS6 454",
+      "description": "Chevrolet LS6 454 - 7.4L V8 (Big Block)",
+      "application": "Chevrolet Chevelle SS 454 LS6 (1970-1971)",
+      "factoryHP": 450.0,
+      "factoryTorque": 500.0,
+      "factoryRPM": 5600,
+      "fuelType": "Gasolina 100+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Big Block", "Chevelle", "LS6", "454", "Muscle Car"],
+      "basicData": {
+        "bore": 108.0,
+        "stroke": 101.6,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 6500
+      },
+      "compressionData": {
+        "chamberVolume": 112.0,
+        "pistonDomeVolume": 15.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 280.0,
+        "exhaustDuration": 288.0,
+        "intakeLift": 13.72,
+        "exhaustLift": 14.22,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 360.0,
+        "runnerDiameter": 88.0,
+        "plenumVolume": 11.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 920.0,
+        "primaryDiameter": 50.8,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 5500,
+        "exhaustDuration": 288.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Pontiac Ram Air V 400",
+      "description": "Pontiac Ram Air V 400 - 6.6L V8 (GTO)",
+      "application": "Pontiac GTO Ram Air V (1969-1970)",
+      "factoryHP": 370.0,
+      "factoryTorque": 445.0,
+      "factoryRPM": 5400,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Pontiac", "GTO", "Ram Air", "Muscle Car"],
+      "basicData": {
+        "bore": 103.38,
+        "stroke": 95.25,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 158.75,
+        "maxRPM": 6000
+      },
+      "compressionData": {
+        "chamberVolume": 96.0,
+        "pistonDomeVolume": 10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 272.0,
+        "exhaustDuration": 280.0,
+        "intakeLift": 12.45,
+        "exhaustLift": 12.7,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.65
+      },
+      "intakeData": {
+        "runnerLength": 330.0,
+        "runnerDiameter": 80.0,
+        "plenumVolume": 8.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5400,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 860.0,
+        "primaryDiameter": 47.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5400,
+        "exhaustDuration": 280.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Oldsmobile 442 W-30",
+      "description": "Oldsmobile 455 W-30 - 7.5L V8",
+      "application": "Oldsmobile 442 W-30 (1970-1971)",
+      "factoryHP": 370.0,
+      "factoryTorque": 500.0,
+      "factoryRPM": 5200,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Oldsmobile", "442", "W-30", "Muscle Car"],
+      "basicData": {
+        "bore": 107.95,
+        "stroke": 104.78,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 5800
+      },
+      "compressionData": {
+        "chamberVolume": 115.0,
+        "pistonDomeVolume": 12.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 46.0
+      },
+      "camshaftData": {
+        "intakeDuration": 268.0,
+        "exhaustDuration": 276.0,
+        "intakeLift": 11.68,
+        "exhaustLift": 11.94,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 350.0,
+        "runnerDiameter": 85.0,
+        "plenumVolume": 10.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5200,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 900.0,
+        "primaryDiameter": 50.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5200,
+        "exhaustDuration": 276.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Plymouth 440 Six Pack",
+      "description": "Plymouth 440 Six Pack - 7.2L V8 (Road Runner/Super Bee)",
+      "application": "Plymouth Road Runner, Dodge Super Bee (1969-1971)",
+      "factoryHP": 390.0,
+      "factoryTorque": 490.0,
+      "factoryRPM": 4700,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Plymouth", "440", "Six Pack", "Mopar", "Muscle Car"],
+      "basicData": {
+        "bore": 108.2,
+        "stroke": 95.25,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 171.45,
+        "maxRPM": 5800
+      },
+      "compressionData": {
+        "chamberVolume": 98.0,
+        "pistonDomeVolume": 8.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 46.0
+      },
+      "camshaftData": {
+        "intakeDuration": 276.0,
+        "exhaustDuration": 284.0,
+        "intakeLift": 11.68,
+        "exhaustLift": 12.19,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 82.0,
+        "plenumVolume": 9.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 4700,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 880.0,
+        "primaryDiameter": 50.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 4700,
+        "exhaustDuration": 284.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Chevrolet L88 427",
+      "description": "Chevrolet L88 427 - 7.0L V8 (Corvette Racing)",
+      "application": "Chevrolet Corvette C3 L88 (1967-1969)",
+      "factoryHP": 430.0,
+      "factoryTorque": 460.0,
+      "factoryRPM": 5800,
+      "fuelType": "Gasolina 103+ octanas (Racing fuel)",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Chevrolet", "L88", "427", "Corvette", "Racing"],
+      "basicData": {
+        "bore": 108.0,
+        "stroke": 95.25,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 6500
+      },
+      "compressionData": {
+        "chamberVolume": 108.0,
+        "pistonDomeVolume": 18.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 296.0,
+        "exhaustDuration": 304.0,
+        "intakeLift": 14.22,
+        "exhaustLift": 14.73,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 88.0,
+        "plenumVolume": 10.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5800,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 850.0,
+        "primaryDiameter": 50.8,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 5800,
+        "exhaustDuration": 304.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford 428 Cobra Jet",
+      "description": "Ford 428 Cobra Jet - 7.0L V8 (Mustang/Torino)",
+      "application": "Ford Mustang, Torino Cobra (1968-1970)",
+      "factoryHP": 335.0,
+      "factoryTorque": 440.0,
+      "factoryRPM": 5200,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Ford", "428", "Cobra Jet", "Mustang", "Big Block"],
+      "basicData": {
+        "bore": 108.2,
+        "stroke": 95.9,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 5800
+      },
+      "compressionData": {
+        "chamberVolume": 102.0,
+        "pistonDomeVolume": 10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 270.0,
+        "exhaustDuration": 280.0,
+        "intakeLift": 11.68,
+        "exhaustLift": 12.19,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.73
+      },
+      "intakeData": {
+        "runnerLength": 350.0,
+        "runnerDiameter": 85.0,
+        "plenumVolume": 10.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5200,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 900.0,
+        "primaryDiameter": 50.8,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5200,
+        "exhaustDuration": 280.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "AMC 401 V8",
+      "description": "AMC 401 - 6.6L V8 (Javelin AMX, Matador)",
+      "application": "AMC Javelin AMX, Matador (1971-1974)",
+      "factoryHP": 330.0,
+      "factoryTorque": 430.0,
+      "factoryRPM": 5000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "AMC", "401", "Javelin", "Muscle Car", "Rare"],
+      "basicData": {
+        "bore": 109.22,
+        "stroke": 88.9,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 5600
+      },
+      "compressionData": {
+        "chamberVolume": 95.0,
+        "pistonDomeVolume": 8.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 46.0
+      },
+      "camshaftData": {
+        "intakeDuration": 268.0,
+        "exhaustDuration": 276.0,
+        "intakeLift": 11.43,
+        "exhaustLift": 11.94,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.65
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 80.0,
+        "plenumVolume": 9.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 880.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5000,
+        "exhaustDuration": 276.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

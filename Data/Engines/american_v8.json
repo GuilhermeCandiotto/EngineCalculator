@@ -1,0 +1,447 @@
+{
+  "version": "1.0.0",
+  "category": "American V8",
+  "description": "Motores V8 americanos ic�nicos",
+  "engines": [
+    {
+      "name": "GM LS3",
+      "description": "General Motors LS3 - 6.2L V8 Aspirado de Alta Performance",
+      "application": "Chevrolet Corvette C6 (2008-2013), Camaro SS",
+      "factoryHP": 430.0,
+      "factoryTorque": 424.0,
+      "factoryRPM": 5900,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "LS", "Corvette", "Camaro", "American Muscle", "N/A"],
+      "basicData": {
+        "bore": 103.25,
+        "stroke": 92.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 158.8,
+        "maxRPM": 6600
+      },
+      "compressionData": {
+        "chamberVolume": 68.0,
+        "pistonDomeVolume": -10.5,
+        "gasketThickness": 1.02,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 196.0,
+        "exhaustDuration": 207.0,
+        "intakeLift": 13.05,
+        "exhaustLift": 13.31,
+        "lsa": 116.5,
+        "advanceRetard": 4.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 76.0,
+        "plenumVolume": 8.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 900.0,
+        "primaryDiameter": 44.5,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 76.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 207.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford Coyote 5.0",
+      "description": "Ford Coyote 5.0L V8 DOHC de Alta Tecnologia",
+      "application": "Ford Mustang GT (2011+), F-150",
+      "factoryHP": 435.0,
+      "factoryTorque": 400.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 87+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "DOHC", "Mustang", "Ford", "Modern", "Coyote"],
+      "basicData": {
+        "bore": 92.2,
+        "stroke": 92.7,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 150.7,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 225.0,
+        "exhaustDuration": 230.0,
+        "intakeLift": 12.0,
+        "exhaustLift": 11.5,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 295.0,
+        "runnerDiameter": 72.0,
+        "plenumVolume": 7.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 820.0,
+        "primaryDiameter": 43.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 230.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "GM LT4 Supercharged",
+      "description": "GM LT4 - 6.2L V8 Supercharged (Corvette Z06)",
+      "application": "Chevrolet Corvette C7 Z06 (2015-2019)",
+      "factoryHP": 650.0,
+      "factoryTorque": 650.0,
+      "factoryRPM": 6400,
+      "fuelType": "Gasolina 93+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Supercharged", "LT4", "Z06", "Corvette"],
+      "basicData": {
+        "bore": 103.25,
+        "stroke": 92.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 158.8,
+        "maxRPM": 6600
+      },
+      "compressionData": {
+        "chamberVolume": 70.0,
+        "pistonDomeVolume": -15.0,
+        "gasketThickness": 1.1,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 204.0,
+        "exhaustDuration": 212.0,
+        "intakeLift": 14.0,
+        "exhaustLift": 14.2,
+        "lsa": 116.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.8
+      },
+      "intakeData": {
+        "runnerLength": 250.0,
+        "runnerDiameter": 78.0,
+        "plenumVolume": 9.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 9.0
+      },
+      "exhaustData": {
+        "primaryLength": 850.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 212.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Dodge Viper 8.4L V10",
+      "description": "Dodge Viper V10 - 8.4L V10 Aspirado (Monster Motor)",
+      "application": "Dodge Viper SRT Gen 5 (2013-2017)",
+      "factoryHP": 645.0,
+      "factoryTorque": 600.0,
+      "factoryRPM": 6150,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V10", "Viper", "SRT", "American", "Big Displacement", "N/A"],
+      "basicData": {
+        "bore": 103.0,
+        "stroke": 100.6,
+        "cylinders": 10,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 170.0,
+        "maxRPM": 6300
+      },
+      "compressionData": {
+        "chamberVolume": 72.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.1,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 228.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 12.5,
+        "exhaustLift": 12.2,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 82.0,
+        "plenumVolume": 11.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 850.0,
+        "primaryDiameter": 48.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 88.9,
+        "targetRPM": 6000,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Dodge Hellcat 6.2L Hemi",
+      "description": "Dodge Hellcat Supercharged 6.2L Hemi V8 (707+ HP)",
+      "application": "Dodge Challenger/Charger Hellcat (2015+)",
+      "factoryHP": 717.0,
+      "factoryTorque": 656.0,
+      "factoryRPM": 6000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Hemi", "Supercharged", "Hellcat", "Mopar", "707HP"],
+      "basicData": {
+        "bore": 103.9,
+        "stroke": 90.9,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 160.0,
+        "maxRPM": 6200
+      },
+      "compressionData": {
+        "chamberVolume": 75.0,
+        "pistonDomeVolume": -12.0,
+        "gasketThickness": 1.15,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 208.0,
+        "exhaustDuration": 216.0,
+        "intakeLift": 13.5,
+        "exhaustLift": 13.8,
+        "lsa": 115.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 270.0,
+        "runnerDiameter": 80.0,
+        "plenumVolume": 9.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5800,
+        "boostPressure": 11.6
+      },
+      "exhaustData": {
+        "primaryLength": 820.0,
+        "primaryDiameter": 46.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5800,
+        "exhaustDuration": 216.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford GT500 5.2L V8 Supercharged",
+      "description": "Ford Shelby GT500 - 5.2L V8 Supercharged (Predator)",
+      "application": "Ford Mustang Shelby GT500 (2020+)",
+      "factoryHP": 760.0,
+      "factoryTorque": 625.0,
+      "factoryRPM": 7300,
+      "fuelType": "Gasolina 93+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V8", "Supercharged", "GT500", "Shelby", "Predator", "760HP"],
+      "basicData": {
+        "bore": 94.0,
+        "stroke": 93.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 155.0,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 58.0,
+        "pistonDomeVolume": -14.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 212.0,
+        "exhaustDuration": 220.0,
+        "intakeLift": 13.8,
+        "exhaustLift": 14.0,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.75
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 78.0,
+        "plenumVolume": 8.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7000,
+        "boostPressure": 12.0
+      },
+      "exhaustData": {
+        "primaryLength": 750.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 7000,
+        "exhaustDuration": 220.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Chevrolet LT1 6.2L V8",
+      "description": "GM LT1 - 6.2L V8 (Corvette C7, Camaro SS)",
+      "application": "Chevrolet Corvette C7, Camaro SS (2014-2019)",
+      "factoryHP": 455.0,
+      "factoryTorque": 460.0,
+      "factoryRPM": 6000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "LT1", "Corvette", "Camaro", "Modern", "N/A"],
+      "basicData": {
+        "bore": 103.25,
+        "stroke": 92.0,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 158.8,
+        "maxRPM": 6600
+      },
+      "compressionData": {
+        "chamberVolume": 67.0,
+        "pistonDomeVolume": -9.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 200.0,
+        "exhaustDuration": 210.0,
+        "intakeLift": 13.2,
+        "exhaustLift": 13.5,
+        "lsa": 116.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.7
+      },
+      "intakeData": {
+        "runnerLength": 285.0,
+        "runnerDiameter": 76.0,
+        "plenumVolume": 8.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5800,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 880.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5800,
+        "exhaustDuration": 210.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Dodge 392 Hemi 6.4L",
+      "description": "Dodge 392 Hemi - 6.4L V8 N/A (Scat Pack)",
+      "application": "Dodge Challenger/Charger R/T Scat Pack (2011+)",
+      "factoryHP": 485.0,
+      "factoryTorque": 475.0,
+      "factoryRPM": 6100,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Hemi", "392", "Scat Pack", "Mopar", "N/A"],
+      "basicData": {
+        "bore": 103.9,
+        "stroke": 90.9,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 160.0,
+        "maxRPM": 6400
+      },
+      "compressionData": {
+        "chamberVolume": 70.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.1,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 220.0,
+        "exhaustDuration": 228.0,
+        "intakeLift": 12.8,
+        "exhaustLift": 13.0,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.65
+      },
+      "intakeData": {
+        "runnerLength": 290.0,
+        "runnerDiameter": 78.0,
+        "plenumVolume": 9.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 840.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 228.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

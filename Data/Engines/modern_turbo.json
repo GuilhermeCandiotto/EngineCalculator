@@ -1,0 +1,282 @@
+{
+  "version": "1.0.0",
+  "category": "Modern Turbo",
+  "description": "Motores turbo modernos de alta performance (2010+)",
+  "engines": [
+    {
+      "name": "BMW B58B30",
+      "description": "BMW B58 - 3.0L Inline-6 Twin-Scroll Turbo",
+      "application": "BMW M340i, Supra A90, Z4 M40i (2016+)",
+      "factoryHP": 382.0,
+      "factoryTorque": 369.0,
+      "factoryRPM": 5800,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I6", "Turbo", "BMW", "B58", "Supra", "Modern"],
+      "basicData": {
+        "bore": 82.0,
+        "stroke": 94.6,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 148.8,
+        "maxRPM": 7200
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.2,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 220.0,
+        "exhaustDuration": 228.0,
+        "intakeLift": 10.5,
+        "exhaustLift": 10.2,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 5.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 17.0
+      },
+      "exhaustData": {
+        "primaryLength": 650.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 380.0,
+        "secondaryDiameter": 57.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 228.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Mercedes-AMG M139",
+      "description": "Mercedes-AMG M139 - 2.0L I4 Turbo (Mais potente 4-cilindros)",
+      "application": "Mercedes-AMG A45 S, CLA 45 S (2019+)",
+      "factoryHP": 416.0,
+      "factoryTorque": 369.0,
+      "factoryRPM": 6750,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Turbo", "AMG", "Record", "High Output"],
+      "basicData": {
+        "bore": 83.0,
+        "stroke": 92.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.0,
+        "maxRPM": 7200
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.3,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 235.0,
+        "exhaustDuration": 240.0,
+        "intakeLift": 11.0,
+        "exhaustLift": 10.5,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 55.0,
+        "plenumVolume": 3.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 26.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 6500,
+        "exhaustDuration": 240.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Honda L15B7 Type R",
+      "description": "Honda L15B - 1.5L I4 VTEC Turbo (Civic Type R FK8)",
+      "application": "Honda Civic Type R FK8 (2017-2021)",
+      "factoryHP": 306.0,
+      "factoryTorque": 295.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I4", "VTEC", "Turbo", "Type R", "Honda", "FK8"],
+      "basicData": {
+        "bore": 73.0,
+        "stroke": 89.4,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 38.0,
+        "pistonDomeVolume": -6.0,
+        "gasketThickness": 0.8,
+        "deckHeight": 0.2,
+        "valveRelief": 0.0,
+        "ivcAngle": 54.0
+      },
+      "camshaftData": {
+        "intakeDuration": 232.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 10.5,
+        "exhaustLift": 10.0,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 52.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 20.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 55.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 6000,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Audi EA855 evo4",
+      "description": "Audi EA855 - 2.5L I5 TFSI (RS3/TTRS)",
+      "application": "Audi RS3 8Y, TT RS (2021+)",
+      "factoryHP": 394.0,
+      "factoryTorque": 354.0,
+      "factoryRPM": 5850,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["I5", "Turbo", "Audi", "RS", "5-Cylinder"],
+      "basicData": {
+        "bore": 82.5,
+        "stroke": 92.8,
+        "cylinders": 5,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.5,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 45.0,
+        "pistonDomeVolume": -9.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.25,
+        "valveRelief": 0.0,
+        "ivcAngle": 51.0
+      },
+      "camshaftData": {
+        "intakeDuration": 228.0,
+        "exhaustDuration": 234.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 10.4,
+        "lsa": 109.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 56.0,
+        "plenumVolume": 4.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 21.0
+      },
+      "exhaustData": {
+        "primaryLength": 670.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 234.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Ford EcoBoost 3.5L V6",
+      "description": "Ford EcoBoost 3.5L V6 Twin-Turbo (High Output)",
+      "application": "Ford F-150 Raptor, GT (2017+)",
+      "factoryHP": 450.0,
+      "factoryTorque": 510.0,
+      "factoryRPM": 5000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["V6", "Twin-Turbo", "EcoBoost", "Ford", "Raptor"],
+      "basicData": {
+        "bore": 92.5,
+        "stroke": 86.7,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 155.6,
+        "maxRPM": 6500
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": -10.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.3,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 224.0,
+        "exhaustDuration": 230.0,
+        "intakeLift": 11.2,
+        "exhaustLift": 10.8,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 330.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 6.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5000,
+        "boostPressure": 18.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 400.0,
+        "secondaryDiameter": 60.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 5000,
+        "exhaustDuration": 230.0,
+        "isFourIntoOne": false
+      }
+    }
+  ]
+}

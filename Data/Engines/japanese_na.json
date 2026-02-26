@@ -1,0 +1,502 @@
+{
+  "version": "1.0.0",
+  "category": "Japanese N/A",
+  "description": "Motores japoneses aspirados de alta rota��o",
+  "engines": [
+    {
+      "name": "Honda B18C Type R",
+      "description": "Honda B18C - 1.8L I4 VTEC de Alta Rota��o",
+      "application": "Honda Integra Type R DC2 (1995-2001)",
+      "factoryHP": 195.0,
+      "factoryTorque": 130.0,
+      "factoryRPM": 8000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["I4", "VTEC", "Type R", "Honda", "JDM", "High-Revving"],
+      "basicData": {
+        "bore": 81.0,
+        "stroke": 87.2,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 134.0,
+        "maxRPM": 8500
+      },
+      "compressionData": {
+        "chamberVolume": 44.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.0,
+        "valveRelief": 1.5,
+        "ivcAngle": 60.0
+      },
+      "camshaftData": {
+        "intakeDuration": 250.0,
+        "exhaustDuration": 244.0,
+        "intakeLift": 11.5,
+        "exhaustLift": 10.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 290.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 3.2,
+        "trumpetLength": 80.0,
+        "trumpetDiameter": 65.0,
+        "targetRPM": 7500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 750.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 7500,
+        "exhaustDuration": 244.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Honda K20A Type R",
+      "description": "Honda K20A - 2.0L I4 i-VTEC de Alta Performance",
+      "application": "Honda Civic Type R EP3, Integra DC5",
+      "factoryHP": 220.0,
+      "factoryTorque": 152.0,
+      "factoryRPM": 8000,
+      "fuelType": "Gasolina 95+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["I4", "i-VTEC", "Type R", "Honda", "K-Series", "High-Revving"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 152.0,
+        "maxRPM": 8600
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.85,
+        "deckHeight": 0.0,
+        "valveRelief": 1.8,
+        "ivcAngle": 62.0
+      },
+      "camshaftData": {
+        "intakeDuration": 248.0,
+        "exhaustDuration": 240.0,
+        "intakeLift": 11.7,
+        "exhaustLift": 11.0,
+        "lsa": 109.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 275.0,
+        "runnerDiameter": 60.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 85.0,
+        "trumpetDiameter": 67.0,
+        "targetRPM": 7800,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 39.0,
+        "secondaryLength": 420.0,
+        "secondaryDiameter": 55.0,
+        "collectorDiameter": 65.0,
+        "targetRPM": 7800,
+        "exhaustDuration": 240.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Honda F20C",
+      "description": "Honda F20C - 2.0L I4 VTEC (S2000)",
+      "application": "Honda S2000 AP1 (1999-2003)",
+      "factoryHP": 240.0,
+      "factoryTorque": 153.0,
+      "factoryRPM": 8300,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["I4", "VTEC", "S2000", "Honda", "9000RPM", "High-Rev"],
+      "basicData": {
+        "bore": 87.0,
+        "stroke": 84.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 155.0,
+        "maxRPM": 9000
+      },
+      "compressionData": {
+        "chamberVolume": 40.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.8,
+        "deckHeight": 0.0,
+        "valveRelief": 2.0,
+        "ivcAngle": 64.0
+      },
+      "camshaftData": {
+        "intakeDuration": 256.0,
+        "exhaustDuration": 248.0,
+        "intakeLift": 12.0,
+        "exhaustLift": 11.5,
+        "lsa": 108.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 260.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 3.0,
+        "trumpetLength": 90.0,
+        "trumpetDiameter": 68.0,
+        "targetRPM": 8000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 65.0,
+        "targetRPM": 8000,
+        "exhaustDuration": 248.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Mazda 13B-REW",
+      "description": "Mazda 13B - 1.3L Twin-Rotor Wankel Turbo",
+      "application": "Mazda RX-7 FD3S (1992-2002)",
+      "factoryHP": 255.0,
+      "factoryTorque": 217.0,
+      "factoryRPM": 6500,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": true,
+      "tags": ["Rotary", "Wankel", "RX-7", "Twin-Turbo", "Sequential"],
+      "basicData": {
+        "bore": 80.0,
+        "stroke": 80.0,
+        "cylinders": 2,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 105.0,
+        "maxRPM": 8000
+      },
+      "compressionData": {
+        "chamberVolume": 654.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 2.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 45.0
+      },
+      "camshaftData": {
+        "intakeDuration": 0.0,
+        "exhaustDuration": 0.0,
+        "intakeLift": 0.0,
+        "exhaustLift": 0.0,
+        "lsa": 0.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 0.0
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 65.0,
+        "plenumVolume": 2.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 10.0
+      },
+      "exhaustData": {
+        "primaryLength": 600.0,
+        "primaryDiameter": 60.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 0.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Nissan VQ35DE",
+      "description": "Nissan VQ35 - 3.5L V6 (350Z/G35)",
+      "application": "Nissan 350Z, Infiniti G35 (2003-2006)",
+      "factoryHP": 287.0,
+      "factoryTorque": 274.0,
+      "factoryRPM": 6200,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V6", "VQ", "350Z", "G35", "N/A", "DOHC"],
+      "basicData": {
+        "bore": 95.5,
+        "stroke": 81.4,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 138.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 54.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 55.0
+      },
+      "camshaftData": {
+        "intakeDuration": 236.0,
+        "exhaustDuration": 232.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 10.5,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 70.0,
+        "plenumVolume": 5.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 780.0,
+        "primaryDiameter": 45.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 232.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Toyota 4U-GSE (86/BRZ)",
+      "description": "Toyota 4U-GSE - 2.0L Flat-4 (86/BRZ/GR86)",
+      "application": "Toyota 86, Subaru BRZ (2012+)",
+      "factoryHP": 200.0,
+      "factoryTorque": 151.0,
+      "factoryRPM": 7000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["Flat-4", "Boxer", "86", "BRZ", "Toyota", "Subaru"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 149.0,
+        "maxRPM": 7450
+      },
+      "compressionData": {
+        "chamberVolume": 46.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 56.0
+      },
+      "camshaftData": {
+        "intakeDuration": 240.0,
+        "exhaustDuration": 236.0,
+        "intakeLift": 11.2,
+        "exhaustLift": 10.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 56.0,
+        "plenumVolume": 3.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 7000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 690.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 60.0,
+        "targetRPM": 7000,
+        "exhaustDuration": 236.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Nissan VQ37VHR 3.7L",
+      "description": "Nissan VQ37VHR - 3.7L V6 (370Z/G37)",
+      "application": "Nissan 370Z, Infiniti G37 (2008-2020)",
+      "factoryHP": 332.0,
+      "factoryTorque": 270.0,
+      "factoryRPM": 7000,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V6", "VQ", "370Z", "G37", "VVEL", "High-Rev"],
+      "basicData": {
+        "bore": 95.5,
+        "stroke": 86.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 141.0,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 50.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 58.0
+      },
+      "camshaftData": {
+        "intakeDuration": 244.0,
+        "exhaustDuration": 240.0,
+        "intakeLift": 11.5,
+        "exhaustLift": 11.0,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 72.0,
+        "plenumVolume": 6.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 46.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 6500,
+        "exhaustDuration": 240.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Honda J35 3.5L V6",
+      "description": "Honda J35 - 3.5L V6 VTEC (Accord/TLX)",
+      "application": "Honda Accord V6, Acura TLX (2008-2017)",
+      "factoryHP": 280.0,
+      "factoryTorque": 251.0,
+      "factoryRPM": 6200,
+      "fuelType": "Gasolina 87+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["V6", "VTEC", "J-Series", "Honda", "Accord"],
+      "basicData": {
+        "bore": 89.0,
+        "stroke": 93.0,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 153.0,
+        "maxRPM": 6800
+      },
+      "compressionData": {
+        "chamberVolume": 56.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 236.0,
+        "exhaustDuration": 232.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 10.5,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 68.0,
+        "plenumVolume": 5.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 780.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 232.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "Mazda Renesis 13B (RX-8)",
+      "description": "Mazda Renesis 13B - 1.3L Rotary N/A (RX-8)",
+      "application": "Mazda RX-8 (2003-2012)",
+      "factoryHP": 232.0,
+      "factoryTorque": 159.0,
+      "factoryRPM": 8500,
+      "fuelType": "Gasolina 91+ octanas",
+      "hasForcedInduction": false,
+      "tags": ["Rotary", "Wankel", "RX-8", "9000RPM", "High-Rev"],
+      "basicData": {
+        "bore": 80.0,
+        "stroke": 80.0,
+        "cylinders": 2,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 105.0,
+        "maxRPM": 9000
+      },
+      "compressionData": {
+        "chamberVolume": 654.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 2.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 0.0
+      },
+      "camshaftData": {
+        "intakeDuration": 0.0,
+        "exhaustDuration": 0.0,
+        "intakeLift": 0.0,
+        "exhaustLift": 0.0,
+        "lsa": 0.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 0.0
+      },
+      "intakeData": {
+        "runnerLength": 280.0,
+        "runnerDiameter": 60.0,
+        "plenumVolume": 2.2,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 8000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 550.0,
+        "primaryDiameter": 60.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 76.0,
+        "targetRPM": 8000,
+        "exhaustDuration": 0.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

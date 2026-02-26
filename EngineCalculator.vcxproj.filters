@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arquivos de Origem">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Recurso">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Core">
+      <UniqueIdentifier>{0f68f629-9e4c-44f5-bba0-98de33da7dcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\UI">
+      <UniqueIdentifier>{dbb08b01-65d1-4f52-a95c-61dce91896d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Banco de Dados">
+      <UniqueIdentifier>{9e854c89-7f88-4c6d-8e00-2131878764d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Core">
+      <UniqueIdentifier>{ab79ab29-2e70-4e5e-aa75-7969da5a2d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\UI">
+      <UniqueIdentifier>{faec0a1c-8c82-4148-914a-aaa5a259d1db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Banco de Dados\Motores">
+      <UniqueIdentifier>{480ba224-054c-4607-a7a9-8868aa883f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\UI\Tabs">
+      <UniqueIdentifier>{f0dc8b42-fddd-4b9a-b546-69821b4dbf59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\UI\Tabs">
+      <UniqueIdentifier>{6da7c1d6-d539-4a4b-9d9e-d726050a4abd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\UI\Managers">
+      <UniqueIdentifier>{f9fa5de2-0e59-41e4-a3ca-c8327154e6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\UI\Managers">
+      <UniqueIdentifier>{aa457ef5-d7c0-45db-a7f6-150c71d5e2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{759e3e19-abc5-44fd-9e5b-7b0ee966b3c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\EngineCore.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CompressionCalculator.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCalculator.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\TabPages.h">
+      <Filter>Arquivos de Cabeçalho\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\MainWindow.h">
+      <Filter>Arquivos de Cabeçalho\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ValveTrainCalculator.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CamshaftCalculator.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EngineDataManager.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ProjectManager.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EngineValidator.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UnitConverter.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FuelSystemCalculator.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\AlternativeFuelsCalculator.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EnginePresets.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\JSONDataLoader.h">
+      <Filter>Arquivos de Cabeçalho\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\BasicTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\EnginePresetsDialog.h">
+      <Filter>Arquivos de Cabeçalho\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\CamshaftTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\CompressionTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\ExhaustTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\IntakeTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\ValveTrainTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Managers\MenuManager.h">
+      <Filter>Arquivos de Cabeçalho\UI\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Managers\StatusBarManager.h">
+      <Filter>Arquivos de Cabeçalho\UI\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Managers\TabManager.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Managers\FileManager.h">
+      <Filter>Arquivos de Cabeçalho\UI\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Managers\SettingsManager.h">
+      <Filter>Arquivos de Cabeçalho\UI\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\FuelTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Tabs\AlternativeFuelsTab.h">
+      <Filter>Arquivos de Cabeçalho\UI\Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IntakeExhaustCalculator.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EngineCalculator.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\CompressionCalculator.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EngineCore.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MainWindow.cpp">
+      <Filter>Arquivos de Origem\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ValveTrainCalculator.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\CamshaftCalculator.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\IntakeExhaustCalculator.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EngineDataManager.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ProjectManager.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UnitConverter.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\FuelSystemCalculator.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\AlternativeFuelsCalculator.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\JSONDataLoader.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\EnginePresetsDialog.cpp">
+      <Filter>Arquivos de Origem\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EnginePresets.cpp">
+      <Filter>Arquivos de Origem\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\BasicTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\CompressionTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\ValveTrainTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\CamshaftTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\IntakeTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\ExhaustTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Managers\MenuManager.cpp">
+      <Filter>Arquivos de Origem\UI\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Managers\StatusBarManager.cpp">
+      <Filter>Arquivos de Origem\UI\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Managers\TabManager.cpp">
+      <Filter>Arquivos de Origem\UI\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Managers\SettingsManager.cpp">
+      <Filter>Arquivos de Origem\UI\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Managers\FileManager.cpp">
+      <Filter>Arquivos de Origem\UI\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\FuelTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Tabs\AlternativeFuelsTab.cpp">
+      <Filter>Arquivos de Origem\UI\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EngineValidator.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\TabPages.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="EngineCalculator.ico">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Data\Engines\american_v8.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\brazilian_performance.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\classic_muscle.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\diesel_performance.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\european.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\japanese_na.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\japanese_turbo.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\modern_turbo.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Engines\racing_engines.json">
+      <Filter>Banco de Dados\Motores</Filter>
+    </None>
+    <None Include="Data\Components\connecting_rods.json">
+      <Filter>Banco de Dados</Filter>
+    </None>
+    <None Include="Data\Components\pistons.json">
+      <Filter>Banco de Dados</Filter>
+    </None>
+    <None Include="Data\Components\camshafts.json">
+      <Filter>Banco de Dados</Filter>
+    </None>
+    <None Include="Data\Components\crankshafts.json">
+      <Filter>Banco de Dados</Filter>
+    </None>
+    <None Include="Data\Components\valve_springs.json">
+      <Filter>Banco de Dados</Filter>
+    </None>
+    <None Include="Data\Components\valves.json">
+      <Filter>Banco de Dados</Filter>
+    </None>
+    <None Include=".gitignore">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="docs\COMPLETE_AUDIT_REPORT.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="CONTRIBUTING.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="LICENSE">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="docs\CORRECTIONS_LOG.md" />
+    <None Include="docs\ARCHITECTURE.md" />
+    <None Include="docs\CHANGELOG.md" />
+    <None Include="docs\FEATURES.md" />
+    <None Include="README.new.md" />
+  </ItemGroup>
+</Project>

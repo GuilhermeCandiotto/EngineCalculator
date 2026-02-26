@@ -1,0 +1,557 @@
+{
+  "version": "1.0.0",
+  "category": "Brazilian Performance",
+  "description": "Motores nacionais brasileiros de alta performance",
+  "engines": [
+    {
+      "name": "Chevrolet Opala 250-S 4.1L I6",
+      "description": "GM 250-S - 4.1L Inline-6 (Motor Opala 6 Cilindros)",
+      "application": "Chevrolet Opala SS, Caravan, Diplomata (1969-1992)",
+      "factoryHP": 171.0,
+      "factoryTorque": 304.0,
+      "factoryRPM": 4400,
+      "fuelType": "Gasolina/�lcool",
+      "hasForcedInduction": false,
+      "tags": ["I6", "Opala", "Brazilian", "Classic", "Torque Monster"],
+      "basicData": {
+        "bore": 98.43,
+        "stroke": 88.9,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 5500
+      },
+      "compressionData": {
+        "chamberVolume": 72.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 45.0
+      },
+      "camshaftData": {
+        "intakeDuration": 260.0,
+        "exhaustDuration": 268.0,
+        "intakeLift": 10.5,
+        "exhaustLift": 10.8,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 65.0,
+        "plenumVolume": 6.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 4400,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 820.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 4400,
+        "exhaustDuration": 268.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "VW AP 2.0L Turbo (Preparado)",
+      "description": "Volkswagen AP 2.0L I4 Turbo - Motor Nacional Preparado",
+      "application": "VW Gol, Parati, Santana, Passat (Prepara��o Turbo)",
+      "factoryHP": 350.0,
+      "factoryTorque": 420.0,
+      "factoryRPM": 6000,
+      "fuelType": "Gasolina/�lcool",
+      "hasForcedInduction": true,
+      "tags": ["I4", "AP", "Turbo", "Brazilian", "Drag Racing", "Street"],
+      "basicData": {
+        "bore": 82.5,
+        "stroke": 92.8,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.0,
+        "maxRPM": 7500
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": -8.0,
+        "gasketThickness": 1.2,
+        "deckHeight": 0.5,
+        "valveRelief": 3.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 272.0,
+        "exhaustDuration": 280.0,
+        "intakeLift": 11.5,
+        "exhaustLift": 11.8,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 320.0,
+        "runnerDiameter": 58.0,
+        "plenumVolume": 4.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 6000,
+        "boostPressure": 18.0
+      },
+      "exhaustData": {
+        "primaryLength": 750.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 70.0,
+        "targetRPM": 6000,
+        "exhaustDuration": 280.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "VW AP 1.8L 8V �lcool (Gol GTi)",
+      "description": "Volkswagen AP 1.8L 8V �lcool - Gol GTi Cl�ssico",
+      "application": "VW Gol GTi, Voyage GTi (1989-1994)",
+      "factoryHP": 120.0,
+      "factoryTorque": 160.0,
+      "factoryRPM": 5500,
+      "fuelType": "�lcool (Etanol)",
+      "hasForcedInduction": false,
+      "tags": ["I4", "AP", "GTi", "Brazilian", "Alcohol", "Classic"],
+      "basicData": {
+        "bore": 81.0,
+        "stroke": 86.4,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.0,
+        "maxRPM": 6500
+      },
+      "compressionData": {
+        "chamberVolume": 48.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 48.0
+      },
+      "camshaftData": {
+        "intakeDuration": 264.0,
+        "exhaustDuration": 272.0,
+        "intakeLift": 10.2,
+        "exhaustLift": 10.5,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 330.0,
+        "runnerDiameter": 55.0,
+        "plenumVolume": 3.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 780.0,
+        "primaryDiameter": 40.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 57.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 272.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford CHT 1.6L Turbo (Preparado)",
+      "description": "Ford CHT 1.6L I4 Turbo - Del Rey/Escort Turbo Preparado",
+      "application": "Ford Del Rey, Escort, Verona (Prepara��o Turbo)",
+      "factoryHP": 280.0,
+      "factoryTorque": 320.0,
+      "factoryRPM": 5800,
+      "fuelType": "Gasolina/�lcool",
+      "hasForcedInduction": true,
+      "tags": ["I4", "CHT", "Turbo", "Brazilian", "Ford", "Escort"],
+      "basicData": {
+        "bore": 81.0,
+        "stroke": 77.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.0,
+        "maxRPM": 7000
+      },
+      "compressionData": {
+        "chamberVolume": 46.0,
+        "pistonDomeVolume": -6.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.3,
+        "valveRelief": 2.5,
+        "ivcAngle": 52.0
+      },
+      "camshaftData": {
+        "intakeDuration": 268.0,
+        "exhaustDuration": 276.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 11.0,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 310.0,
+        "runnerDiameter": 52.0,
+        "plenumVolume": 3.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5800,
+        "boostPressure": 16.0
+      },
+      "exhaustData": {
+        "primaryLength": 720.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 60.0,
+        "targetRPM": 5800,
+        "exhaustDuration": 276.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Fiat Fire 1.4L 16V Turbo (Abarth)",
+      "description": "Fiat Fire 1.4L I4 16V Turbo - Abarth 500/Punto T-Jet",
+      "application": "Fiat 500 Abarth, Punto T-Jet (Brasil)",
+      "factoryHP": 152.0,
+      "factoryTorque": 206.0,
+      "factoryRPM": 5500,
+      "fuelType": "Gasolina",
+      "hasForcedInduction": true,
+      "tags": ["I4", "Fire", "Turbo", "Abarth", "Brazilian", "16V"],
+      "basicData": {
+        "bore": 72.0,
+        "stroke": 84.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 129.0,
+        "maxRPM": 6500
+      },
+      "compressionData": {
+        "chamberVolume": 42.0,
+        "pistonDomeVolume": -5.0,
+        "gasketThickness": 0.9,
+        "deckHeight": 0.2,
+        "valveRelief": 0.0,
+        "ivcAngle": 50.0
+      },
+      "camshaftData": {
+        "intakeDuration": 228.0,
+        "exhaustDuration": 234.0,
+        "intakeLift": 9.8,
+        "exhaustLift": 9.5,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 48.0,
+        "plenumVolume": 2.8,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5500,
+        "boostPressure": 12.0
+      },
+      "exhaustData": {
+        "primaryLength": 680.0,
+        "primaryDiameter": 35.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 54.0,
+        "targetRPM": 5500,
+        "exhaustDuration": 234.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "GM Family II 2.0L 8V (Vectra)",
+      "description": "GM Family II 2.0L I4 8V - Vectra/Calibra Nacional",
+      "application": "Chevrolet Vectra, Calibra, S10 (1993-2011)",
+      "factoryHP": 116.0,
+      "factoryTorque": 177.0,
+      "factoryRPM": 5200,
+      "fuelType": "Gasolina/�lcool",
+      "hasForcedInduction": false,
+      "tags": ["I4", "Family II", "Vectra", "Brazilian", "GM"],
+      "basicData": {
+        "bore": 86.0,
+        "stroke": 86.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 145.0,
+        "maxRPM": 6000
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 46.0
+      },
+      "camshaftData": {
+        "intakeDuration": 252.0,
+        "exhaustDuration": 260.0,
+        "intakeLift": 9.5,
+        "exhaustLift": 9.8,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 330.0,
+        "runnerDiameter": 54.0,
+        "plenumVolume": 4.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5200,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 760.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 57.0,
+        "targetRPM": 5200,
+        "exhaustDuration": 260.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Puma GTB 2.0L (VW AP)",
+      "description": "Puma GTB - VW AP 2.0L 8V (Clássico Esportivo Nacional)",
+      "application": "Puma GTB, GTE, GTB S2 (1973-1992)",
+      "factoryHP": 110.0,
+      "factoryTorque": 157.0,
+      "factoryRPM": 5400,
+      "fuelType": "Gasolina/Álcool",
+      "hasForcedInduction": false,
+      "tags": ["I4", "Puma", "AP", "Brazilian", "Classic", "Sports Car"],
+      "basicData": {
+        "bore": 92.8,
+        "stroke": 74.4,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 144.0,
+        "maxRPM": 6000
+      },
+      "compressionData": {
+        "chamberVolume": 52.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 46.0
+      },
+      "camshaftData": {
+        "intakeDuration": 256.0,
+        "exhaustDuration": 264.0,
+        "intakeLift": 9.8,
+        "exhaustLift": 10.2,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 330.0,
+        "runnerDiameter": 54.0,
+        "plenumVolume": 3.6,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 5400,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 780.0,
+        "primaryDiameter": 38.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 57.0,
+        "targetRPM": 5400,
+        "exhaustDuration": 264.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Ford Maverick V8 302 (5.0L)",
+      "description": "Ford Maverick V8 302 - 5.0L V8 Nacional",
+      "application": "Ford Maverick GT, Super GT (1974-1979)",
+      "factoryHP": 199.0,
+      "factoryTorque": 353.0,
+      "factoryRPM": 4400,
+      "fuelType": "Gasolina",
+      "hasForcedInduction": false,
+      "tags": ["V8", "Ford", "Maverick", "Brazilian", "302", "V8 Nacional"],
+      "basicData": {
+        "bore": 101.6,
+        "stroke": 76.2,
+        "cylinders": 8,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 130.0,
+        "maxRPM": 5500
+      },
+      "compressionData": {
+        "chamberVolume": 68.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 45.0
+      },
+      "camshaftData": {
+        "intakeDuration": 260.0,
+        "exhaustDuration": 268.0,
+        "intakeLift": 10.8,
+        "exhaustLift": 11.2,
+        "lsa": 112.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.6
+      },
+      "intakeData": {
+        "runnerLength": 340.0,
+        "runnerDiameter": 70.0,
+        "plenumVolume": 6.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 4400,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 850.0,
+        "primaryDiameter": 44.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 63.5,
+        "targetRPM": 4400,
+        "exhaustDuration": 268.0,
+        "isFourIntoOne": true
+      }
+    },
+    {
+      "name": "Chevrolet Landau V8 250-S",
+      "description": "Chevrolet Landau - 4.1L I6 250-S (Opala Landau)",
+      "application": "Chevrolet Landau, Opala Diplomata (1981-1992)",
+      "factoryHP": 140.0,
+      "factoryTorque": 280.0,
+      "factoryRPM": 4000,
+      "fuelType": "Álcool (Etanol)",
+      "hasForcedInduction": false,
+      "tags": ["I6", "Landau", "250-S", "Brazilian", "Alcohol", "Luxury"],
+      "basicData": {
+        "bore": 98.43,
+        "stroke": 88.9,
+        "cylinders": 6,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 165.1,
+        "maxRPM": 5000
+      },
+      "compressionData": {
+        "chamberVolume": 70.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 44.0
+      },
+      "camshaftData": {
+        "intakeDuration": 252.0,
+        "exhaustDuration": 260.0,
+        "intakeLift": 10.0,
+        "exhaustLift": 10.5,
+        "lsa": 114.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.5
+      },
+      "intakeData": {
+        "runnerLength": 350.0,
+        "runnerDiameter": 62.0,
+        "plenumVolume": 5.5,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 4000,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 840.0,
+        "primaryDiameter": 42.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 60.0,
+        "targetRPM": 4000,
+        "exhaustDuration": 260.0,
+        "isFourIntoOne": false
+      }
+    },
+    {
+      "name": "VW Fusca 1600 (Boxer)",
+      "description": "Volkswagen Fusca 1600 - 1.6L Flat-4 Boxer Refrigerado a Ar",
+      "application": "VW Fusca 1600, Kombi (1970-1996)",
+      "factoryHP": 65.0,
+      "factoryTorque": 120.0,
+      "factoryRPM": 4600,
+      "fuelType": "Gasolina/Álcool",
+      "hasForcedInduction": false,
+      "tags": ["Flat-4", "Fusca", "Beetle", "Brazilian", "Air-cooled", "Classic"],
+      "basicData": {
+        "bore": 85.5,
+        "stroke": 69.0,
+        "cylinders": 4,
+        "engineType": "FOUR_STROKE",
+        "rodLength": 120.0,
+        "maxRPM": 5200
+      },
+      "compressionData": {
+        "chamberVolume": 56.0,
+        "pistonDomeVolume": 0.0,
+        "gasketThickness": 1.0,
+        "deckHeight": 0.0,
+        "valveRelief": 0.0,
+        "ivcAngle": 42.0
+      },
+      "camshaftData": {
+        "intakeDuration": 244.0,
+        "exhaustDuration": 252.0,
+        "intakeLift": 9.0,
+        "exhaustLift": 9.5,
+        "lsa": 110.0,
+        "advanceRetard": 0.0,
+        "rockerRatio": 1.4
+      },
+      "intakeData": {
+        "runnerLength": 300.0,
+        "runnerDiameter": 42.0,
+        "plenumVolume": 2.0,
+        "trumpetLength": 0.0,
+        "trumpetDiameter": 0.0,
+        "targetRPM": 4600,
+        "boostPressure": 0.0
+      },
+      "exhaustData": {
+        "primaryLength": 700.0,
+        "primaryDiameter": 32.0,
+        "secondaryLength": 0.0,
+        "secondaryDiameter": 0.0,
+        "collectorDiameter": 50.0,
+        "targetRPM": 4600,
+        "exhaustDuration": 252.0,
+        "isFourIntoOne": true
+      }
+    }
+  ]
+}

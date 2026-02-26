@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9525c6ba-eb08-429e-a16e-312886d60fe7}</ProjectGuid>
+    <RootNamespace>EngineCalculator</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\AlternativeFuelsCalculator.h" />
+    <ClInclude Include="Core\CamshaftCalculator.h" />
+    <ClInclude Include="Core\CompressionCalculator.h" />
+    <ClInclude Include="Core\EngineCore.h" />
+    <ClInclude Include="Core\EngineDataManager.h" />
+    <ClInclude Include="Core\EnginePresets.h" />
+    <ClInclude Include="Core\EngineValidator.h" />
+    <ClInclude Include="Core\FuelSystemCalculator.h" />
+    <ClInclude Include="Core\IntakeExhaustCalculator.h" />
+    <ClInclude Include="Core\JSONDataLoader.h" />
+    <ClInclude Include="Core\ProjectManager.h" />
+    <ClInclude Include="Core\UnitConverter.h" />
+    <ClInclude Include="Core\ValveTrainCalculator.h" />
+    <ClInclude Include="EngineCalculator.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UI\EnginePresetsDialog.h" />
+    <ClInclude Include="UI\MainWindow.h" />
+    <ClInclude Include="UI\Managers\FileManager.h" />
+    <ClInclude Include="UI\Managers\MenuManager.h" />
+    <ClInclude Include="UI\Managers\SettingsManager.h" />
+    <ClInclude Include="UI\Managers\StatusBarManager.h" />
+    <ClInclude Include="UI\Managers\TabManager.h" />
+    <ClInclude Include="UI\TabPages.h" />
+    <ClInclude Include="UI\Tabs\AlternativeFuelsTab.h" />
+    <ClInclude Include="UI\Tabs\BasicTab.h" />
+    <ClInclude Include="UI\Tabs\CamshaftTab.h" />
+    <ClInclude Include="UI\Tabs\CompressionTab.h" />
+    <ClInclude Include="UI\Tabs\ExhaustTab.h" />
+    <ClInclude Include="UI\Tabs\FuelTab.h" />
+    <ClInclude Include="UI\Tabs\IntakeTab.h" />
+    <ClInclude Include="UI\Tabs\ValveTrainTab.h" />
+    <ClInclude Include="UI\GraphRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\AlternativeFuelsCalculator.cpp" />
+    <ClCompile Include="Core\CamshaftCalculator.cpp" />
+    <ClCompile Include="Core\CompressionCalculator.cpp" />
+    <ClCompile Include="Core\EngineCore.cpp" />
+    <ClCompile Include="Core\EngineDataManager.cpp" />
+    <ClCompile Include="Core\EnginePresets.cpp" />
+    <ClCompile Include="Core\EngineValidator.cpp" />
+    <ClCompile Include="Core\FuelSystemCalculator.cpp" />
+    <ClCompile Include="Core\IntakeExhaustCalculator.cpp" />
+    <ClCompile Include="Core\JSONDataLoader.cpp" />
+    <ClCompile Include="Core\ProjectManager.cpp" />
+    <ClCompile Include="Core\UnitConverter.cpp" />
+    <ClCompile Include="Core\ValveTrainCalculator.cpp" />
+    <ClCompile Include="EngineCalculator.cpp" />
+    <ClCompile Include="UI\GraphRenderer.cpp" />
+    <ClCompile Include="UI\EnginePresetsDialog.cpp" />
+    <ClCompile Include="UI\MainWindow.cpp" />
+    <ClCompile Include="UI\Managers\FileManager.cpp" />
+    <ClCompile Include="UI\Managers\MenuManager.cpp" />
+    <ClCompile Include="UI\Managers\SettingsManager.cpp" />
+    <ClCompile Include="UI\Managers\StatusBarManager.cpp" />
+    <ClCompile Include="UI\Managers\TabManager.cpp" />
+    <ClCompile Include="UI\TabPages.cpp" />
+    <ClCompile Include="UI\Tabs\AlternativeFuelsTab.cpp" />
+    <ClCompile Include="UI\Tabs\BasicTab.cpp" />
+    <ClCompile Include="UI\Tabs\CamshaftTab.cpp" />
+    <ClCompile Include="UI\Tabs\CompressionTab.cpp" />
+    <ClCompile Include="UI\Tabs\ExhaustTab.cpp" />
+    <ClCompile Include="UI\Tabs\FuelTab.cpp" />
+    <ClCompile Include="UI\Tabs\IntakeTab.cpp" />
+    <ClCompile Include="UI\Tabs\ValveTrainTab.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="EngineCalculator.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="CONTRIBUTING.md" />
+    <None Include="Data\Components\camshafts.json" />
+    <None Include="Data\Components\connecting_rods.json" />
+    <None Include="Data\Components\crankshafts.json" />
+    <None Include="Data\Components\pistons.json" />
+    <None Include="Data\Components\valves.json" />
+    <None Include="Data\Components\valve_springs.json" />
+    <None Include="Data\Engines\american_v8.json" />
+    <None Include="Data\Engines\brazilian_performance.json" />
+    <None Include="Data\Engines\classic_muscle.json" />
+    <None Include="Data\Engines\diesel_performance.json" />
+    <None Include="Data\Engines\european.json" />
+    <None Include="Data\Engines\japanese_na.json" />
+    <None Include="Data\Engines\japanese_turbo.json" />
+    <None Include="Data\Engines\modern_turbo.json" />
+    <None Include="Data\Engines\racing_engines.json" />
+    <None Include="docs\ARCHITECTURE.md" />
+    <None Include="docs\CHANGELOG.md" />
+    <None Include="docs\COMPLETE_AUDIT_REPORT.md" />
+    <None Include="docs\CORRECTIONS_LOG.md" />
+    <None Include="docs\FEATURES.md" />
+    <None Include="LICENSE" />
+    <None Include="packages.config" />
+    <None Include="README.new.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets" Condition="Exists('packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets'))" />
+  </Target>
+</Project>
