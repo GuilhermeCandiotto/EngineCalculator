@@ -41,19 +41,27 @@ EngineCalculator/
 │       └── AlternativeFuelsTab.h/.cpp
 │
 ├── Data/                              # Dados JSON
-│   └── Engines/                       # 9 arquivos JSON com 81 presets
-│       ├── american_v8.json
-│       ├── brazilian_performance.json
-│       ├── classic_muscle.json
-│       ├── diesel_performance.json
-│       ├── european.json
-│       ├── japanese_na.json
-│       ├── japanese_turbo.json
-│       ├── modern_turbo.json
-│       └── racing_engines.json
+│   ├── Engines/                       # 9 arquivos JSON com 81 presets
+│   │   ├── american_v8.json
+│   │   ├── brazilian_performance.json
+│   │   ├── classic_muscle.json
+│   │   ├── diesel_performance.json
+│   │   ├── european.json
+│   │   ├── japanese_na.json
+│   │   ├── japanese_turbo.json
+│   │   ├── modern_turbo.json
+│   │   └── racing_engines.json
+│   └── Components/                    # Base de componentes
+│       ├── camshafts.json
+│       ├── connecting_rods.json
+│       ├── crankshafts.json
+│       ├── pistons.json
+│       ├── valve_springs.json
+│       └── valves.json
 │
 ├── docs/                              # Documentação
 ├── EngineCalculator.cpp               # Entry point (WinMain)
+├── EngineCalculator.slnx              # Visual Studio solution
 └── EngineCalculator.vcxproj           # Projeto Visual Studio
 ```
 

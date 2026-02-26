@@ -200,6 +200,7 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".github\copilot-instructions.md" />
     <None Include=".gitignore" />
     <None Include="CONTRIBUTING.md" />
     <None Include="Data\Components\camshafts.json" />
@@ -219,12 +220,12 @@
     <None Include="Data\Engines\racing_engines.json" />
     <None Include="docs\ARCHITECTURE.md" />
     <None Include="docs\CHANGELOG.md" />
-    <None Include="docs\COMPLETE_AUDIT_REPORT.md" />
-    <None Include="docs\CORRECTIONS_LOG.md" />
     <None Include="docs\FEATURES.md" />
+    <None Include="docs\FUEL_REFERENCES.md" />
+    <None Include="docs\MEP_REFERENCES.md" />
     <None Include="LICENSE" />
     <None Include="packages.config" />
-    <None Include="README.new.md" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

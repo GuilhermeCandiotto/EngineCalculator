@@ -43,7 +43,7 @@ git clone https://github.com/GuilhermeCandiotto/EngineCalculator.git
 cd EngineCalculator
 ```
 
-1. Open `EngineCalculator.sln` in Visual Studio
+1. Open `EngineCalculator.slnx` in Visual Studio
 2. Build → Build Solution (`Ctrl+Shift+B`)
 3. `F5` to run
 
@@ -159,7 +159,7 @@ EngineCalculator/
 │   └── Components/                 # Component database (JSON)
 │
 ├── docs/                           # Documentation
-└── EngineCalculator.sln            # Visual Studio solution
+└── EngineCalculator.slnx            # Visual Studio solution
 ```
 
 ### Design Patterns

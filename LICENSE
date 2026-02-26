@@ -1,63 +1,32 @@
-MIT License
+Copyright (c) 2026 Guilherme Candiotto. All rights reserved.
 
-Copyright (c) 2026 Engine Calculator Development Team
+PROPRIETARY SOFTWARE LICENSE
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software and associated documentation files (the "Software") are the
+exclusive property of Guilherme Candiotto.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+PERMITTED USE:
+- Personal use
+- Professional use (engine design and analysis)
+- Educational use (academic study and research)
+
+RESTRICTIONS:
+- Redistribution of source code, in whole or in part, is NOT permitted.
+- Resale or commercial distribution of the Software is NOT permitted.
+- Removal or modification of copyright notices is NOT permitted.
+- Creating derivative works for distribution is NOT permitted.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
----
-
-## DISCLAIMER - ENGINEERING SOFTWARE
-
-This software performs engineering calculations for internal combustion engines
-based on established scientific formulas and peer-reviewed literature.
-
-**IMPORTANT NOTICES:**
-
-1. **Educational and Professional Use:**
-   This software is intended for educational purposes and professional
-   engineering analysis. All calculations are based on theoretical models
-   and should be validated against real-world testing.
-
-2. **No Warranty for Accuracy:**
-   While every effort has been made to ensure the accuracy of formulas
-   and calculations, the authors make no warranty regarding the precision
-   of results. Users are responsible for validating all calculations.
-
-3. **Not a Substitute for Professional Engineering:**
-   This software does not replace professional engineering judgment and
-   should not be the sole basis for critical design decisions.
-
-4. **References and Citations:**
-   All formulas are based on recognized scientific literature including:
-   - Heywood, J.B. "Internal Combustion Engine Fundamentals" (1988)
-   - Blair, G.P. "Design and Simulation of Four-Stroke Engines" (1999)
-   - Pulkrabek, W.W. "Engineering Fundamentals of ICE" (2003)
-   - Various SAE Papers and technical standards
-
-5. **User Responsibility:**
-   Users assume all responsibility for the application of results
-   obtained from this software. Always consult with qualified engineers
-   and perform appropriate testing and validation.
-
-## SCIENTIFIC VALIDATION
-
-All calculations have been validated against published literature and
-industry standards. See docs/technical/REFERENCES.md for complete
-bibliography and validation reports.
-
+ENGINEERING DISCLAIMER:
+This software performs engineering calculations based on published scientific
+literature (SAE Papers, Heywood, Blair, etc.). Results are theoretical
+estimates intended for reference only. The author assumes no responsibility
+for engine designs, builds, or modifications based on these calculations.
+Always validate results with physical measurements and consult qualified
+engineers for critical applications.
